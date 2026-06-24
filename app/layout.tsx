@@ -12,7 +12,7 @@ const body = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "DogHaven Group | Global Dog Ownership Platform",
+    default: "Dog Haven Group | Global Dog Ownership Platform",
     template: "%s"
   },
   description: site.description,

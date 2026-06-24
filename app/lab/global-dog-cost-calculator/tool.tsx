@@ -21,15 +21,39 @@ export default function CostCalculator() {
   const [extra, setExtra] = useState<keyof typeof extras>("Balanced");
 
   const result = useMemo(() => {
-    const base = 180 * regions[region] * sizes[size] * foods[food];
-    const monthly = base + grooming[groom] * regions[region] + insurance[cover] * regions[region] + training[train] + extras[extra];
-    return { low: Math.round(monthly * 0.82), high: Math.round(monthly * 1.28), yearlyLow: Math.round(monthly * 0.82 * 12), yearlyHigh: Math.round(monthly * 1.28 * 12) };
+    const foodBase = Math.round(180 * regions[region] * sizes[size] * foods[food]);
+    const groomingCost = Math.round(grooming[groom] * regions[region]);
+    const coverCost = Math.round(insurance[cover] * regions[region]);
+    const trainingCost = training[train];
+    const extrasCost = extras[extra];
+    const monthly = foodBase + groomingCost + coverCost + trainingCost + extrasCost;
+    const low = Math.round(monthly * 0.82);
+    const high = Math.round(monthly * 1.28);
+    const yearlyLow = low * 12;
+    const yearlyHigh = high * 12;
+    const pressure = monthly > 720 ? "High planning pressure" : monthly > 470 ? "Moderate planning pressure" : "Lean planning pressure";
+    const pressureProgress = Math.min(100, Math.max(22, Math.round((monthly / 900) * 100)));
+    return {
+      low,
+      high,
+      yearlyLow,
+      yearlyHigh,
+      pressure,
+      pressureProgress,
+      breakdown: [
+        ["Food baseline", foodBase],
+        ["Grooming", groomingCost],
+        ["Insurance or emergency savings", coverCost],
+        ["Training", trainingCost],
+        ["Extras and enrichment", extrasCost]
+      ]
+    };
   }, [region, size, food, groom, cover, train, extra]);
 
   return (
     <section className="section">
       <div className="shell">
-        <p className="eyebrow">DogHaven Lab</p>
+        <p className="eyebrow">Dog Haven Group Lab</p>
         <h1>Global Dog Cost Calculator</h1>
         <p className="lead">Use this as a planning estimate, not an official price source. Costs vary by country, city, dog size, health, insurance, food choice, grooming needs, training, and lifestyle.</p>
         <div className="tool">
@@ -45,9 +69,23 @@ export default function CostCalculator() {
           <div className="panel">
             <p className="eyebrow">Estimated planning range</p>
             <div className="score">${result.low} - ${result.high}</div>
-            <h3>Estimated monthly range</h3>
-            <p>Estimated yearly planning range: <strong>${result.yearlyLow} - ${result.yearlyHigh}</strong>. This range is intentionally broad because real ownership costs depend on local services, dog health, insurance availability, and household choices.</p>
-            <p>For deeper context, read <Link href="/world-atlas/dog-ownership-costs-by-country">dog ownership costs by country</Link> or compare broader conditions through the <Link href="/world-atlas/global-dog-ownership-index">Global Dog Ownership Index framework</Link>.</p>
+            <div className="progress-track" aria-label={`Planning pressure ${result.pressureProgress}%`}>
+              <span className="progress-fill" style={{ width: `${result.pressureProgress}%` }} />
+            </div>
+            <h2>Monthly estimate</h2>
+            <div className="result-grid">
+              <div className="metric-card"><strong>${result.yearlyLow} - ${result.yearlyHigh}</strong><span>Estimated yearly planning range</span></div>
+              <div className="metric-card"><strong>{result.pressure}</strong><span>Budget status for this scenario</span></div>
+            </div>
+            <div className="breakdown-grid" aria-label="Estimated monthly breakdown">
+              {result.breakdown.map(([label, value]) => (
+                <div className="breakdown-row" key={label}><strong>{label}</strong><span>${value}</span></div>
+              ))}
+            </div>
+            <div className="result-note">
+              <span>Planning caution: this is not an official price source. Verify local providers, veterinary practices, insurance options, housing costs, food prices, and emergency savings in your actual city.</span>
+            </div>
+            <p>Next, read <Link href="/world-atlas/dog-ownership-costs-by-country">dog ownership costs by country</Link>, compare broader conditions through the <Link href="/world-atlas/global-dog-ownership-index">Global Dog Ownership Index framework</Link>, or download the <Link href="/downloads/global-dog-owner-starter-guide">Global Dog Owner Starter Guide</Link>.</p>
           </div>
         </div>
       </div>

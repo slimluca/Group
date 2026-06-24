@@ -13,7 +13,7 @@ export function pageMetadata(title: string, description: string, path = ""): Met
       url,
       siteName: site.name,
       type: "website",
-      images: [{ url: site.logoPath, width: 1024, height: 1024, alt: "DogHaven Group circular logo." }]
+      images: [{ url: site.logoPath, width: 1024, height: 1024, alt: "Dog Haven Group circular logo." }]
     }
   };
 }

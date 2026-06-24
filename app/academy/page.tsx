@@ -1,16 +1,30 @@
 import Link from "next/link";
 import { EditorialPage } from "@/components/EditorialPage";
+import { academyTopics } from "@/data/academy";
 import { pages } from "@/data/content";
 import { pageMetadata } from "@/lib/metadata";
 
 const page = pages.academy;
 export const metadata = pageMetadata(page.title, page.description, page.slug);
-const topics = ["First-time dog owners", "Puppy planning", "Apartment dog ownership", "Family dog ownership", "Senior dog care", "Dog behavior basics", "Dog safety", "Dog nutrition basics"];
+const firstTopic = {
+  title: "First-time dog owners",
+  slug: "/academy/first-time-dog-owner-guide",
+  description: "A long-form guide for first-time dog owners covering lifestyle fit, budget, routines, safety, training, and next steps."
+};
 export default function Page() {
   return (
     <>
       <EditorialPage page={page} />
-      <section className="section editorial"><div className="shell grid">{topics.map((topic) => <Link className="nav-card" href={topic === "First-time dog owners" ? "/academy/first-time-dog-owner-guide" : "/academy"} key={topic}><h3>{topic}</h3><p>Planned Academy coverage for responsible global dog owners, written with professional caution and practical internal links.</p></Link>)}</div></section>
+      <section className="section editorial">
+        <div className="shell">
+          <p className="eyebrow">Academy library</p>
+          <h2>Practical guides with real pages behind them.</h2>
+          <div className="grid">
+            <Link className="nav-card" href={firstTopic.slug}><h3>{firstTopic.title}</h3><p>{firstTopic.description}</p></Link>
+            {academyTopics.map((topic) => <Link className="nav-card" href={`/academy/${topic.slug}`} key={topic.slug}><h3>{topic.title.replace(" | Dog Haven Group Academy", "")}</h3><p>{topic.description}</p></Link>)}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

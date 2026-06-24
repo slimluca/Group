@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { navItems, site } from "@/data/site";
+import { navItems } from "@/data/site";
 
 export function SiteFooter() {
   return (
@@ -12,11 +12,11 @@ export function SiteFooter() {
               <Image src="/brand/dog-haven-group-logo.png" alt="" width={74} height={74} />
             </span>
             <span className="brand-copy">
-              <strong>DogHaven Group</strong>
+              <strong>Dog Haven Group</strong>
               <span>Dog ownership intelligence</span>
             </span>
           </Link>
-          <p>DogHaven Group is the global parent platform for the DogHaven network, built around country gateways, travel planning, Academy guides, premium tools, Journal insights, and branded resources.</p>
+          <p>Dog Haven Group is the global parent platform for the DogHaven network, built around country gateways, travel planning, Academy guides, premium tools, Journal insights, and branded resources. For corrections, partnerships, country suggestions, or media enquiries, use the contact page.</p>
         </div>
         <div>
           <h3>Platform</h3>
@@ -37,7 +37,7 @@ export function SiteFooter() {
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms">Terms</Link>
           <Link href="/disclaimer">Disclaimer</Link>
-          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <Link href="/contact">Contact Dog Haven Group</Link>
         </div>
       </div>
     </footer>

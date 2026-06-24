@@ -1,0 +1,60 @@
+Dog Haven Group Global Dog Owner Starter Guide PDF QA
+Direct PDF path: C:/Code Projects/Group/public/downloads/dog-haven-group-global-dog-owner-starter-guide.pdf
+Direct PDF URL: /downloads/dog-haven-group-global-dog-owner-starter-guide.pdf
+Generated at: 2026-06-24 18:33:19 South Africa Standard Time
+Page count: 22
+Total extracted word count: 5307
+Extracted word count per page:
+- Page 1: 44 words
+- Page 2: 251 words
+- Page 3: 255 words
+- Page 4: 276 words
+- Page 5: 303 words
+- Page 6: 266 words
+- Page 7: 246 words
+- Page 8: 269 words
+- Page 9: 247 words
+- Page 10: 306 words
+- Page 11: 246 words
+- Page 12: 253 words
+- Page 13: 264 words
+- Page 14: 293 words
+- Page 15: 227 words
+- Page 16: 318 words
+- Page 17: 255 words
+- Page 18: 196 words
+- Page 19: 143 words
+- Page 20: 186 words
+- Page 21: 187 words
+- Page 22: 276 words
+Visual status per page:
+- Page 1: rendered and inspected; useful content reaches the lower page area
+- Page 2: rendered and inspected; useful content reaches the lower page area
+- Page 3: rendered and inspected; useful content reaches the lower page area
+- Page 4: rendered and inspected; useful content reaches the lower page area
+- Page 5: rendered and inspected; useful content reaches the lower page area
+- Page 6: rendered and inspected; useful content reaches the lower page area
+- Page 7: rendered and inspected; useful content reaches the lower page area
+- Page 8: rendered and inspected; useful content reaches the lower page area
+- Page 9: rendered and inspected; useful content reaches the lower page area
+- Page 10: rendered and inspected; useful content reaches the lower page area
+- Page 11: rendered and inspected; useful content reaches the lower page area
+- Page 12: rendered and inspected; useful content reaches the lower page area
+- Page 13: rendered and inspected; useful content reaches the lower page area
+- Page 14: rendered and inspected; useful content reaches the lower page area
+- Page 15: rendered and inspected; useful content reaches the lower page area
+- Page 16: rendered and inspected; useful content reaches the lower page area
+- Page 17: rendered and inspected; useful content reaches the lower page area
+- Page 18: rendered and inspected; useful content reaches the lower page area
+- Page 19: rendered and inspected; useful content reaches the lower page area
+- Page 20: rendered and inspected; useful content reaches the lower page area
+- Page 21: rendered and inspected; useful content reaches the lower page area
+- Page 22: rendered and inspected; useful content reaches the lower page area
+Large empty lower-page areas present: no
+Every page has meaningful content: yes
+No pages empty or nearly empty: yes
+Pages below threshold: none
+Old blank pages issue fixed: yes
+Removed wide cover image present: no
+Logo expected: circular Dog Haven Group logo on cover
+Footer expected: DogHavenGroup.com on every interior page

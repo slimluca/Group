@@ -1,9 +1,9 @@
 export const site = {
-  name: "DogHaven Group",
+  name: "Dog Haven Group",
   url: "https://doghavengroup.com",
   email: "info@doghavengroup.com",
   description:
-    "DogHaven Group is the global home of the DogHaven network, built for serious dog ownership planning across countries, travel routes, costs, learning, tools, and local DogHaven sites.",
+    "Dog Haven Group is the global home of the DogHaven network, built for serious dog ownership planning across countries, travel routes, costs, learning, tools, and local DogHaven sites.",
   logoPath: "/brand/dog-haven-group-logo.png"
 };
 

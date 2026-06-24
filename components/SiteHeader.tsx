@@ -21,7 +21,7 @@ export function SiteHeader() {
             <Image src="/brand/dog-haven-group-logo.png" alt="" width={54} height={54} priority />
           </span>
           <span className="brand-copy">
-            <strong>DogHaven Group</strong>
+            <strong>Dog Haven Group</strong>
             <span>Global dog ownership platform</span>
           </span>
         </Link>

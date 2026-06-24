@@ -32,7 +32,7 @@ export function EditorialPage({ page }: { page: PageContent }) {
                 </div>
               ) : null}
             </div>
-            {section.image ? <MediaFrame image={section.image} /> : <div className="panel"><h3>Connected DogHaven sections</h3><p>Continue through the global platform using the internal links in this page. DogHaven Group is designed so country gateways, tools, travel planning, Academy resources, Journal articles, and downloads support one another naturally.</p></div>}
+            {section.image ? <MediaFrame image={section.image} /> : <div className="panel"><h3>Connected DogHaven sections</h3><p>Continue through the global platform using the internal links in this page. Dog Haven Group is designed so country gateways, tools, travel planning, Academy resources, Journal articles, and downloads support one another naturally.</p></div>}
           </div>
         </section>
       ))}
