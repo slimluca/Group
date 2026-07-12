@@ -1,0 +1,587 @@
+{
+  "name": "Dog Haven Global Dog Ownership Index — Founding Research Edition",
+  "version": "1.0",
+  "generatedFrom": "data/global-dog-ownership-index/countries.ts",
+  "rows": [
+    {
+      "country": "Australia",
+      "countryCode": "AU",
+      "category": "housing",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Moderate confidence",
+      "summary": "Rental access has a structured pathway in some states, but no single national permission rule applies.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "au-vic-renting",
+        "oecd-housing"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Australia",
+      "countryCode": "AU",
+      "category": "public-spaces",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Limited confidence",
+      "summary": "Everyday outdoor access is often workable, subject to council controls and protected-area restrictions.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Australia",
+      "countryCode": "AU",
+      "category": "transport",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "Limited confidence",
+      "summary": "Ordinary-dog access to public transport is fragmented and frequently restricted.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Australia",
+      "countryCode": "AU",
+      "category": "veterinary",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "Moderate confidence",
+      "summary": "Professional regulation and urban service infrastructure are generally supportive.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "au-vet-board",
+        "woah-pvs"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Australia",
+      "countryCode": "AU",
+      "category": "climate",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "High confidence",
+      "summary": "Heat and severe-weather planning can impose a substantial seasonal burden.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-climate"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Australia",
+      "countryCode": "AU",
+      "category": "cost",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "Limited confidence",
+      "summary": "Housing, veterinary travel and routine services can create notable pressure.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "oecd-housing",
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Australia",
+      "countryCode": "AU",
+      "category": "travel",
+      "score": 1,
+      "scoreLabel": "Substantial barriers",
+      "confidence": "High confidence",
+      "summary": "The official inbound process is clear but highly sequenced and demanding.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "au-biosecurity"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Australia",
+      "countryCode": "AU",
+      "category": "everyday",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Moderate confidence",
+      "summary": "Daily ownership is workable for many households but depends heavily on location and mobility.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators",
+        "au-vet-board"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Italy",
+      "countryCode": "IT",
+      "category": "housing",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Limited confidence",
+      "summary": "National legal context and everyday practice still leave meaningful rental uncertainty.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "oecd-housing"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Italy",
+      "countryCode": "IT",
+      "category": "public-spaces",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Limited confidence",
+      "summary": "Parks and walking environments can be supportive, with municipal and seasonal constraints.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Italy",
+      "countryCode": "IT",
+      "category": "transport",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "High confidence",
+      "summary": "National rail publishes practical pathways for travelling with dogs.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "trenitalia-pets"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Italy",
+      "countryCode": "IT",
+      "category": "veterinary",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "Moderate confidence",
+      "summary": "Regulated services are generally accessible in populated regions.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "woah-pvs"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Italy",
+      "countryCode": "IT",
+      "category": "climate",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "High confidence",
+      "summary": "Climate is manageable in many seasons but summer heat can materially change routines.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-climate"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Italy",
+      "countryCode": "IT",
+      "category": "cost",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Limited confidence",
+      "summary": "Costs are mixed once housing pressure and household purchasing power are considered.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "oecd-housing",
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Italy",
+      "countryCode": "IT",
+      "category": "travel",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "High confidence",
+      "summary": "EU rules create a comparatively legible system, although routes remain specific.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "eu-pets",
+        "it-health"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "Italy",
+      "countryCode": "IT",
+      "category": "everyday",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "Moderate confidence",
+      "summary": "Rail options, walkable communities and service networks can support routine ownership.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "trenitalia-pets",
+        "it-health"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "category": "housing",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "Limited confidence",
+      "summary": "Pet-permitting rental evidence is fragmented and permission can depend on multiple private rules.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "category": "public-spaces",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Moderate confidence",
+      "summary": "Useful public spaces exist, but access and control rules are municipal.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "cape-town-dogs"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "category": "transport",
+      "score": 1,
+      "scoreLabel": "Substantial barriers",
+      "confidence": "Limited confidence",
+      "summary": "Ordinary-dog access through mass public transport is generally difficult to plan.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "category": "veterinary",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Moderate confidence",
+      "summary": "Professional regulation is established, while geographic and financial access are uneven.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "za-vet-council",
+        "woah-pvs"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "category": "climate",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "High confidence",
+      "summary": "Heat and region-specific hazards require active planning.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-climate"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "category": "cost",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "Limited confidence",
+      "summary": "Household purchasing power and uneven access can make routine and unexpected costs difficult.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "category": "travel",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "High confidence",
+      "summary": "Official import entry points exist, but the process requires direct permit and certificate work.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "za-import"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "category": "everyday",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Limited confidence",
+      "summary": "Ownership can be workable with local knowledge and reliable private arrangements.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "cape-town-dogs",
+        "za-vet-council"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "category": "housing",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Moderate confidence",
+      "summary": "Pet-request policy is developing, but cost and jurisdiction differences constrain access.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "uk-renting-pets",
+        "oecd-housing"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "category": "public-spaces",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Limited confidence",
+      "summary": "Walking access is extensive, subject to local control orders and land-manager rules.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "category": "transport",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "High confidence",
+      "summary": "Great Britain’s national rail framework is broadly practical for dogs.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "uk-national-rail"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "category": "veterinary",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "High confidence",
+      "summary": "Statutory regulation and broad service networks are supportive.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "uk-rcvs",
+        "woah-pvs"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "category": "climate",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "Moderate confidence",
+      "summary": "Temperate conditions reduce some extremes but weather management still matters.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-climate"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "category": "cost",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "Moderate confidence",
+      "summary": "Housing and veterinary expenses can create notable ownership pressure.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "oecd-housing",
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "category": "travel",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "High confidence",
+      "summary": "Official systems are clear, but jurisdiction and route distinctions add work.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "uk-gb-entry",
+        "uk-ni-entry"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "category": "everyday",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "Moderate confidence",
+      "summary": "Walking, rail and service networks can support routine ownership.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "uk-national-rail",
+        "uk-rcvs"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United States",
+      "countryCode": "US",
+      "category": "housing",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "Limited confidence",
+      "summary": "Pet-permitting rentals exist, but cost and layered restrictions produce notable constraints.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "oecd-housing",
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United States",
+      "countryCode": "US",
+      "category": "public-spaces",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Limited confidence",
+      "summary": "Many dedicated spaces exist, alongside extensive local restrictions.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United States",
+      "countryCode": "US",
+      "category": "transport",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "Limited confidence",
+      "summary": "Ordinary-dog public transport is inconsistent and often size- or carrier-limited.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United States",
+      "countryCode": "US",
+      "category": "veterinary",
+      "score": 4,
+      "scoreLabel": "Generally supportive",
+      "confidence": "Moderate confidence",
+      "summary": "A large regulated professional ecosystem supports care, but affordability and geography constrain access.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "us-avma",
+        "woah-pvs"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United States",
+      "countryCode": "US",
+      "category": "climate",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "High confidence",
+      "summary": "Multiple climate extremes create a significant location-specific management burden.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "world-bank-climate"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United States",
+      "countryCode": "US",
+      "category": "cost",
+      "score": 2,
+      "scoreLabel": "Notable constraints",
+      "confidence": "Moderate confidence",
+      "summary": "Veterinary, housing and routine ownership costs can exert notable pressure.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "us-avma",
+        "oecd-housing",
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United States",
+      "countryCode": "US",
+      "category": "travel",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "High confidence",
+      "summary": "Federal guidance is detailed, while layered authorities add complexity.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "us-cdc",
+        "us-usda"
+      ],
+      "version": "1.0"
+    },
+    {
+      "country": "United States",
+      "countryCode": "US",
+      "category": "everyday",
+      "score": 3,
+      "scoreLabel": "Mixed conditions",
+      "confidence": "Moderate confidence",
+      "summary": "Services are abundant in many markets, but mobility, housing and costs produce mixed conditions.",
+      "lastReviewed": "2026-07-12",
+      "sourceIds": [
+        "us-avma",
+        "world-bank-indicators"
+      ],
+      "version": "1.0"
+    }
+  ]
+}

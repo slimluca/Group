@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "eslint .",
     "check:content-quality": "node scripts/check-content-quality.mjs",
-    "check:passport-planner": "node scripts/check-passport-planner.mjs"
+    "check:passport-planner": "node scripts/check-passport-planner.mjs",
+    "generate:global-index": "node scripts/generate-global-dog-ownership-index-data.mjs",
+    "check:global-index": "node scripts/check-global-dog-ownership-index.mjs",
+    "check:global-index-sources": "node scripts/check-global-index-sources.mjs",
+    "check:interactive-tools": "node scripts/check-interactive-tools.mjs"
   },
   "dependencies": {
     "next": "latest",

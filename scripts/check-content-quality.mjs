@@ -8,6 +8,9 @@ const intentionalLegalDrafts = [
   "This privacy policy is a Phase 1 website policy",
   "These terms are a Phase 1 website draft"
 ];
+const intentionalSharedInterfaceCopy = [
+  "Comparing countries is only the beginning. Use the Passport Planner to organise a specific international route, timeline, checklist and official-source review."
+];
 const suspiciousPhrases = [
   "Connected DogHaven sections",
   "Connected Dog Haven sections",
@@ -45,6 +48,7 @@ let ignoredLegalNotices = 0;
 
 function recordParagraph(text, file, line) {
   const value = normalise(text);
+  if (intentionalSharedInterfaceCopy.includes(value)) return;
   if (value.length < minimumParagraphLength) return;
   const key = value.toLocaleLowerCase("en");
   const entries = paragraphs.get(key) ?? [];

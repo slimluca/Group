@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { INDEX_BASE, INDEX_NOTICE } from "@/lib/global-dog-ownership-index";
+export function IndexNav(){return <nav className="index-nav no-print" aria-label="Global Dog Ownership Index"><Link href={INDEX_BASE}>Index</Link><Link href={`${INDEX_BASE}/compare`}>Compare</Link><Link href={`${INDEX_BASE}/methodology`}>Methodology</Link><Link href={`${INDEX_BASE}/sources`}>Sources</Link></nav>}
+export function IndexNotice(){return <aside className="index-notice"><strong>Research and editorial notice</strong><p>{INDEX_NOTICE}</p></aside>}
+export function DataDownloads(){return <div className="compact-actions"><a className="button secondary" href="/data/global-dog-ownership-index-v1.json" download>Download JSON research data</a><a className="button secondary" href="/data/global-dog-ownership-index-v1.csv" download>Download CSV research data</a></div>}
+export function Correction(){return <section className="index-correction"><h2>Suggest a Correction</h2><p>Dog Haven Group welcomes corrections supported by current official or authoritative evidence. Suggestions are reviewed against the published methodology; submission does not guarantee acceptance.</p><Link href="/contact?topic=global-dog-ownership-index-correction">Contact the editorial team</Link></section>}

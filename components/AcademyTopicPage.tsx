@@ -14,28 +14,41 @@ export function AcademyTopicPage({ topic }: { topic: AcademyTopic }) {
         </div>
       </section>
       {topic.sections.map((section, index) => (
-        <section className={`section ${index % 2 === 0 ? "editorial" : ""}`} key={section.title}>
+        <section
+          className={`section content-section academy-guide-section ${index % 2 === 0 ? "editorial" : ""}`}
+          key={section.title}
+        >
           <div className="shell split">
-            <div>
+            <div className="editorial-copy">
               <h2>{section.title}</h2>
-              {section.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {section.body.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
             <div className="panel">
               <p className="eyebrow">Planning checklist</p>
               <ul className="result-list">
-                {section.checklist.map((item) => <li key={item}>{item}</li>)}
+                {section.checklist.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
         </section>
       ))}
       <section className="section">
-        <div className="shell">
-          <p className="eyebrow">Continue planning</p>
+        <div className="shell editorial-reading">
+          <p className="eyebrow">Related ownership guidance</p>
           <h2>Use this guide with the wider Dog Haven Group platform.</h2>
           <div className="actions">
-            {topic.links.map((link) => <Link className="button" href={link.href} key={link.href}>{link.label}</Link>)}
-            <Link className="button secondary" href="/academy">Back to Academy</Link>
+            {topic.links.map((link) => (
+              <Link className="button" href={link.href} key={link.href}>
+                {link.label}
+              </Link>
+            ))}
+            <Link className="button secondary" href="/academy">
+              Back to Academy
+            </Link>
           </div>
         </div>
       </section>

@@ -15,18 +15,30 @@ export function EditorialPage({ page }: { page: PageContent }) {
         </div>
       </section>
       {page.sections.map((section, index) => (
-        <section className={`section ${index % 2 === 0 ? "editorial" : ""}`} key={section.title}>
-          <div className={`shell ${section.image ? "split" : "editorial-reading"}`}>
-            <div>
-              {section.eyebrow ? <p className="eyebrow">{section.eyebrow}</p> : null}
+        <section
+          className={`section content-section ${section.image ? "content-section-with-media" : "content-section-reading"} ${index % 2 === 0 ? "editorial" : ""}`}
+          key={section.title}
+        >
+          <div
+            className={`shell ${section.image ? "split" : "editorial-reading"}`}
+          >
+            <div className="editorial-copy">
+              {section.eyebrow ? (
+                <p className="eyebrow">{section.eyebrow}</p>
+              ) : null}
               <h2>{section.title}</h2>
               {section.body.map((paragraph) => (
-                <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                <p
+                  key={paragraph}
+                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                />
               ))}
               {section.links ? (
                 <div className="actions">
                   {section.links.map((link) => (
-                    <Link className="button" key={link.href} href={link.href}>{link.label}</Link>
+                    <Link className="button" key={link.href} href={link.href}>
+                      {link.label}
+                    </Link>
                   ))}
                 </div>
               ) : null}
@@ -36,12 +48,28 @@ export function EditorialPage({ page }: { page: PageContent }) {
         </section>
       ))}
       {page.table ? (
-        <section className="section">
+        <section className="section content-section data-section">
           <div className="shell">
             <div className="table-wrap">
               <table>
-                <thead><tr>{page.table.columns.map((column) => <th key={column}>{column}</th>)}</tr></thead>
-                <tbody>{page.table.rows.map((row) => <tr key={row.join("-")}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody>
+                <thead>
+                  <tr>
+                    {page.table.columns.map((column) => (
+                      <th scope="col" key={column}>
+                        {column}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {page.table.rows.map((row) => (
+                    <tr key={row.join("-")}>
+                      {row.map((cell) => (
+                        <td key={cell}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
               </table>
             </div>
           </div>

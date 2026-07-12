@@ -12,8 +12,8 @@ export const metadata = pageMetadata(
     url: "/images/doghavengroup/home/mother-site-architecture-global-network.jpg",
     width: 1450,
     height: 1088,
-    alt: "Dog Haven Group global network architecture connecting country dog websites around the world"
-  }
+    alt: "Dog Haven Group global network architecture connecting country dog websites around the world",
+  },
 );
 
 export default function HomePage() {
@@ -25,11 +25,23 @@ export default function HomePage() {
         <div className="hero-inner">
           <div className="hero-copy">
             <p className="eyebrow">Global home of the Dog Haven network</p>
-            <h1>Premium dog ownership intelligence for a world that moves with dogs.</h1>
-            <p className="lead">Dog Haven Group is the mother site for Dog Haven country platforms, global ownership planning, international dog travel, premium tools, Academy learning, Journal insight, and downloadable resources.</p>
+            <h1>
+              Premium dog ownership intelligence for a world that moves with
+              dogs.
+            </h1>
+            <p className="lead">
+              Dog Haven Group is the mother site for Dog Haven country
+              platforms, global ownership planning, international dog travel,
+              premium tools, Academy learning, Journal insight, and downloadable
+              resources.
+            </p>
             <div className="hero-actions">
-              <Link className="button" href="/doghaven-universe">Explore the platform</Link>
-              <Link className="button secondary" href="/countries">View country network</Link>
+              <Link className="button" href="/doghaven-universe">
+                Explore the platform
+              </Link>
+              <Link className="button secondary" href="/countries">
+                View country network
+              </Link>
             </div>
           </div>
         </div>
@@ -40,8 +52,25 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">Mother site architecture</p>
             <h2>One global brand, separate local country purposes.</h2>
-            <p>DogHavenGroup.com is not a copy of Dog Haven South Africa, Dog Haven USA, or Dog Haven Italy. It exists above those local sites as the global parent brand: a serious platform for country comparison, travel planning, ownership education, structured tools, editorial methodology, and branded resources for dog owners whose decisions increasingly cross borders.</p>
-            <p>Readers can use the <Link href="/world-atlas">Dog Haven Group World Atlas</Link> to compare ownership conditions, the <Link href="/global-travel">Global Travel</Link> section to prepare for routes and relocation, the <Link href="/lab">Dog Haven Group Lab</Link> for interactive planning, and the <Link href="/academy">Dog Haven Group Academy</Link> for long-form learning before moving into a local country site.</p>
+            <p>
+              DogHavenGroup.com is not a copy of Dog Haven South Africa, Dog
+              Haven USA, or Dog Haven Italy. It exists above those local sites
+              as the global parent brand: a serious platform for country
+              comparison, travel planning, ownership education, structured
+              tools, editorial methodology, and branded resources for dog owners
+              whose decisions increasingly cross borders.
+            </p>
+            <p>
+              Readers can use the{" "}
+              <Link href="/world-atlas">Dog Haven Group World Atlas</Link> to
+              compare ownership conditions, the{" "}
+              <Link href="/global-travel">Global Travel</Link> section to
+              prepare for routes and relocation, the{" "}
+              <Link href="/lab">Dog Haven Group Lab</Link> for interactive
+              planning, and the{" "}
+              <Link href="/academy">Dog Haven Group Academy</Link> for long-form
+              learning before moving into a local country site.
+            </p>
           </div>
           <figure className="homepage-media-frame">
             <Image
@@ -59,8 +88,15 @@ export default function HomePage() {
         <div className="shell">
           <p className="eyebrow">Country showcase</p>
           <h2>Dog Haven country gateways</h2>
-          <p className="lead">Each gateway gives real global context before linking to the local Dog Haven country site. The country sites remain separate websites with their own local purpose.</p>
-          <div className="country-strip" aria-label="Dog Haven country gateway slider">
+          <p className="lead">
+            Each gateway gives real global context before linking to the local
+            Dog Haven country site. The country sites remain separate websites
+            with their own local purpose.
+          </p>
+          <div
+            className="country-strip"
+            aria-label="Dog Haven country gateway slider"
+          >
             <Link className="country-card" href={southAfrica.href}>
               <div className="country-card-media country-card-media-south-africa">
                 <Image
@@ -113,12 +149,51 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section flagship-tool-section">
-        <div className="shell editorial-reading">
-          <p className="eyebrow">Flagship global tool</p>
-          <h2>Plan an international journey with your dog</h2>
-          <p className="lead">Build a personalised preparation timeline, organise travel questions, track checklist progress and open relevant official sources before an international trip or permanent move.</p>
-          <Link className="button" href="/global-travel/dog-passport-planner">Open the Global Passport Planner</Link>
+      <section className="section owner-guidance-section">
+        <div className="shell information-copy">
+          <p className="eyebrow">Practical dog-owner guidance</p>
+          <h2>Guidance for dog owners wherever life takes them</h2>
+          <p>
+            Thoughtful dog ownership begins before a dog comes home. Use the{" "}
+            <Link href="/academy">Academy</Link> to think through daily
+            routines, training, household agreement and long-term care, then use
+            the practical tools in the <Link href="/lab">Lab</Link> to test
+            budgets, readiness and travel assumptions without treating a result
+            as a verdict.
+          </p>
+          <p>
+            Care changes with age, health, climate, housing and family life.
+            Plan safe exercise around the individual dog, know where appropriate
+            veterinary help is available, and revisit routines when a puppy
+            matures, a senior dog slows down or the household changes. The{" "}
+            <Link href="/countries">Dog Haven country network</Link> provides
+            local starting points where city rules, services and costs matter
+            more than a global summary.
+          </p>
+          <p>
+            International travel and relocation need an additional layer of
+            preparation. Compare broader ownership conditions in the{" "}
+            <Link href="/world-atlas/global-dog-ownership-index">
+              Global Dog Ownership Index
+            </Link>
+            , organise a specific journey in the{" "}
+            <Link href="/global-travel/dog-passport-planner">
+              Passport Planner
+            </Link>
+            , and reopen the relevant government, veterinary and transport
+            sources before making time-sensitive decisions.
+          </p>
+          <nav
+            className="context-link-row"
+            aria-label="Dog-owner planning resources"
+          >
+            <Link href="/academy">Ownership guidance</Link>
+            <Link href="/lab">Planning tools</Link>
+            <Link href="/world-atlas/global-dog-ownership-index">
+              Compare countries
+            </Link>
+            <Link href="/global-travel/dog-passport-planner">Plan a route</Link>
+          </nav>
         </div>
       </section>
 
@@ -128,14 +203,33 @@ export default function HomePage() {
             <div>
               <p className="eyebrow">Platform pathways</p>
               <h2>Start with the decision you are actually making.</h2>
-              <p>Dog Haven Group is built around connected decisions, not isolated articles. A first-time owner may begin in <Link href="/academy">Academy</Link>, test assumptions in the <Link href="/lab">Lab</Link>, download a planning guide, then compare country conditions in the <Link href="/world-atlas">World Atlas</Link>. A family moving abroad may begin in <Link href="/global-travel">Global Travel</Link>, use the checklist tool, and then choose the right local country gateway.</p>
-              <p>The site should feel like a global ownership system: editorial guidance, structured tools, printable resources, and country context all supporting one another.</p>
+              <p>
+                Dog Haven Group is built around connected decisions, not
+                isolated articles. A first-time owner may begin in{" "}
+                <Link href="/academy">Academy</Link>, test assumptions in the{" "}
+                <Link href="/lab">Lab</Link>, download a planning guide, then
+                compare country conditions in the{" "}
+                <Link href="/world-atlas">World Atlas</Link>. A family moving
+                abroad may begin in{" "}
+                <Link href="/global-travel">Global Travel</Link>, use the
+                checklist tool, and then choose the right local country gateway.
+              </p>
+              <p>
+                The site should feel like a global ownership system: editorial
+                guidance, structured tools, printable resources, and country
+                context all supporting one another.
+              </p>
             </div>
             <div className="resource-panel">
               <span className="status-pill available">New download</span>
               <h3>The Dog Haven Group Global Dog Owner Starter Guide</h3>
-              <p>A branded PDF for lifestyle fit, budgets, puppy preparation, travel, relocation, safety, and country-network next steps.</p>
-              <Link href="/downloads/global-dog-owner-starter-guide">Open the guide</Link>
+              <p>
+                A branded PDF for lifestyle fit, budgets, puppy preparation,
+                travel, relocation, safety, and country-network next steps.
+              </p>
+              <Link href="/downloads/global-dog-owner-starter-guide">
+                Open the guide
+              </Link>
             </div>
           </div>
         </div>
@@ -145,9 +239,32 @@ export default function HomePage() {
         <div className="shell split">
           <div>
             <p className="eyebrow">Core sections</p>
-            <h2>Built for comparison, travel, tools, learning, insight, and resources.</h2>
-            <p>The first version of Dog Haven Group includes the <Link href="/world-atlas">World Atlas</Link>, <Link href="/global-travel">Global Travel</Link>, <Link href="/lab">Dog Haven Group Lab</Link>, <Link href="/academy">Dog Haven Group Academy</Link>, <Link href="/journal">Dog Haven Group Journal</Link>, <Link href="/downloads">Download Library</Link>, <Link href="/countries">Country Network</Link>, and <Link href="/doghaven-universe">Dog Haven Group Universe</Link>. This structure gives the site room to grow without creating thin pages or making the homepage behave like a generic blog index.</p>
-            <p>The <Link href="/downloads">Download Library</Link> now begins with a real branded starter guide. The <Link href="/journal">Dog Haven Group Journal</Link> is positioned as a premium insights room for travel planning, safety guidance, network updates, and country spotlights. The Atlas and Travel sections provide the global frame, while the Lab turns decisions into usable planning tools.</p>
+            <h2>
+              Built for comparison, travel, tools, learning, insight, and
+              resources.
+            </h2>
+            <p>
+              The first version of Dog Haven Group includes the{" "}
+              <Link href="/world-atlas">World Atlas</Link>,{" "}
+              <Link href="/global-travel">Global Travel</Link>,{" "}
+              <Link href="/lab">Dog Haven Group Lab</Link>,{" "}
+              <Link href="/academy">Dog Haven Group Academy</Link>,{" "}
+              <Link href="/journal">Dog Haven Group Journal</Link>,{" "}
+              <Link href="/downloads">Download Library</Link>,{" "}
+              <Link href="/countries">Country Network</Link>, and{" "}
+              <Link href="/doghaven-universe">Dog Haven Group Universe</Link>.
+              This structure gives the site room to grow without creating thin
+              pages or making the homepage behave like a generic blog index.
+            </p>
+            <p>
+              The <Link href="/downloads">Download Library</Link> now begins
+              with a real branded starter guide. The{" "}
+              <Link href="/journal">Dog Haven Group Journal</Link> is positioned
+              as a premium insights room for travel planning, safety guidance,
+              network updates, and country spotlights. The Atlas and Travel
+              sections provide the global frame, while the Lab turns decisions
+              into usable planning tools.
+            </p>
           </div>
           <figure className="homepage-media-frame">
             <Image
@@ -165,7 +282,12 @@ export default function HomePage() {
         <div className="shell">
           <p className="eyebrow">Interactive Lab</p>
           <h2>Working tools with a wider platform behind them.</h2>
-          <p className="lead">The Lab is where Dog Haven Group turns careful editorial thinking into calculators, quizzes, checklists, and future planning tools. Use it with the World Atlas, Global Travel, Academy guides, and downloads rather than treating a result as a final answer.</p>
+          <p className="lead">
+            The Lab is where Dog Haven Group turns careful editorial thinking
+            into calculators, quizzes, checklists, and future planning tools.
+            Use it with the World Atlas, Global Travel, Academy guides, and
+            downloads rather than treating a result as a final answer.
+          </p>
           <ToolLinks />
         </div>
       </section>
