@@ -11,15 +11,14 @@ export const metadata = pageMetadata("Global Dog Owner Starter Guide PDF | Dog H
 export default function Page() {
   return (
     <>
-      <section className="section">
-        <div className="shell split">
-          <div>
+      <section className="page-hero">
+        <div className="shell">
+          <div className="page-hero-copy">
             <p className="eyebrow">Download Library</p>
             <h1>The Dog Haven Group Global Dog Owner Starter Guide</h1>
             <p className="lead">The first official Dog Haven Group PDF is available now: a polished starter guide for dog owners comparing lifestyle fit, costs, puppy preparation, global travel, moving abroad, safety planning, and country-network next steps.</p>
             <div className="actions"><Link className="button" href={downloadHref}>Download PDF</Link><Link className="button secondary" href="/downloads">Back to downloads</Link></div>
           </div>
-          <MediaFrame image={{ src: "/images/doghavengroup/downloads/owner-starter-guide-cover.svg", alt: "A premium cover concept for the Dog Haven Group Global Dog Owner Starter Guide." }} />
         </div>
       </section>
       <section className="section editorial">

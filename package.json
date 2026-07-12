@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check:content-quality": "node scripts/check-content-quality.mjs",
+    "check:passport-planner": "node scripts/check-passport-planner.mjs"
   },
   "dependencies": {
     "next": "latest",

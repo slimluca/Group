@@ -1,18 +1,16 @@
 import Link from "next/link";
 import type { AcademyTopic } from "@/data/academy";
-import { MediaFrame } from "./MediaFrame";
 
 export function AcademyTopicPage({ topic }: { topic: AcademyTopic }) {
   return (
     <>
-      <section className="section">
-        <div className="shell split">
-          <div>
+      <section className="page-hero">
+        <div className="shell">
+          <div className="page-hero-copy">
             <p className="eyebrow">{topic.eyebrow}</p>
             <h1>{topic.hero}</h1>
             <p className="lead">{topic.description}</p>
           </div>
-          <MediaFrame image={topic.image} />
         </div>
       </section>
       {topic.sections.map((section, index) => (

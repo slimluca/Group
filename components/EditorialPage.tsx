@@ -5,19 +5,18 @@ import { MediaFrame } from "./MediaFrame";
 export function EditorialPage({ page }: { page: PageContent }) {
   return (
     <>
-      <section className="section">
-        <div className="shell split">
-          <div>
+      <section className="page-hero">
+        <div className="shell">
+          <div className="page-hero-copy">
             <p className="eyebrow">{page.eyebrow}</p>
             <h1>{page.hero}</h1>
             <p className="lead">{page.description}</p>
           </div>
-          <MediaFrame image={page.heroImage} />
         </div>
       </section>
       {page.sections.map((section, index) => (
         <section className={`section ${index % 2 === 0 ? "editorial" : ""}`} key={section.title}>
-          <div className="shell split">
+          <div className={`shell ${section.image ? "split" : "editorial-reading"}`}>
             <div>
               {section.eyebrow ? <p className="eyebrow">{section.eyebrow}</p> : null}
               <h2>{section.title}</h2>
@@ -32,7 +31,7 @@ export function EditorialPage({ page }: { page: PageContent }) {
                 </div>
               ) : null}
             </div>
-            {section.image ? <MediaFrame image={section.image} /> : <div className="panel"><h3>Connected DogHaven sections</h3><p>Continue through the global platform using the internal links in this page. Dog Haven Group is designed so country gateways, tools, travel planning, Academy resources, Journal articles, and downloads support one another naturally.</p></div>}
+            {section.image ? <MediaFrame image={section.image} /> : null}
           </div>
         </section>
       ))}

@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
 
-export function pageMetadata(title: string, description: string, path = ""): Metadata {
+type MetadataImage = {
+  url: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
+export function pageMetadata(title: string, description: string, path = "", image?: MetadataImage): Metadata {
   const url = `${site.url}${path ? `/${path}` : ""}`;
   return {
     title,
@@ -13,7 +20,7 @@ export function pageMetadata(title: string, description: string, path = ""): Met
       url,
       siteName: site.name,
       type: "website",
-      images: [{ url: site.logoPath, width: 1024, height: 1024, alt: "Dog Haven Group circular logo." }]
+      images: [image ?? { url: site.logoPath, width: 1024, height: 1024, alt: "Dog Haven Group circular logo." }]
     }
   };
 }

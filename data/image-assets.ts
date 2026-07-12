@@ -85,10 +85,9 @@ export const plannedImageAssets: PlannedImageAsset[] = [
     folder: "public/images/doghavengroup/downloads/",
     usedOn: "/downloads",
     recommendedSize: "1600x1100",
-    description: "Premium library of black, gold, and ivory DogHaven PDF guides and worksheets.",
+    description: "Premium library of black, gold, and ivory Dog Haven PDF guides and worksheets.",
     alt: "A premium library of Dog Haven Group branded dog owner guides, planners, and checklists.",
     mobileCrop: "Keep the front guide covers visible, crop shelves first.",
     priority: "high"
   }
 ];
-

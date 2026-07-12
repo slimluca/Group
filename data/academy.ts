@@ -84,7 +84,7 @@ export const academyTopics: AcademyTopic[] = [
         title: "Choose temperament and support over fantasy",
         body: [
           "No breed label guarantees family fit. Look for individual temperament, responsible sourcing or adoption support, health considerations, training plan, and realistic supervision.",
-          "Use DogHaven tools to prepare, but seek qualified professional support for safety or behavior concerns."
+          "Use Dog Haven Group tools to prepare, but seek qualified professional support for safety or behavior concerns."
         ],
         checklist: ["Temperament researched", "Supervision plan realistic", "Budget includes training", "Emergency contacts ready"]
       }
@@ -124,7 +124,7 @@ export const academyTopics: AcademyTopic[] = [
     description: "A Dog Haven Group Academy guide to behavior planning, training expectations, stress signals, enrichment, routine, and when to seek qualified help.",
     eyebrow: "Academy guide",
     hero: "Dog behavior planning starts with routine, observation, and support.",
-    image: { src: "/images/doghavengroup/lab/interactive-tool-suite.svg", alt: "DogHaven planning tools for training, behavior, and routine decisions." },
+    image: { src: "/images/doghavengroup/lab/interactive-tool-suite.svg", alt: "Dog Haven Group planning tools for training, behavior, and routine decisions." },
     sections: [
       {
         title: "Behavior is information",
@@ -165,7 +165,7 @@ export const academyTopics: AcademyTopic[] = [
         title: "Plan for ordinary hazards",
         body: [
           "Heat, cold, storms, toxic foods, open gates, travel delays, rough surfaces, unfamiliar dogs, and household chemicals are ordinary risks that deserve planning.",
-          "DogHaven safety content should stay practical and route readers to qualified or official sources where the topic requires it."
+          "Dog Haven Group safety content should stay practical and route readers to qualified or official sources where the topic requires it."
         ],
         checklist: ["Heat/cold plan ready", "Toxic food list reviewed", "Gate and fence habits checked", "Travel safety kit prepared"]
       }

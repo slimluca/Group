@@ -8,7 +8,6 @@ const page = pages.downloads;
 export const metadata = pageMetadata(page.title, page.description, page.slug);
 export default function Page() {
   const featured = downloadResources[0];
-  const next = downloadResources.slice(1);
 
   return (
     <>
@@ -34,27 +33,12 @@ export default function Page() {
         </div>
       </section>
       <section className="section">
-        <div className="shell">
-          <p className="eyebrow">Resource roadmap</p>
-          <h2>Planned guides with a clear job to do.</h2>
-          <div className="resource-list">
-            {next.map((resource) => (
-              <article className="resource-row" key={resource.title}>
-                <div>
-                  <span className={`status-pill ${resource.status.replace(" ", "-")}`}>{resource.status}</span>
-                  <h3>{resource.title}</h3>
-                  <p>{resource.description}</p>
-                </div>
-                <div>
-                  <p className="label">Planned filename</p>
-                  <p>{resource.filename}</p>
-                  <p className="label">Intended benefit</p>
-                  <p>{resource.benefit}</p>
-                  <Link href={resource.relatedHref}>Related: {resource.relatedLabel}</Link>
-                </div>
-              </article>
-            ))}
-          </div>
+        <div className="shell editorial-reading">
+          <p className="eyebrow">Using the library well</p>
+          <h2>Print the resource, then verify the decisions it helps organise.</h2>
+          <p>A worksheet is most useful when it becomes part of a real conversation. Mark the items that are settled, record questions that still need research, and note where the answer depends on a local price, housing rule, professional assessment, or current travel requirement. The PDF should make preparation easier without creating false certainty.</p>
+          <p>Use the <Link href="/academy/first-time-dog-owner-guide">first-time owner guide</Link> for deeper explanation, the <Link href="/lab">Lab</Link> for interactive estimates and checklists, and <Link href="/global-travel">Global Travel</Link> when a decision involves movement between countries. Return to the live pages for information that may change more quickly than a downloaded file.</p>
+          <p>For route planning, build a current working checklist in the <Link href="/global-travel/dog-passport-planner">Dog Haven Global Passport Planner</Link>. Use the global dog-owner starter guide for broader ownership and relocation planning alongside route-specific official research.</p>
         </div>
       </section>
     </>

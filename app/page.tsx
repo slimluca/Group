@@ -2,35 +2,35 @@ import Link from "next/link";
 import Image from "next/image";
 import { countries } from "@/data/content";
 import { pageMetadata } from "@/lib/metadata";
-import { MediaFrame } from "@/components/MediaFrame";
 import { ToolLinks } from "@/components/ToolLinks";
 
-export const metadata = pageMetadata("Global Dog Ownership Guides, Travel Tools & Country Network | Dog Haven Group", "Dog Haven Group helps owners compare dog ownership by country, plan dog travel worldwide, use premium tools, and move into the Dog Haven country network.", "");
+export const metadata = pageMetadata(
+  "Global Dog Ownership Guides, Travel Tools & Country Network | Dog Haven Group",
+  "Dog Haven Group provides global dog ownership guidance, international dog travel planning, country comparisons, premium tools, and gateways to Dog Haven country websites.",
+  "",
+  {
+    url: "/images/doghavengroup/home/mother-site-architecture-global-network.jpg",
+    width: 1450,
+    height: 1088,
+    alt: "Dog Haven Group global network architecture connecting country dog websites around the world"
+  }
+);
 
 export default function HomePage() {
+  const [southAfrica, unitedStates, italy] = countries;
+
   return (
     <>
       <section className="hero">
         <div className="hero-inner">
           <div className="hero-copy">
-            <p className="eyebrow">Global home of the DogHaven network</p>
+            <p className="eyebrow">Global home of the Dog Haven network</p>
             <h1>Premium dog ownership intelligence for a world that moves with dogs.</h1>
-            <p className="lead">Dog Haven Group is the mother site for DogHaven country platforms, global ownership planning, international dog travel, premium tools, Academy learning, Journal insight, and downloadable resources.</p>
+            <p className="lead">Dog Haven Group is the mother site for Dog Haven country platforms, global ownership planning, international dog travel, premium tools, Academy learning, Journal insight, and downloadable resources.</p>
             <div className="hero-actions">
               <Link className="button" href="/doghaven-universe">Explore the platform</Link>
               <Link className="button secondary" href="/countries">View country network</Link>
             </div>
-          </div>
-          <div className="hero-brand-panel" aria-label="Dog Haven Group brand mark">
-            <div className="hero-logo-ring">
-              <Image src="/brand/dog-haven-group-logo.png" alt="Dog Haven Group" width={180} height={180} priority />
-            </div>
-            <div className="hero-lines" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
-            <p>Global platform for country comparison, travel planning, ownership tools, Academy learning, Journal insight, and branded resources.</p>
           </div>
         </div>
       </section>
@@ -40,10 +40,18 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">Mother site architecture</p>
             <h2>One global brand, separate local country purposes.</h2>
-            <p>DogHavenGroup.com is not a copy of DogHaven South Africa, DogHaven United States, or DogHaven Italy. It exists above those local sites as the global parent brand: a serious platform for country comparison, travel planning, ownership education, structured tools, editorial methodology, and branded resources for dog owners whose decisions increasingly cross borders.</p>
+            <p>DogHavenGroup.com is not a copy of Dog Haven South Africa, Dog Haven USA, or Dog Haven Italy. It exists above those local sites as the global parent brand: a serious platform for country comparison, travel planning, ownership education, structured tools, editorial methodology, and branded resources for dog owners whose decisions increasingly cross borders.</p>
             <p>Readers can use the <Link href="/world-atlas">Dog Haven Group World Atlas</Link> to compare ownership conditions, the <Link href="/global-travel">Global Travel</Link> section to prepare for routes and relocation, the <Link href="/lab">Dog Haven Group Lab</Link> for interactive planning, and the <Link href="/academy">Dog Haven Group Academy</Link> for long-form learning before moving into a local country site.</p>
           </div>
-          <MediaFrame image={{ src: "/images/doghavengroup/home/world-atlas-premium-map.svg", alt: "A premium world atlas scene showing global dog ownership planning and country connections." }} />
+          <figure className="homepage-media-frame">
+            <Image
+              src="/images/doghavengroup/home/mother-site-architecture-global-network.jpg"
+              alt="Dog Haven Group global network architecture connecting country dog websites around the world"
+              width={1450}
+              height={1088}
+              sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1200px) 46vw, 560px"
+            />
+          </figure>
         </div>
       </section>
 
@@ -51,16 +59,66 @@ export default function HomePage() {
         <div className="shell">
           <p className="eyebrow">Country showcase</p>
           <h2>Dog Haven country gateways</h2>
-          <p className="lead">Each gateway gives real global context before linking to the local DogHaven country site. The country sites remain separate websites with their own local purpose.</p>
-          <div className="country-strip" aria-label="DogHaven country gateway slider">
-            {countries.map((country) => (
-              <Link className="country-card" href={country.href} key={country.href} style={{ "--country-image": `url(${country.image})` } as React.CSSProperties}>
-                <h3>{country.name}</h3>
-                <p>{country.summary}</p>
+          <p className="lead">Each gateway gives real global context before linking to the local Dog Haven country site. The country sites remain separate websites with their own local purpose.</p>
+          <div className="country-strip" aria-label="Dog Haven country gateway slider">
+            <Link className="country-card" href={southAfrica.href}>
+              <div className="country-card-media country-card-media-south-africa">
+                <Image
+                  src="/images/doghavengroup/countries/dog-haven-south-africa-country-gateway-map.webp"
+                  alt="South Africa highlighted on a premium Africa network map for Dog Haven South Africa country guides"
+                  width={1450}
+                  height={1088}
+                  sizes="(max-width: 520px) calc(100vw - 28px), (max-width: 900px) 46vw, 370px"
+                />
+              </div>
+              <div className="country-card-content">
+                <h3>{southAfrica.name}</h3>
+                <p>{southAfrica.summary}</p>
                 <span className="eyebrow">Open gateway</span>
-              </Link>
-            ))}
+              </div>
+            </Link>
+            <Link className="country-card" href={unitedStates.href}>
+              <div className="country-card-media country-card-media-united-states">
+                <Image
+                  src="/images/doghavengroup/countries/dog-haven-united-states-country-gateway-map.webp"
+                  alt="United States highlighted on a premium global network map for Dog Haven USA country guides"
+                  width={1536}
+                  height={1024}
+                  sizes="(max-width: 520px) calc(100vw - 28px), (max-width: 900px) 46vw, 370px"
+                />
+              </div>
+              <div className="country-card-content">
+                <h3>{unitedStates.name}</h3>
+                <p>{unitedStates.summary}</p>
+                <span className="eyebrow">Open gateway</span>
+              </div>
+            </Link>
+            <Link className="country-card" href={italy.href}>
+              <div className="country-card-media country-card-media-italy">
+                <Image
+                  src="/images/doghavengroup/countries/dog-haven-italy-country-gateway-map.webp"
+                  alt="Italy highlighted on a premium European network map for Dog Haven Italy country guides"
+                  width={1536}
+                  height={1024}
+                  sizes="(max-width: 520px) calc(100vw - 28px), (max-width: 900px) 46vw, 370px"
+                />
+              </div>
+              <div className="country-card-content">
+                <h3>{italy.name}</h3>
+                <p>{italy.summary}</p>
+                <span className="eyebrow">Open gateway</span>
+              </div>
+            </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section flagship-tool-section">
+        <div className="shell editorial-reading">
+          <p className="eyebrow">Flagship global tool</p>
+          <h2>Plan an international journey with your dog</h2>
+          <p className="lead">Build a personalised preparation timeline, organise travel questions, track checklist progress and open relevant official sources before an international trip or permanent move.</p>
+          <Link className="button" href="/global-travel/dog-passport-planner">Open the Global Passport Planner</Link>
         </div>
       </section>
 
@@ -91,7 +149,15 @@ export default function HomePage() {
             <p>The first version of Dog Haven Group includes the <Link href="/world-atlas">World Atlas</Link>, <Link href="/global-travel">Global Travel</Link>, <Link href="/lab">Dog Haven Group Lab</Link>, <Link href="/academy">Dog Haven Group Academy</Link>, <Link href="/journal">Dog Haven Group Journal</Link>, <Link href="/downloads">Download Library</Link>, <Link href="/countries">Country Network</Link>, and <Link href="/doghaven-universe">Dog Haven Group Universe</Link>. This structure gives the site room to grow without creating thin pages or making the homepage behave like a generic blog index.</p>
             <p>The <Link href="/downloads">Download Library</Link> now begins with a real branded starter guide. The <Link href="/journal">Dog Haven Group Journal</Link> is positioned as a premium insights room for travel planning, safety guidance, network updates, and country spotlights. The Atlas and Travel sections provide the global frame, while the Lab turns decisions into usable planning tools.</p>
           </div>
-          <MediaFrame image={{ src: "/images/doghavengroup/home/platform-section-map.svg", alt: "A premium map of Dog Haven Group sections including Atlas, Travel, Lab, Academy, Journal, and Downloads." }} />
+          <figure className="homepage-media-frame">
+            <Image
+              src="/images/doghavengroup/home/dog-haven-group-core-sections-platform.webp"
+              alt="Dog Haven Group platform connecting the World Atlas, dog travel guides, planning tools, Academy learning, Journal insights and downloadable resources"
+              width={1450}
+              height={1088}
+              sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1200px) 46vw, 560px"
+            />
+          </figure>
         </div>
       </section>
 
