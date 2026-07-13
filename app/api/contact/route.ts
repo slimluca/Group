@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      from: "Dog Haven Group <onboarding@resend.dev>",
+      from: "Dog Haven Group <website@doghavengroup.com>",
       to,
       reply_to: email,
       subject: `[Dog Haven Group] ${subject}`,
