@@ -1548,12 +1548,6 @@ textarea {
   line-height: 1.65;
 }
 
-.footer-contact {
-  display: inline-flex;
-  min-height: 42px;
-  align-items: center;
-}
-
 .footer-link-group {
   display: grid;
   align-content: start;
@@ -1581,6 +1575,22 @@ textarea {
 
 .footer a:not(.brand):hover {
   color: var(--gold-soft);
+}
+
+.footer-brand-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer .footer-brand-actions .footer-action {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 0.88rem;
+  line-height: 1.2;
 }
 
 .footer-bottom {
@@ -1909,7 +1919,7 @@ main li::marker { color: var(--gold); }
 .footer { padding: clamp(52px, 7vw, 82px) 0 28px; background: radial-gradient(circle at 8% 10%, rgba(200, 164, 93, .1), transparent 30rem), linear-gradient(180deg, #080705, #030302); }
 .footer-columns { padding: 10px 0 4px; grid-template-columns: minmax(280px, 1.5fr) repeat(3, minmax(145px, .72fr)); }
 .footer-brand-column { padding-right: clamp(10px, 3vw, 44px); }
-.footer-brand-actions { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.footer-brand-actions { gap: 4px 22px; }
 .footer-link-group a { display: flex; min-height: 38px; align-items: center; }
 .footer-bottom { align-items: center; }
 

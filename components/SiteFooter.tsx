@@ -66,10 +66,12 @@ export function SiteFooter() {
               growing Dog Haven country network.
             </p>
             <div className="footer-brand-actions">
-              <Link className="footer-contact" href="/contact">
+              <Link className="footer-action" href="/contact">
                 Contact
               </Link>
-              <Link href="/doghaven-universe">Explore the Universe</Link>
+              <Link className="footer-action" href="/doghaven-universe">
+                Explore the Universe
+              </Link>
             </div>
           </section>
           <nav
