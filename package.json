@@ -12,7 +12,10 @@
     "generate:global-index": "node scripts/generate-global-dog-ownership-index-data.mjs",
     "check:global-index": "node scripts/check-global-dog-ownership-index.mjs",
     "check:global-index-sources": "node scripts/check-global-index-sources.mjs",
-    "check:interactive-tools": "node scripts/check-interactive-tools.mjs"
+    "check:interactive-tools": "node scripts/check-interactive-tools.mjs",
+    "check:layout-alignment": "node scripts/check-layout-alignment.mjs",
+    "check:asset-paths": "node scripts/check-asset-paths.mjs",
+    "check:browser-qa": "playwright test \"scripts/browser-qa.spec.mjs\" --reporter=line"
   },
   "dependencies": {
     "next": "latest",
@@ -20,6 +23,7 @@
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",

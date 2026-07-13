@@ -20,7 +20,7 @@ export function EditorialPage({ page }: { page: PageContent }) {
           key={section.title}
         >
           <div
-            className={`shell ${section.image ? "split" : "editorial-reading"}`}
+            className={`shell ${section.image ? "split" : "full-copy"}`}
           >
             <div className="editorial-copy">
               {section.eyebrow ? (

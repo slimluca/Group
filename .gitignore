@@ -5,4 +5,6 @@ dist/
 .env*
 !.env.example
 *.log
+.qa-screenshots/
+test-results/
 .DS_Store

@@ -37,7 +37,7 @@ export function AcademyTopicPage({ topic }: { topic: AcademyTopic }) {
         </section>
       ))}
       <section className="section">
-        <div className="shell editorial-reading">
+        <div className="shell full-copy">
           <p className="eyebrow">Related ownership guidance</p>
           <h2>Use this guide with the wider Dog Haven Group platform.</h2>
           <div className="actions">
