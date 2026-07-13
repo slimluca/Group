@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { AnalyticsPreferencesLink } from "@/components/AnalyticsPreferencesLink";
 
 const globalPlatformLinks = [
   { href: "/world-atlas", label: "World Atlas" },
@@ -124,6 +125,7 @@ export function SiteFooter() {
                 {item.label}
               </Link>
             ))}
+            <AnalyticsPreferencesLink />
           </nav>
         </div>
       </div>

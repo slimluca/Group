@@ -740,7 +740,8 @@ export const pages: Record<string, PageContent> = {
         title: "Privacy overview",
         body: [
           "This privacy policy should be reviewed by a qualified legal professional before it is relied on as legal advice. Dog Haven Group may collect information voluntarily submitted through contact links or future forms, along with standard technical information used to operate and improve the website.",
-          "Dog Haven Group should avoid collecting unnecessary personal data. If analytics, email tools, forms, advertising, or third-party services are added, this policy must be updated to describe those services accurately."
+          "Dog Haven Group uses optional Google Analytics only after a visitor chooses to accept analytics. It helps understand how visitors use the website so guides, tools and resources can be improved. Visitors can decline analytics, and they can change the choice later using Analytics preferences in the footer.",
+          "The analytics consent decision is stored locally in the visitor's browser as dog-haven-group-analytics-consent-v1. If analytics is declined, Google Analytics is not loaded by this website. If other email tools, forms, advertising, or third-party services are added, this policy should describe those services accurately."
         ]
       }
     ]
