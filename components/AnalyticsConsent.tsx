@@ -59,29 +59,29 @@ export function AnalyticsConsent({
           className="analytics-consent"
           aria-labelledby="analytics-consent-title"
         >
-          <div>
-            <h2 id="analytics-consent-title">Analytics preferences</h2>
+          <div className="analytics-consent-copy">
+            <h2 id="analytics-consent-title">Optional analytics</h2>
             <p>
-              Dog Haven Group uses optional analytics to understand how visitors
-              use the website and improve its guides, tools and resources.
+              We use optional analytics to improve Dog Haven Group guides and
+              tools.
             </p>
-            <Link href="/privacy-policy">Privacy policy</Link>
           </div>
           <div className="analytics-consent-actions">
             <button
-              className="button"
+              className="analytics-consent-button analytics-consent-accept"
               type="button"
               onClick={() => saveChoice("accepted")}
             >
-              Accept analytics
+              Accept
             </button>
             <button
-              className="button secondary"
+              className="analytics-consent-button analytics-consent-decline"
               type="button"
               onClick={() => saveChoice("declined")}
             >
               Decline
             </button>
+            <Link href="/privacy-policy">Privacy</Link>
           </div>
         </section>
       ) : null}
