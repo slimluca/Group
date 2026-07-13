@@ -176,7 +176,7 @@ export function GlobalPassportPlanner() {
         } else
           queueMicrotask(() => {
             setStorageMessage(
-              "A saved plan uses an unsupported format. It has not been overwritten; start a new plan or clear it when ready.",
+              "A saved plan uses an unsupported format. It has not been overwritten. Start a new plan or clear it when ready.",
             );
             hydrated.current = false;
           });
@@ -188,7 +188,7 @@ export function GlobalPassportPlanner() {
     } catch {
       queueMicrotask(() => {
         setStorageMessage(
-          "Saved planner data could not be read. It has not been silently discarded; browser storage may be unavailable or corrupted.",
+          "Saved planner data could not be read. It has not been silently discarded. Browser storage may be unavailable or corrupted.",
         );
         hydrated.current = false;
       });
@@ -268,7 +268,7 @@ export function GlobalPassportPlanner() {
       `Route: ${routeLabel}`,
       `Date: ${plan.travelDate || "Not selected"}`,
       `Journey: ${plan.journeyType || "Not selected"}`,
-      `Dog: ${plan.dogName || "Name not added"}; ${plan.dogAge} ${plan.dogAgeUnit}; ${plan.dogSize}; ${plan.breed || "breed not added"}; ${plan.dogCount} dog(s)`,
+      `Dog: ${plan.dogName || "Name not added"}, ${plan.dogAge} ${plan.dogAgeUnit}, ${plan.dogSize}, ${plan.breed || "breed not added"}, ${plan.dogCount} dog(s)`,
       `Transport: ${plan.transport || "Not selected"}${plan.carrier ? ` — ${plan.carrier}` : ""}`,
       `Progress: ${progress.percent}% (${progress.completed} completed, ${progress.remaining} remaining)`,
       `Priority tasks: ${categories
@@ -281,7 +281,7 @@ export function GlobalPassportPlanner() {
         .slice(0, 5)
         .map((item) => item.label)
         .join("; ")}`,
-      `Official sources: ${officialSources.map((source) => source.title).join("; ") || "No dedicated collection yet — identify official authorities directly."}`,
+      `Official sources: ${officialSources.map((source) => source.title).join(", ") || "No dedicated collection yet. Identify official authorities directly."}`,
       "Safety notice: This planner does not replace official requirements. It does not issue a pet passport, approve travel, guarantee entry, determine compliance or replace government, veterinary, airline or transport advice.",
     ].join("\n");
   const copySummary = async () => {
@@ -375,7 +375,7 @@ export function GlobalPassportPlanner() {
                   options={[
                     [
                       "great-britain",
-                      "Great Britain — England, Scotland or Wales",
+                      "Great Britain, England, Scotland or Wales",
                     ],
                     ["northern-ireland", "Northern Ireland"],
                     ["not-sure", "Not sure"],
@@ -768,7 +768,7 @@ export function GlobalPassportPlanner() {
           <div className="planner-sources-print">
             <div className="print-brand">
               <Image
-                src="/brand/dog-haven-group-logo.png"
+                src="/brand/dog-haven-group-logo-128.png"
                 alt=""
                 width={72}
                 height={72}

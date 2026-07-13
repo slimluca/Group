@@ -49,7 +49,7 @@ export function SiteFooter() {
             <Link className="brand" href="/">
               <span className="brand-mark footer-mark" aria-hidden="true">
                 <Image
-                  src="/brand/dog-haven-group-logo.png"
+                  src="/brand/dog-haven-group-logo-128.png"
                   alt=""
                   width={48}
                   height={48}

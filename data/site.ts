@@ -3,8 +3,8 @@ export const site = {
   url: "https://doghavengroup.com",
   email: "info@doghavengroup.com",
   description:
-    "Dog Haven Group is the global home of the Dog Haven network, built for serious dog ownership planning across countries, travel routes, costs, learning, tools, and local Dog Haven sites.",
-  logoPath: "/brand/dog-haven-group-logo.png"
+    "Dog Haven Group brings global dog ownership research, travel planning, learning, tools and local Dog Haven country sites together in one practical place.",
+  logoPath: "/brand/dog-haven-group-logo-512.png"
 };
 
 export const navItems = [

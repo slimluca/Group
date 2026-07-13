@@ -20,7 +20,7 @@ export function pageMetadata(title: string, description: string, path = "", imag
       url,
       siteName: site.name,
       type: "website",
-      images: [image ?? { url: site.logoPath, width: 1024, height: 1024, alt: "Dog Haven Group circular logo." }]
+      images: [image ?? { url: site.logoPath, width: 512, height: 512, alt: "Dog Haven Group circular logo." }]
     }
   };
 }

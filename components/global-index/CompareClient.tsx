@@ -125,7 +125,7 @@ export function CompareClient() {
 
       <div className="print-brand">
         <Image
-          src="/brand/dog-haven-group-logo.png"
+          src="/brand/dog-haven-group-logo-128.png"
           alt=""
           width={54}
           height={54}

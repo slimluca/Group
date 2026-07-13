@@ -15,6 +15,8 @@
     "check:interactive-tools": "node scripts/check-interactive-tools.mjs",
     "check:layout-alignment": "node scripts/check-layout-alignment.mjs",
     "check:asset-paths": "node scripts/check-asset-paths.mjs",
+    "check:editorial-quality": "node scripts/check-editorial-quality.mjs",
+    "check:production-seo": "node scripts/check-production-seo.mjs",
     "check:browser-qa": "playwright test \"scripts/browser-qa.spec.mjs\" --reporter=line"
   },
   "dependencies": {

@@ -53,7 +53,7 @@ export function CountryProfile({ country }: { country: IndexCountry }) {
                 <small>
                   {score
                     ? band(score)
-                    : "Provisional profile — overall score not yet calculated"}
+                    : "Provisional profile, overall score not yet calculated"}
                 </small>
               </div>
               <div>
@@ -84,7 +84,7 @@ export function CountryProfile({ country }: { country: IndexCountry }) {
                         <h3>
                           {a.score === null
                             ? "Evidence still being reviewed"
-                            : `${a.score} / 5 — ${a.scoreLabel}`}
+                            : `${a.score} / 5, ${a.scoreLabel}`}
                         </h3>
                       </div>
                       <span

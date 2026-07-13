@@ -18,7 +18,7 @@ export function SiteHeader() {
       <div className="header-inner">
         <Link className="brand" href="/" onClick={() => setOpen(false)}>
           <span className="brand-mark" aria-hidden="true">
-            <Image src="/brand/dog-haven-group-logo.png" alt="" width={54} height={54} priority />
+            <Image src="/brand/dog-haven-group-logo-128.png" alt="" width={54} height={54} priority />
           </span>
           <span className="brand-copy">
             <strong>Dog Haven Group</strong>

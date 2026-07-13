@@ -67,7 +67,7 @@ export const pages: Record<string, PageContent> = {
         title: "What the South African site helps with",
         body: [
           "The local country site can focus on South African ownership situations in a way a global parent site should not flatten. That may include local buying and adoption considerations, puppy planning, safety awareness, seasonal care, travel within the region, and the different expectations of urban, suburban, and more rural dog households.",
-          "Dog Haven Group remains the global layer: it compares ownership patterns across countries, builds planning tools, develops route-guide methodology, and keeps readers oriented when dog ownership touches international travel, relocation, or multi-country decisions. Readers who need local detail should <a href=\"https://doghaven.co.za\">explore Dog Haven South Africa</a>; readers comparing countries should continue through the global sections."
+          "Dog Haven Group remains the global layer. It compares ownership patterns across countries, builds planning tools and keeps readers oriented when dog ownership touches international travel, relocation or multi-country decisions. Readers who need local detail should <a href=\"https://doghaven.co.za\">explore Dog Haven South Africa</a>. Readers comparing countries can continue through the global sections."
         ]
       }
     ]
@@ -93,8 +93,8 @@ export const pages: Record<string, PageContent> = {
       {
         title: "How the gateway should be used",
         body: [
-          "This gateway is a global orientation page that helps readers understand why a local United States resource exists, what questions belong on the local site, and which questions are better handled at the group level. Local details belong on doghaven.us; global comparison, travel planning, and multi-country ownership decisions belong on DogHavenGroup.com.",
-          "If a reader is deciding whether a dog fits their lifestyle, they can start with the <a href=\"/lab/breed-fit-quiz\">Breed Fit Quiz</a>. If they are preparing for costs, the calculator provides planning ranges rather than official prices. If they are relocating, the <a href=\"/global-travel/moving-abroad-with-a-dog\">moving abroad guide</a> explains how to organize the process before checking official sources."
+          "This gateway helps readers understand why a local United States resource exists, what questions belong on the local site and which questions are better handled at the group level. Local details belong on doghaven.us. Global comparison, travel planning and multi-country ownership decisions belong on DogHavenGroup.com.",
+          "If a reader is deciding whether a dog fits their lifestyle, they can start with the <a href=\"/lab/breed-fit-quiz\">Breed Fit Quiz</a>. If they are preparing for costs, the calculator provides planning ranges rather than official prices. If they are relocating, the <a href=\"/global-travel/moving-abroad-with-a-dog\">moving abroad guide</a> explains how to organise the process before checking official sources."
         ]
       }
     ]
@@ -112,7 +112,7 @@ export const pages: Record<string, PageContent> = {
         title: "Italy in the Dog Haven network",
         body: [
           "Italy is a meaningful country gateway because dog ownership often intersects with compact city living, apartment routines, regional travel, public-space etiquette, and the practical work of planning around transport and accommodation. Dog Haven Italy can speak to those local realities while Dog Haven Group keeps the wider international structure coherent.",
-          "For readers comparing Italy with South Africa, the United States, or a future Dog Haven country, this page provides context rather than pretending to be a complete local guide. Global readers can use the <a href=\"/global-travel/route-guides\">Route Guides hub</a>, <a href=\"/downloads\">Download Library</a>, and <a href=\"/world-atlas/dog-ownership-costs-by-country\">costs by country guide</a> before moving into country-specific material."
+          "For readers comparing Italy with South Africa, the United States or a future Dog Haven country, this page provides context rather than pretending to be a complete local guide. Global readers can use the <a href=\"/global-travel/route-guides\">Route Guides hub</a>, <a href=\"/downloads\">Download Library</a> and <a href=\"/world-atlas/dog-ownership-costs-by-country\">costs by country guide</a> before moving into country-specific material."
         ],
         image: { src: "/images/doghavengroup/countries/italy-apartment-and-travel-dogs.svg", alt: "Dog ownership in Italy represented through apartment living, trains, streets, and travel planning." },
         links: [{ href: "https://doghaven.it", label: "Read Dog Haven Italy resources", text: "Open the local Dog Haven Italy site for country-specific resources." }]
@@ -121,7 +121,7 @@ export const pages: Record<string, PageContent> = {
         title: "Local insight with global context",
         body: [
           "A global dog ownership platform should not erase local nuance. Italy may raise questions about urban walking routines, rentals, holiday travel, veterinary planning, and how a dog fits into a household that may move between cities or regions. Those are better served through a dedicated Italian site than by forcing every reader through a single global article.",
-          "Dog Haven Group supports that local work by creating shared planning tools, honest methodology, and a consistent editorial standard across the network. Readers can move between the Italian site and group-level guidance without confusion about which source is designed for which job."
+          "Dog Haven Group supports that local work with shared planning tools, clear methodology and a consistent editorial standard across the network. Readers can move between the Italian site and group-level guidance without confusion about which source fits the question."
         ]
       }
     ]
@@ -139,7 +139,7 @@ export const pages: Record<string, PageContent> = {
         title: "Dog ownership by country",
         body: [
           "The World Atlas is Dog Haven Group's long-term structure for understanding how dog ownership changes across borders. It will help readers compare housing expectations, access to public space, climate considerations, transport friction, veterinary planning, cost pressure, and the everyday rhythm of keeping a dog healthy and safe in different countries.",
-          "Rather than inventing official rankings before the evidence base is ready, Dog Haven Group begins with transparent methodology. The <a href=\"/world-atlas/global-dog-ownership-index\">Global Dog Ownership Index</a> explains how future scoring will be organized, while the <a href=\"/world-atlas/dog-ownership-costs-by-country\">costs by country guide</a> helps readers think in planning ranges."
+          "Rather than inventing official rankings before the evidence is ready, Dog Haven Group begins with clear methodology. The <a href=\"/world-atlas/global-dog-ownership-index\">Global Dog Ownership Index</a> explains how future scoring will be organised, while the <a href=\"/world-atlas/dog-ownership-costs-by-country\">costs by country guide</a> helps readers think in planning ranges."
         ],
         image: { src: "/images/doghavengroup/countries/global-country-comparison.svg", alt: "Country comparison panels for dog ownership costs, laws, public space, and climate." }
       },
@@ -187,30 +187,30 @@ export const pages: Record<string, PageContent> = {
     slug: "world-atlas/global-dog-ownership-index",
     title: "Global Dog Ownership Index Methodology | Dog Haven Group",
     description:
-      "Dog Haven Group's Global Dog Ownership Index methodology explains future scoring categories without fake rankings, statistics, or unsupported claims.",
+      "Dog Haven Group's Global Dog Ownership Index methodology explains future scoring categories with careful evidence, clear limits and no unsupported rankings.",
     eyebrow: "Index methodology",
-    hero: "The Global Dog Ownership Index is a transparent framework for future country comparison, not a fake league table.",
+    hero: "The Global Dog Ownership Index is a careful framework for country comparison, not a league table.",
     heroImage: { src: "/images/doghavengroup/countries/global-ownership-index-framework.svg", alt: "A refined scoring framework for future Dog Haven global dog ownership comparisons." },
     sections: [
       {
         title: "Why the index starts with methodology",
         body: [
           "Dog ownership quality cannot be measured responsibly by one headline score. A country might be affordable but difficult for renters, welcoming in public spaces but challenging for heat-sensitive dogs, or excellent for families while complicated for international relocation. Dog Haven Group is building the index as a framework first so that future scoring can be explained, challenged, improved, and updated.",
-          "The current framework does not claim official rankings. It explains the categories Dog Haven Group would evaluate only when reliable country research, official-source review, and local editorial validation can support a responsible public index."
+          "The current framework does not claim official rankings. It explains the categories Dog Haven Group would evaluate only when reliable country research, official-source review and local editorial checks can support a responsible public index."
         ],
         image: { src: "/images/doghavengroup/lab/index-score-dials.svg", alt: "Index score dials for dog friendliness, cost, climate, travel, and public access." }
       },
       {
         title: "Scoring categories",
         body: [
-          "The index framework includes dog friendliness, monthly ownership cost level, apartment suitability, travel difficulty, climate risk, public space access, first-time owner suitability, family dog suitability, paperwork complexity, and vet access planning. Each category is designed to encourage better questions rather than simplistic winners and losers.",
+          "The index framework includes dog friendliness, monthly ownership cost level, apartment suitability, travel difficulty, climate risk, public space access, first-time owner suitability, family dog suitability, paperwork complexity and vet access planning. Each category encourages better questions rather than simplistic winners and losers.",
           "Future index releases should explain sources, assumptions, uncertainty, and update cycles. Where laws, import rules, or health requirements are involved, readers must be reminded to check current official government and veterinary sources."
         ]
       },
       {
         title: "What the index will not do",
         body: [
-          "The index will not invent exact rankings before the evidence supports them, and it will not treat a whole country as identical from one city to the next. Dog ownership conditions can change between apartment-heavy capitals, coastal towns, rural areas, rental markets, and high-cost urban centers.",
+          "The index will not invent exact rankings before the evidence supports them, and it will not treat a whole country as identical from one city to the next. Dog ownership conditions can change between apartment-heavy capitals, coastal towns, rural areas, rental markets and high-cost urban centres.",
           "When country expansion is ready, index pages should link back to the <a href=\"/countries\">Country Network</a>, the <a href=\"/world-atlas/dog-ownership-costs-by-country\">cost planning guide</a>, and the <a href=\"/global-travel\">Global Travel</a> section so readers can move from comparison into practical planning."
         ]
       }
@@ -258,7 +258,7 @@ export const pages: Record<string, PageContent> = {
       {
         title: "Why city, housing, and lifestyle change the number",
         body: [
-          "Two owners in the same country can experience very different costs. A small dog in a walkable apartment neighborhood, a large dog needing professional grooming, a puppy needing training, and a senior dog needing regular veterinary support all create different budgets. Housing rules, pet deposits, insurance availability, food quality, transport habits, and access to trusted services can matter as much as national averages.",
+          "Two owners in the same country can experience very different costs. A small dog in a walkable apartment neighbourhood, a large dog needing professional grooming, a puppy needing training and a senior dog needing regular veterinary support all create different budgets. Housing rules, pet deposits, insurance availability, food quality, transport habits and access to trusted services can matter as much as national averages.",
           "Use this guide alongside the <a href=\"/lab/global-dog-cost-calculator\">Global Dog Cost Calculator</a>, the <a href=\"/downloads/global-dog-owner-starter-guide\">starter guide PDF</a>, and country gateways such as <a href=\"/south-africa\">South Africa</a>, <a href=\"/united-states\">United States</a>, and <a href=\"/italy\">Italy</a>. Treat every number as a planning prompt until you verify local providers and current conditions."
         ]
       }
@@ -294,7 +294,7 @@ export const pages: Record<string, PageContent> = {
         body: [
           "Keep one travel file for the dog rather than scattering information across messages and browser tabs. It can contain identity and microchip details, vaccination records, veterinary appointments, document issue and expiry windows, government source links, airline contacts, crate measurements, accommodation confirmations, arrival transport, emergency contacts, and notes about the dog’s normal food and routine. Mark which items are confirmed, which are awaiting action, and which must be checked again near departure.",
           "The file should distinguish original documents, copies, and information stored securely for backup. It should also include questions rather than only answers: who handles the dog at each handover, what happens during a delay, which number is answered outside office hours, and how will the dog travel from the arrival point to the first accommodation? Use the <a href=\"/lab/dog-travel-checklist\">Dog Travel Checklist</a> to create a tailored starting list and the <a href=\"/downloads/global-dog-owner-starter-guide\">Global Dog Owner Starter Guide</a> for wider household planning.",
-          "A travel file improves organisation; it does not approve a journey. Government authorities, veterinarians, airlines, ferries, rail operators, and other transport providers remain the sources for current requirements and professional decisions."
+          "A travel file improves organisation, but it does not approve a journey. Government authorities, veterinarians, airlines, ferries, rail operators and other transport providers remain the sources for current requirements and professional decisions."
         ]
       },
       {
@@ -365,7 +365,7 @@ export const pages: Record<string, PageContent> = {
         title: "Rebuild daily life after arrival",
         body: [
           "Arrival is the start of another planning phase. Confirm identification and contact details, establish a secure resting area, locate suitable walking routes, protect access to familiar food where possible, and keep early days manageable. Check housing boundaries and local expectations before allowing off-lead activity, using shared spaces, or assuming transport access.",
-          "Identify a local veterinary practice and understand how emergency care is accessed, but verify services directly. Watch for changes in appetite, elimination, sleep, movement, breathing, or behaviour and seek veterinary guidance when concerned. The goal is not to force an instant normal routine; it is to create safety and consistency while the dog and household adjust."
+          "Identify a local veterinary practice and understand how emergency care is accessed, but verify services directly. Watch for changes in appetite, elimination, sleep, movement, breathing or behaviour and seek veterinary guidance when concerned. The goal is to create safety and consistency while the dog and household adjust, not to force an instant normal routine."
         ]
       }
     ]
@@ -424,14 +424,14 @@ export const pages: Record<string, PageContent> = {
       {
         title: "How to interpret a Lab result",
         body: [
-          "A calculator output is an estimate built from the inputs and assumptions shown on the page. A quiz result organises answers into a useful category; it does not prove that one breed, puppy, or ownership choice is right. A checklist records preparation; it cannot confirm that a journey meets current legal, carrier, or veterinary requirements.",
+          "A calculator output is an estimate built from the inputs and assumptions shown on the page. A quiz result organises answers into a useful category, but it does not prove that one breed, puppy or ownership choice is right. A checklist records preparation, but it cannot confirm that a journey meets current legal, carrier or veterinary requirements.",
           "Use the explanation beside the result to decide what to verify next. That may mean checking local prices, reading an <a href=\"/academy\">Academy guide</a>, speaking with a veterinarian or qualified trainer, confirming current official travel rules, or revisiting household constraints that a short tool cannot measure."
         ]
       },
       {
         title: "Keep tool results connected to real planning",
         body: [
-          "Save or note the assumptions behind a result so it can be revisited when circumstances change. A cost range may need local quotes; a puppy-readiness score may change when support is arranged; a name shortlist becomes more useful after meeting the dog; and a travel checklist should be rechecked as official information and bookings change.",
+          "Save or note the assumptions behind a result so it can be revisited when circumstances change. A cost range may need local quotes, a puppy-readiness score may change when support is arranged, a name shortlist becomes more useful after meeting the dog and a travel checklist should be rechecked as official information and bookings change.",
           "Pair travel outputs with the <a href=\"/global-travel\">Global Travel</a> hub and the <a href=\"/global-travel/moving-abroad-with-a-dog\">moving abroad guide</a>. For wider household preparation, use the <a href=\"/downloads/global-dog-owner-starter-guide\">starter guide PDF</a> as a printable working document."
         ]
       }
@@ -482,7 +482,7 @@ export const pages: Record<string, PageContent> = {
       {
         title: "Start with the life the dog will actually live",
         body: [
-          "A good first dog decision begins with daily routine, housing, budget, energy, time, family structure, travel plans, and tolerance for mess, training, noise, and unpredictability. The right question is not which dog looks appealing online; it is which kind of dog can thrive in the life you can responsibly provide for the next decade or more.",
+          "A good first dog decision begins with daily routine, housing, budget, energy, time, family structure, travel plans and tolerance for mess, training, noise and unpredictability. The right question is not which dog looks appealing online. It is which kind of dog can thrive in the life you can responsibly provide for the next decade or more.",
           "Before choosing a puppy or adult dog, use the <a href=\"/lab/breed-fit-quiz\">Breed Fit Quiz</a> to think in lifestyle categories, then check the <a href=\"/lab/global-dog-cost-calculator\">Global Dog Cost Calculator</a> to understand planning ranges. If your life may involve relocation, read <a href=\"/global-travel/moving-abroad-with-a-dog\">moving abroad with a dog</a> before making a commitment."
         ],
         image: { src: "/images/doghavengroup/home/dog-home-routine-planning.svg", alt: "A calm home routine planning scene for a new dog owner." }
@@ -490,7 +490,7 @@ export const pages: Record<string, PageContent> = {
       {
         title: "Prepare the home, budget, and support system",
         body: [
-          "First-time owners should plan sleeping areas, toilet routines, walking routes, enrichment, safe storage, basic equipment, veterinary registration, emergency funds, training help, and household roles before the dog arrives. Puppies need more supervision and structure; adult dogs may need decompression, patience, and careful routine building.",
+          "First-time owners should plan sleeping areas, toilet routines, walking routes, enrichment, safe storage, basic equipment, veterinary registration, emergency funds, training help and household roles before the dog arrives. Puppies need more supervision and structure. Adult dogs may need decompression, patience and careful routine building.",
           "Dog Haven Group Academy connects puppy planning, apartment dog ownership, family routines, senior dog care, behaviour foundations, safety, and nutrition principles. The live <a href=\"/downloads/global-dog-owner-starter-guide\">Global Dog Owner Starter Guide</a> provides a branded worksheet-style resource for organising this first stage."
         ],
         image: { src: "/images/doghavengroup/downloads/puppy-first-month-planner.svg", alt: "A puppy first month planner with feeding, sleeping, vet, and training notes." }
@@ -550,7 +550,7 @@ export const pages: Record<string, PageContent> = {
     description:
       "Download free dog ownership planners, PDFs, checklists, worksheets, travel resources, puppy planning guides, and dog cost planning workbooks.",
     eyebrow: "Download Library",
-    hero: "Free branded planners and worksheets for dog owners who want decisions to feel organized.",
+    hero: "Free branded planners and worksheets for dog owners who want decisions to feel organised.",
     heroImage: { src: "/images/doghavengroup/downloads/download-library-premium-guides.svg", alt: "A premium library of Dog Haven Group branded dog owner guides, planners, and checklists." },
     sections: [
       {
@@ -596,13 +596,13 @@ export const pages: Record<string, PageContent> = {
     description:
       "Explore the Dog Haven Group platform map across World Atlas, Global Travel, Lab tools, Academy guides, Journal insights, downloads, and countries.",
     eyebrow: "Platform map",
-    hero: "Dog Haven Group Universe is the internal map of a global dog ownership platform built to grow carefully.",
-    heroImage: { src: "/images/doghavengroup/home/doghaven-universe-map.svg", alt: "A premium internal map of the Dog Haven Group Universe platform sections." },
+    hero: "Dog Haven Group Universe shows how the global ownership, travel, tools, learning and country sections fit together.",
+    heroImage: { src: "/images/doghavengroup/home/doghaven-universe-map.svg", alt: "A premium map of the Dog Haven Group platform sections." },
     sections: [
       {
         title: "How the platform fits together",
         body: [
-          "The Dog Haven Group Universe includes the World Atlas, Global Travel, Route Guides, Lab, Academy, Journal, Download Library, and Country Network. Each section has a role. The Atlas compares countries, Travel organises movement, Lab turns decisions into tools, Academy teaches, Journal publishes researched context, and the Country Network routes readers into local sites.",
+          "The Dog Haven Group Universe includes the World Atlas, Global Travel, Route Guides, Lab, Academy, Journal, Download Library and Country Network. Each section has a role. The Atlas compares countries, Travel organises movement, Lab turns decisions into tools, Academy teaches, Journal publishes researched context and the Country Network routes readers into local sites.",
           "A serious mother site needs this structure because dog ownership is no longer only local for many families. People move countries, compare costs, travel with dogs, rent apartments, plan around climates, and look for trustworthy education that does not collapse into either vague inspiration or unsupported claims."
         ],
         image: { src: "/images/doghavengroup/home/platform-section-map.svg", alt: "Dog Haven Group platform sections shown as connected global ownership systems." }
@@ -610,7 +610,7 @@ export const pages: Record<string, PageContent> = {
       {
         title: "Global research and local editorial responsibility",
         body: [
-          "The group platform can compare broad themes—housing pressure, climate, transport, public access, veterinary planning, costs, and travel friction—but local country sites must explain how those themes are experienced in practice. A score or global summary cannot replace local detail, and local material should not be copied between countries where rules, services, culture, and everyday routines differ.",
+          "Dog Haven Group can compare broad themes such as housing pressure, climate, transport, public access, veterinary planning, costs and travel friction. Local country sites explain how those themes are experienced in practice. A score or global summary cannot replace local detail, and local material should not be copied between countries where rules, services, culture and everyday routines differ.",
           "Research work should show its assumptions and limits. Cost tools use planning ranges rather than official prices. Travel guidance separates organisation from legal approval. Academy material is educational and does not diagnose individual dogs. When a decision depends on current law, transport policy, or health, the reader should be directed to the relevant official source or qualified professional.",
           "The <a href=\"/research-methodology\">research methodology</a> explains this approach, while the <a href=\"/editorial-policy\">editorial policy</a> sets standards for clarity, originality, corrections, and responsible uncertainty."
         ]
@@ -619,7 +619,7 @@ export const pages: Record<string, PageContent> = {
         title: "Expansion without duplicated country content",
         body: [
           "A new country site needs a distinct audience and enough local knowledge to answer real questions. The group site should not compete with it by reproducing local articles, and the country site should not mirror global pages merely to look complete. Instead, the two layers should link to one another where the reader’s question changes from global comparison to local action.",
-          "That separation keeps the network useful as it grows. Someone comparing countries can stay in the <a href=\"/world-atlas\">World Atlas</a>; someone preparing a cross-border move can work through <a href=\"/global-travel\">Global Travel</a>; and someone who needs local ownership context can choose an established gateway through the <a href=\"/countries\">country network</a>."
+          "That separation keeps the network useful as it grows. Someone comparing countries can stay in the <a href=\"/world-atlas\">World Atlas</a>. Someone preparing a cross-border move can work through <a href=\"/global-travel\">Global Travel</a>. Someone who needs local ownership context can choose an established gateway through the <a href=\"/countries\">country network</a>."
         ]
       }
     ]
@@ -628,7 +628,7 @@ export const pages: Record<string, PageContent> = {
     slug: "about",
     title: "About Dog Haven Group | Global Dog Ownership Platform",
     description:
-      "Learn about Dog Haven Group, the premium global parent platform for the Dog Haven country network, ownership intelligence, travel planning, tools, Academy, Journal, and downloads.",
+      "Learn about Dog Haven Group, the global parent site for the Dog Haven country network, ownership research, travel planning, tools, Academy, Journal and downloads.",
     eyebrow: "About",
     hero: "Dog Haven Group exists to make responsible dog ownership easier to plan across countries, homes, and life stages.",
     heroImage: { src: "/images/doghavengroup/home/global-dog-ownership-hero.svg", alt: "Dog Haven Group global dog ownership platform brand scene." },
@@ -637,7 +637,7 @@ export const pages: Record<string, PageContent> = {
         title: "A parent brand with a practical mission",
         body: [
           "Dog Haven Group is the global home of the Dog Haven network. It connects local country sites with broader planning resources for dog ownership, international travel, learning, cost awareness, tools, and responsible editorial guidance.",
-          "The group site is built to be serious, scalable, and useful. It avoids fake authority, fake statistics, and copied country-site content. Its job is to give readers a polished global framework and then route them to local Dog Haven sites when local context matters."
+          "Dog Haven Group brings international research, planning tools and practical guidance together in one place. When a question depends on local laws, services or everyday conditions, readers are directed to the relevant Dog Haven country website."
         ]
       },
       {
@@ -668,7 +668,7 @@ export const pages: Record<string, PageContent> = {
         title: "How we approach content",
         body: [
           "Dog Haven Group publishes educational dog ownership content, planning frameworks, tools, and editorial resources. We do not present general content as veterinary, legal, financial, or government advice. Where rules, health matters, travel requirements, or legal obligations are involved, readers are reminded to consult current official sources and qualified professionals.",
-          "Content should be original to Dog Haven Group, distinct from local country sites, and written for real reader value rather than search-engine volume. We avoid fake reviews, fake authorship claims, fake statistics, and thin doorway pages."
+          "Content should be original to Dog Haven Group, distinct from local country sites and written for real reader value rather than search-engine volume. We do not publish invented reviews, unsupported authorship claims, invented statistics or thin doorway pages."
         ]
       },
       {
@@ -698,7 +698,7 @@ export const pages: Record<string, PageContent> = {
       {
         title: "How comparison categories should be interpreted",
         body: [
-          "Country comparison is multi-dimensional. Housing access, public-space expectations, climate, transport, veterinary access, cost pressure, travel connections, and the needs of different households cannot be collapsed into one universal definition of a good place to own a dog. A category can reveal a question to investigate; it cannot make the decision for every dog or family.",
+          "Country comparison is multi-dimensional. Housing access, public-space expectations, climate, transport, veterinary access, cost pressure, travel connections and the needs of different households cannot be collapsed into one universal definition of a good place to own a dog. A category can reveal a question to investigate, but it cannot make the decision for every dog or family.",
           "Any future index should publish its category definitions, weighting choices, source dates, geographic limitations, and known gaps. It should also distinguish national information from city-level reality, because conditions can vary significantly inside one country."
         ]
       },
@@ -739,7 +739,7 @@ export const pages: Record<string, PageContent> = {
       {
         title: "Privacy overview",
         body: [
-          "This privacy policy is a Phase 1 website policy and should be reviewed by a qualified legal professional before final deployment. Dog Haven Group may collect information voluntarily submitted through contact links or future forms, along with standard technical information used to operate and improve the website.",
+          "This privacy policy should be reviewed by a qualified legal professional before it is relied on as legal advice. Dog Haven Group may collect information voluntarily submitted through contact links or future forms, along with standard technical information used to operate and improve the website.",
           "Dog Haven Group should avoid collecting unnecessary personal data. If analytics, email tools, forms, advertising, or third-party services are added, this policy must be updated to describe those services accurately."
         ]
       }
@@ -756,7 +756,7 @@ export const pages: Record<string, PageContent> = {
       {
         title: "Website terms",
         body: [
-          "These terms are a Phase 1 website draft and should be reviewed by a qualified legal professional before final deployment. Dog Haven Group content is provided for general educational and planning purposes only. It is not veterinary, legal, financial, transport, or government advice.",
+          "These terms should be reviewed by a qualified legal professional before they are relied on as legal advice. Dog Haven Group content is provided for general educational and planning purposes only. It is not veterinary, legal, financial, transport or government advice.",
           "Users are responsible for checking current official sources, qualified professionals, and local requirements before making decisions about dog health, ownership obligations, travel, relocation, or spending."
         ]
       }
@@ -791,7 +791,7 @@ export const journalArticles = [
       "A launch essay explaining Dog Haven Group as the parent platform for global dog ownership planning, country sites, travel guidance, learning, tools, and downloadable resources.",
     body: [
       "Dog Haven Group begins with a simple but serious idea: dog ownership is local in the details, but increasingly global in the decisions. People compare countries, move with dogs, travel internationally, rent apartments, prepare for puppies, budget for care, and look for advice that respects both practical reality and emotional commitment.",
-      "The group site is designed as the mother platform for the Dog Haven network. Dog Haven South Africa, Dog Haven USA, and Dog Haven Italy can serve local audiences with local context, while DogHavenGroup.com builds the global framework around ownership intelligence, travel planning, tools, Academy guides, Journal insights, and branded downloads.",
+      "The group site is the mother site for the Dog Haven network. Dog Haven South Africa, Dog Haven USA and Dog Haven Italy can serve local audiences with local context, while DogHavenGroup.com builds the global framework around ownership research, travel planning, tools, Academy guides, Journal insight and branded downloads.",
       "The platform begins with a clear structure, editorial standard, country gateways, interactive tools, and trust pages. Growth should be careful rather than noisy: useful country expansion, better data, practical downloads, responsible route guidance, and deeper Academy resources."
     ]
   },
@@ -805,7 +805,7 @@ export const journalArticles = [
     body: [
       "The Dog Haven network is built to grow, but growth should not mean creating shallow pages for every country name. A useful country site needs local editorial purpose, practical ownership context, and a clear relationship to the global parent platform.",
       "Potential countries such as the United Kingdom, Australia, Canada, New Zealand, Ireland, Germany, France, and Spain belong in the network only when Dog Haven can provide meaningful guidance for local dog owners and connect that guidance to global planning resources.",
-      "Dog Haven Group will remain the framework layer. It can compare countries, develop methodology, organize travel planning, host tools, and publish shared learning resources. Country sites can then focus on the local realities that matter most to readers in that market."
+      "Dog Haven Group will remain the comparison and planning layer. It can compare countries, develop methodology, organise travel planning, host tools and publish shared learning resources. Country sites can then focus on the local realities that matter most to readers in that market."
     ]
   },
   {
@@ -817,7 +817,7 @@ export const journalArticles = [
       "A practical editorial piece explaining why dog travel content should focus on preparation structure, source reminders, and calm decision-making.",
     body: [
       "International dog travel is one of the clearest reasons Dog Haven Group needs to exist. A dog cannot be packed into a relocation plan as an afterthought. Documents, microchip checks, rabies timing, airline policies, route decisions, housing, arrival routines, and emergency planning all need attention.",
-      "The rules can change, and online anecdotes are often out of date. Dog Haven Group travel content should help owners organize their thinking while reminding them to check current official government, airline, and veterinary sources before acting.",
+      "The rules can change, and online anecdotes are often out of date. Dog Haven Group travel content should help owners organise their thinking while reminding them to check current official government, airline and veterinary sources before acting.",
       "The Global Travel hub, Moving Abroad guide, Route Guides, Dog Travel Checklist, and printable starter guide work together. They give dog owners a structured planning pathway without pretending that a general website can replace professional or official advice."
     ]
   }

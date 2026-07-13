@@ -63,7 +63,7 @@ export default function Page() {
       {jsonLd({
         "@context": "https://schema.org",
         "@type": "Dataset",
-        name: "Dog Haven Global Dog Ownership Index — Founding Research Edition",
+        name: "Dog Haven Global Dog Ownership Index",
         description,
         creator: { "@type": "Organization", name: "Dog Haven Group" },
         publisher: { "@type": "Organization", name: "Dog Haven Group" },

@@ -78,6 +78,19 @@ test("site-wide width, asset, responsive, and interaction QA", async ({ page }) 
   await fs.mkdir(outDir, { recursive: true });
   const failures = [];
   const checked = [];
+  const consoleErrors = [];
+  const badResponses = [];
+
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
+  page.on("response", (response) => {
+    const status = response.status();
+    const url = response.url();
+    if ((status === 402 || status === 404) && !url.includes("__nextjs_original-stack-frames")) {
+      badResponses.push(`${status} ${url}`);
+    }
+  });
 
   for (const width of viewports) {
     await page.setViewportSize({ width, height: 950 });
@@ -101,17 +114,21 @@ test("site-wide width, asset, responsive, and interaction QA", async ({ page }) 
         const brokenImages = [...document.images]
           .filter((img) => img.currentSrc && img.complete && img.naturalWidth === 0)
           .map((img) => img.currentSrc || img.getAttribute("src"));
+        const transformedImages = [...document.images]
+          .map((img) => img.currentSrc || img.getAttribute("src") || "")
+          .filter((src) => src.includes("/_next/image"));
         const clipped = [...document.querySelectorAll("button, a, input, select, textarea")]
           .filter((el) => {
             const rect = el.getBoundingClientRect();
             return rect.width > 0 && (rect.right > doc.clientWidth + 1 || rect.left < -1);
           })
           .map((el) => el.textContent?.trim() || el.getAttribute("aria-label") || el.tagName);
-        return { overflow, brokenImages, clipped };
+        return { overflow, brokenImages, transformedImages, clipped };
       });
       checked.push(`${route}@${width}`);
       if (result.overflow > 1) failures.push(`${route}@${width}: horizontal overflow ${result.overflow}px`);
       if (result.brokenImages.length) failures.push(`${route}@${width}: broken images ${result.brokenImages.join(", ")}`);
+      if (result.transformedImages.length) failures.push(`${route}@${width}: images still use /_next/image ${result.transformedImages.join(", ")}`);
       if (result.clipped.length) failures.push(`${route}@${width}: clipped controls ${result.clipped.join(", ")}`);
     }
   }
@@ -160,11 +177,20 @@ test("site-wide width, asset, responsive, and interaction QA", async ({ page }) 
     }
   }
 
+  if (consoleErrors.length) {
+    failures.push(`browser console errors: ${[...new Set(consoleErrors)].slice(0, 8).join(" | ")}`);
+  }
+  if (badResponses.length) {
+    failures.push(`bad 402/404 responses: ${[...new Set(badResponses)].slice(0, 12).join(" | ")}`);
+  }
+
   const summary = {
     checkedRoutes: routes.length,
     checkedViewportRuns: checked.length,
     widths: viewports,
     screenshots: screenshots.map(([, , file]) => path.join(outDir, file)),
+    consoleErrorCount: consoleErrors.length,
+    badResponseCount: badResponses.length,
     academy,
     failures,
   };
