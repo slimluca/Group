@@ -160,6 +160,26 @@ function taskId(stageTitle: string, task: string) {
   return `${stageTitle}:${task}`;
 }
 
+function progressFor(completedCount: number, totalCount: number) {
+  const total = Math.max(0, totalCount);
+  const completed = Math.min(total, Math.max(0, completedCount));
+  const percent = total ? Math.min(100, Math.max(0, Math.round((completed / total) * 100))) : 0;
+  return {
+    completed,
+    total,
+    remaining: total - completed,
+    percent,
+    label: `${completed} of ${total} tasks complete · ${percent}%`
+  };
+}
+
+function completionMessage(progress: ReturnType<typeof progressFor>) {
+  if (progress.total === 0) return "No timeline tasks are available.";
+  if (progress.completed === 0) return "Start by choosing a timeframe and checking the tasks you have already handled.";
+  if (progress.completed === progress.total) return "All timeline tasks are checked. Reconfirm current official and carrier sources before travel.";
+  return "Timeline planning is in progress. Keep source checks, veterinary questions and transport decisions tied to the actual route.";
+}
+
 export function RelocationTimelineTool() {
   const [timeframe, setTimeframe] = useState<Timeframe>("undecided");
   const [checked, setChecked] = useState<string[]>([]);
@@ -169,8 +189,9 @@ export function RelocationTimelineTool() {
 
   const activeTimeframe = timeframeOptions.find((option) => option.value === timeframe)!;
   const allTasks = useMemo(() => baseStages.flatMap((stage) => stage.tasks.map((task) => taskId(stage.title, task))), []);
-  const completed = allTasks.filter((id) => checked.includes(id)).length;
-  const percent = allTasks.length ? Math.round((completed / allTasks.length) * 100) : 0;
+  const validChecked = useMemo(() => checked.filter((id) => allTasks.includes(id)), [allTasks, checked]);
+  const progress = progressFor(validChecked.length, allTasks.length);
+  const message = completionMessage(progress);
 
   useEffect(() => {
     try {
@@ -271,15 +292,13 @@ export function RelocationTimelineTool() {
           <p>{activeTimeframe.summary}</p>
         </section>
         <section className="planner-checklist">
-          <div className="checklist-overall">
+          <div className="checklist-overall relocation-progress-summary" aria-live="polite">
             <div>
-              <strong>{percent}% of timeline tasks checked</strong>
-              <span>
-                {completed} completed, {allTasks.length - completed} remaining
-              </span>
+              <strong>{progress.label}</strong>
+              <span>{message}</span>
             </div>
-            <progress max="100" value={percent}>
-              {percent}%
+            <progress max="100" value={progress.percent}>
+              {progress.percent}%
             </progress>
           </div>
           <div className="planner-timeline">
@@ -295,7 +314,7 @@ export function RelocationTimelineTool() {
                     return (
                       <label className="checklist-item" key={id}>
                         <span>{task}</span>
-                        <input type="checkbox" checked={checked.includes(id)} onChange={() => toggle(id)} />
+                        <input type="checkbox" checked={validChecked.includes(id)} onChange={() => toggle(id)} />
                       </label>
                     );
                   })}
@@ -303,6 +322,14 @@ export function RelocationTimelineTool() {
               </article>
             ))}
           </div>
+          <section className="relocation-completion-summary" aria-live="polite">
+            <p className="eyebrow">Timeline progress</p>
+            <h3>{progress.label}</h3>
+            <p>
+              {progress.completed} completed, {progress.total} total, {progress.percent}% complete.
+            </p>
+            <p>{message}</p>
+          </section>
         </section>
       </div>
       <p className="planner-privacy">

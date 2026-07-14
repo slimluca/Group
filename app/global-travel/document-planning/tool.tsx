@@ -109,6 +109,26 @@ function isSavedState(value: unknown): value is SavedState {
   );
 }
 
+function progressFor(completedCount: number, totalCount: number) {
+  const total = Math.max(0, totalCount);
+  const completed = Math.min(total, Math.max(0, completedCount));
+  const percent = total ? Math.min(100, Math.max(0, Math.round((completed / total) * 100))) : 0;
+  return {
+    completed,
+    total,
+    remaining: total - completed,
+    percent,
+    label: `${completed} of ${total} items complete · ${percent}%`
+  };
+}
+
+function completionMessage(progress: ReturnType<typeof progressFor>) {
+  if (progress.total === 0) return "No planning items are available.";
+  if (progress.completed === 0) return "Start by checking the document categories that apply to your route research.";
+  if (progress.completed === progress.total) return "All document planning items are checked. Reconfirm current requirements before booking and before departure.";
+  return "Document planning is in progress. Keep checking official sources and carrier requirements for the exact route.";
+}
+
 export function DocumentPlanningTool() {
   const [checked, setChecked] = useState<string[]>([]);
   const [notes, setNotes] = useState<Record<string, string>>({});
@@ -125,8 +145,9 @@ export function DocumentPlanningTool() {
     });
     return [...map.entries()];
   }, []);
-  const completed = documentItems.filter((item) => checked.includes(item.id)).length;
-  const percent = Math.round((completed / documentItems.length) * 100);
+  const validChecked = useMemo(() => checked.filter((id) => documentItems.some((item) => item.id === id)), [checked]);
+  const progress = progressFor(validChecked.length, documentItems.length);
+  const message = completionMessage(progress);
 
   useEffect(() => {
     try {
@@ -193,7 +214,9 @@ export function DocumentPlanningTool() {
   function summaryText() {
     const lines = [
       "Dog Haven Group Document Planning Checklist",
-      `Progress: ${completed}/${documentItems.length} categories checked`,
+      `Progress: ${progress.label}`,
+      `Completed items: ${progress.completed}`,
+      `Remaining items: ${progress.remaining}`,
       "Important: Required documents vary by route. Confirm current requirements with official authorities, airlines, transport providers and appropriate veterinary professionals.",
       ""
     ];
@@ -201,7 +224,7 @@ export function DocumentPlanningTool() {
       lines.push(category);
       items.forEach((item) => {
         const note = notes[item.id]?.trim();
-        lines.push(`[${checked.includes(item.id) ? "x" : " "}] ${item.title}`);
+        lines.push(`[${validChecked.includes(item.id) ? "x" : " "}] ${item.title}`);
         if (note) lines.push(`Note: ${note}`);
       });
       lines.push("");
@@ -246,15 +269,13 @@ export function DocumentPlanningTool() {
         </button>
       </div>
       <div className="planner-stage">
-        <div className="checklist-overall">
+        <div className="checklist-overall relocation-progress-summary" aria-live="polite">
           <div>
-            <strong>{percent}% of document categories checked</strong>
-            <span>
-              {completed} checked, {documentItems.length - completed} remaining
-            </span>
+            <strong>{progress.label}</strong>
+            <span>{message}</span>
           </div>
-          <progress max="100" value={percent}>
-            {percent}%
+          <progress max="100" value={progress.percent}>
+            {progress.percent}%
           </progress>
         </div>
         <div className="document-category-list">
@@ -268,7 +289,7 @@ export function DocumentPlanningTool() {
                       <strong>{item.title}</strong>
                       <small>{item.prompt}</small>
                     </span>
-                    <input type="checkbox" checked={checked.includes(item.id)} onChange={() => toggle(item.id)} />
+                    <input type="checkbox" checked={validChecked.includes(item.id)} onChange={() => toggle(item.id)} />
                   </label>
                   <label className="field document-note">
                     <span>Private note for this category</span>
@@ -298,6 +319,14 @@ export function DocumentPlanningTool() {
         {manualSummary ? (
           <textarea className="manual-summary" readOnly value={manualSummary} aria-label="Document planning summary for manual copying" />
         ) : null}
+        <section className="relocation-completion-summary" aria-live="polite">
+          <p className="eyebrow">Document planning progress</p>
+          <h3>{progress.label}</h3>
+          <p>
+            {progress.completed} completed, {progress.total} total, {progress.percent}% complete.
+          </p>
+          <p>{message}</p>
+        </section>
       </div>
       <p className="planner-privacy">
         Checklist progress and notes are stored only in this browser. Dog Haven

@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 
 import pdfplumber
-from PIL import Image
+from PIL import Image, ImageDraw
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.lib.pagesizes import A4
@@ -25,10 +25,10 @@ LOGO_PATH = ROOT / "public" / "brand" / "dog-haven-group-logo.png"
 
 PAGE_W, PAGE_H = A4
 
-BLACK = colors.HexColor("#050504")
-CHARCOAL = colors.HexColor("#0d0c0a")
-PANEL = colors.HexColor("#17130e")
-PANEL_2 = colors.HexColor("#211b12")
+BLACK = colors.HexColor("#000000")
+CHARCOAL = colors.HexColor("#0a0a0a")
+PANEL = colors.HexColor("#111111")
+PANEL_2 = colors.HexColor("#171717")
 GOLD = colors.HexColor("#c8a45d")
 GOLD_SOFT = colors.HexColor("#e5c978")
 IVORY = colors.HexColor("#f7f0df")
@@ -41,6 +41,13 @@ def make_logo_reader(max_px: int = 720) -> ImageReader | None:
     if not LOGO_PATH.exists():
         return None
     image = Image.open(LOGO_PATH).convert("RGBA")
+    side = min(image.size)
+    left = (image.width - side) // 2
+    top = (image.height - side) // 2
+    image = image.crop((left, top, left + side, top + side))
+    mask = Image.new("L", (side, side), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, side - 1, side - 1), fill=255)
+    image.putalpha(mask)
     image.thumbnail((max_px, max_px), Image.Resampling.LANCZOS)
     buffer = BytesIO()
     image.save(buffer, format="PNG", optimize=True)
@@ -144,10 +151,6 @@ def p(text: str, style: str = "Body") -> Paragraph:
 def background(c: canvas.Canvas, page_number: int, title: str | None = None) -> None:
     c.setFillColor(BLACK)
     c.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
-    c.setFillColor(colors.Color(0.78, 0.64, 0.36, alpha=0.025))
-    c.rect(PAGE_W - 36 * mm, PAGE_H - 48 * mm, 18 * mm, 30 * mm, fill=1, stroke=0)
-    c.setFillColor(colors.Color(0.78, 0.64, 0.36, alpha=0.025))
-    c.rect(18 * mm, 18 * mm, 22 * mm, 18 * mm, fill=1, stroke=0)
     c.setStrokeColor(LINE)
     c.setLineWidth(0.6)
     c.line(18 * mm, PAGE_H - 20 * mm, PAGE_W - 18 * mm, PAGE_H - 20 * mm)
@@ -165,36 +168,38 @@ def background(c: canvas.Canvas, page_number: int, title: str | None = None) -> 
 def cover(c: canvas.Canvas) -> None:
     c.setFillColor(BLACK)
     c.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
-    c.setFillColor(colors.Color(0.78, 0.64, 0.36, alpha=0.08))
-    c.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
-    c.setFillColor(BLACK)
-    c.rect(10 * mm, 10 * mm, PAGE_W - 20 * mm, PAGE_H - 20 * mm, fill=1, stroke=0)
-    c.setStrokeColor(GOLD)
-    c.setLineWidth(1)
+    c.setStrokeColor(colors.Color(0.78, 0.64, 0.36, alpha=0.86))
+    c.setLineWidth(0.9)
     c.rect(18 * mm, 18 * mm, PAGE_W - 36 * mm, PAGE_H - 36 * mm, stroke=1, fill=0)
+    c.setStrokeColor(colors.Color(0.78, 0.64, 0.36, alpha=0.46))
+    c.setLineWidth(0.55)
     c.rect(25 * mm, 25 * mm, PAGE_W - 50 * mm, PAGE_H - 50 * mm, stroke=1, fill=0)
-    c.setFillColor(colors.Color(0.97, 0.94, 0.87, alpha=0.94))
-    c.circle(PAGE_W / 2, PAGE_H - 76 * mm, 43 * mm, fill=1, stroke=0)
-    c.setStrokeColor(GOLD)
-    c.setLineWidth(1.2)
-    c.circle(PAGE_W / 2, PAGE_H - 76 * mm, 34 * mm, fill=0, stroke=1)
+    c.setStrokeColor(colors.Color(0.9, 0.79, 0.47, alpha=0.28))
+    c.setLineWidth(0.5)
+    c.circle(PAGE_W / 2, PAGE_H - 58 * mm, 33 * mm, fill=0, stroke=1)
     if LOGO:
-        c.drawImage(LOGO, PAGE_W / 2 - 29 * mm, PAGE_H - 104 * mm, width=58 * mm, height=58 * mm, mask="auto")
-    c.setFillColor(GOLD_SOFT)
-    c.setFont("Helvetica-Bold", 9)
-    c.drawCentredString(PAGE_W / 2, PAGE_H - 116 * mm, "DOG HAVEN GROUP")
-    frame = Frame(34 * mm, 90 * mm, PAGE_W - 68 * mm, 76 * mm, showBoundary=0)
+        c.drawImage(LOGO, PAGE_W / 2 - 27 * mm, PAGE_H - 85 * mm, width=54 * mm, height=54 * mm, mask="auto")
+    frame = Frame(34 * mm, 122 * mm, PAGE_W - 68 * mm, 62 * mm, showBoundary=0)
     story = [
         p("The Dog Haven Group<br/>Global Dog Owner<br/>Starter Guide", "CoverTitle"),
         p("A premium planning resource for first-time and globally minded dog owners.", "Subtitle"),
     ]
     frame.addFromList(story, c)
-    c.setStrokeColor(GOLD)
-    c.line(54 * mm, 84 * mm, PAGE_W - 54 * mm, 84 * mm)
-    c.setFillColor(MUTED)
-    c.setFont("Helvetica", 9)
-    value = "Use this guide with Dog Haven Group World Atlas, Global Travel, Lab, Academy, Downloads, and the Country Network."
-    c.drawCentredString(PAGE_W / 2, 68 * mm, value)
+    c.setStrokeColor(colors.Color(0.78, 0.64, 0.36, alpha=0.8))
+    c.line(54 * mm, 108 * mm, PAGE_W - 54 * mm, 108 * mm)
+    support_frame = Frame(38 * mm, 72 * mm, PAGE_W - 76 * mm, 28 * mm, showBoundary=0)
+    support_frame.addFromList(
+        [
+            p(
+                "Use this guide with Dog Haven Group World Atlas, Global Travel, "
+                "Relocation Center, Passport Planner, Lab, Academy, Downloads, and the Country Network.",
+                "Subtitle",
+            )
+        ],
+        c,
+    )
+    c.setFillColor(colors.Color(0.78, 0.64, 0.36, alpha=0.82))
+    c.circle(PAGE_W / 2, 59 * mm, 0.8 * mm, fill=1, stroke=0)
     c.setFont("Helvetica", 8)
     c.drawCentredString(PAGE_W / 2, 34 * mm, "DogHavenGroup.com")
 
@@ -442,7 +447,7 @@ pages = [
         "paragraphs": [
             "Moving abroad with a dog is a project. It combines origin-country rules, destination-country rules, vet appointments, import and export planning, airline or transport coordination, housing, budget, routine changes, and arrival preparation.",
             "Separate the move into phases: research, veterinary timeline, document windows, route and booking decisions, housing confirmation, crate preparation, departure week, arrival week, and routine rebuilding.",
-            "The Moving Abroad With a Dog guide on DogHavenGroup.com gives a deeper planning sequence. Use this checklist as a first control panel before you move into route-specific requirements.",
+            "The Moving Abroad With a Dog guide and the Global Dog Relocation Center on DogHavenGroup.com give deeper planning sequences. Use this checklist as a first control panel before you move into route-specific requirements.",
         ],
         "checklist": ["Create a dated relocation timeline", "Separate origin tasks from destination tasks", "Confirm vet appointment windows", "Check import, export, and transit requirements", "Confirm airline or transport policy directly", "Confirm housing and temporary accommodation rules", "Budget for documents, crates, fees, arrival transport, and emergencies", "Plan the first week routine after arrival"],
     },
@@ -452,7 +457,7 @@ pages = [
         "paragraphs": [
             "Dog travel documents may involve microchip records, rabies vaccination details, health certificates, import permits, export documents, parasite treatments, airline forms, crate measurements, and timing windows. Requirements vary by route and can change.",
             "This guide does not provide country-specific legal instructions as final facts. Treat every document topic as a prompt to check current official government pages, airline or transport rules, and your veterinarian.",
-            "Keep a travel document folder with dated source links, contact names, appointment dates, copies of records, and notes about what still needs confirmation.",
+            "Keep a travel document folder with dated source links, contact names, appointment dates, copies of records, and notes about what still needs confirmation. Use the Passport Planner and document planning checklist to organize questions, not to replace official route checks.",
         ],
         "table": [
             ["Document area", "What to record", "Who to verify with"],
@@ -519,9 +524,9 @@ pages = [
         "paragraphs": [
             "Dog Haven Group Lab turns planning questions into tools. The Global Dog Cost Calculator explores budget ranges, the Breed Fit Quiz frames lifestyle fit, the Puppy Readiness Quiz checks preparation foundations, and the Dog Travel Checklist organizes route or relocation tasks.",
             "Tools support planning; they do not make final decisions. A result should lead you into deeper research, local checks, professional support where needed, and the relevant DogHaven guide.",
-            "Future Lab concepts include a Dog Haven Group Passport Planner, games, quizzes, daily challenges, and city-planning prompts. Even playful tools should stay premium and useful.",
+            "The Passport Planner, Relocation Timeline, and document planning checklist help organize travel preparation. Even lighter tools and quizzes should stay premium, useful, and clear about when official sources matter.",
         ],
-        "checklist": ["Use the Cost Calculator before budgeting", "Use the Breed Fit Quiz before narrowing dog choices", "Use the Puppy Readiness Quiz before setting an arrival date", "Use the Travel Checklist before booking transport", "Use future Passport Planner concepts to organize documents, not replace official rules"],
+        "checklist": ["Use the Cost Calculator before budgeting", "Use the Breed Fit Quiz before narrowing dog choices", "Use the Puppy Readiness Quiz before setting an arrival date", "Use the Travel Checklist before booking transport", "Use the Passport Planner to organize documents, not replace official rules"],
     },
     {
         "title": "Planning worksheet: lifestyle and home",
@@ -620,15 +625,15 @@ pages = [
         "title": "Next steps with Dog Haven Group",
         "eyebrow": "Closing plan",
         "paragraphs": [
-            "Your next step is to turn this guide into a working plan. Compare countries through the World Atlas, organize travel questions through Global Travel, use Lab tools to test assumptions, read Academy guides for deeper learning, browse Downloads for printable resources, and use Countries when local context matters.",
+            "Your next step is to turn this guide into a working plan. Compare countries through the World Atlas, organize travel and relocation questions through Global Travel, use Lab tools to test assumptions, read Academy guides for deeper learning, browse Downloads for printable resources, and use Countries when local context matters.",
             "Keep the planning habit simple: read, write down assumptions, use a tool, verify local or official sources, then update your plan. Responsible dog ownership is not one big decision; it is a chain of smaller decisions made with care.",
             "Professional closing note: Dog Haven Group provides educational planning content and tools. It does not replace qualified veterinary, legal, transport, government, financial, training, or emergency advice.",
         ],
         "table": [
             ["DogHaven section", "Use it for"],
             ["World Atlas", "Country comparison, costs, index methodology, future expansion"],
-            ["Global Travel", "International travel, route thinking, relocation planning"],
-            ["Lab", "Calculators, quizzes, checklists, future Passport Planner concepts"],
+            ["Global Travel", "International travel, route thinking, Passport Planner, relocation planning"],
+            ["Lab", "Calculators, quizzes, checklists, planning tools"],
             ["Academy", "Long-form learning for first-time owners and future guide topics"],
             ["Downloads", "Printable worksheets, checklists, and branded planning guides"],
             ["Countries", "Local gateways for South Africa, United States, Italy, and future sites"],
@@ -674,9 +679,10 @@ def add_content_page(c: canvas.Canvas, page_number: int, item: dict) -> None:
 def generate_pdf() -> None:
     PDF_PATH.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(PDF_PATH), pagesize=A4, pageCompression=1)
-    c.setTitle("The Dog Haven Group Global Dog Owner Starter Guide")
+    c.setTitle("Dog Haven Group Global Dog Owner Starter Guide")
     c.setAuthor("Dog Haven Group")
-    c.setSubject("Premium dog ownership planning guide")
+    c.setSubject("Global dog ownership planning guide")
+    c.setKeywords("Dog Haven Group, global dog ownership, dog travel planning, dog relocation planning, dog owner guide")
     cover(c)
     for index, item in enumerate(pages, start=2):
         c.showPage()
