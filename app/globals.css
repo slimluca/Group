@@ -208,6 +208,7 @@
 
 .passport-planner input,
 .passport-planner select,
+.passport-planner textarea,
 .manual-summary {
   width: 100%;
   min-height: 48px;
@@ -219,6 +220,7 @@
 
 .passport-planner input:focus,
 .passport-planner select:focus,
+.passport-planner textarea:focus,
 .manual-summary:focus {
   outline: 2px solid var(--gold-soft);
   outline-offset: 2px;
@@ -427,6 +429,106 @@
   font-size: 0.82rem;
 }
 
+.relocation-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: clamp(24px, 4vw, 44px);
+  align-items: start;
+}
+
+.relocation-start-panel ol {
+  margin-bottom: 0;
+}
+
+.relocation-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.relocation-topic-grid .nav-card {
+  min-height: 100%;
+}
+
+.relocation-tool .planner-stage {
+  display: grid;
+  gap: 28px;
+}
+
+.timeline-window-options {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.timeline-window-options legend,
+.document-category legend {
+  margin-bottom: 16px;
+  color: var(--ivory);
+  font-weight: 800;
+}
+
+.relocation-task-list {
+  display: grid;
+  gap: 10px;
+}
+
+.relocation-tool .checklist-item input[type="checkbox"] {
+  appearance: none;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  margin: 2px 0 0;
+  border: 1px solid rgba(229, 201, 120, 0.54);
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.relocation-tool .checklist-item input[type="checkbox"]:checked {
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+  box-shadow: inset 0 0 0 3px rgba(5, 5, 4, 0.96), inset 0 0 0 8px var(--gold-soft);
+}
+
+.relocation-tool .checklist-item input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--gold-soft);
+  outline-offset: 3px;
+}
+
+.document-category-list {
+  display: grid;
+  gap: 26px;
+}
+
+.document-category {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.document-item {
+  display: grid;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(200, 164, 93, 0.18);
+}
+
+.document-item .checklist-item small {
+  display: block;
+  margin-top: 5px;
+  color: rgba(247, 240, 223, 0.62);
+  line-height: 1.55;
+}
+
+.document-note textarea,
+.manual-summary {
+  width: 100%;
+  min-height: 104px;
+  resize: vertical;
+}
+
 .copy-status {
   min-height: 24px;
 }
@@ -470,6 +572,8 @@
   .planner-step-progress > progress { display: block; }
   .plan-summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .official-source-list { grid-template-columns: 1fr; }
+  .relocation-layout,
+  .relocation-topic-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {
