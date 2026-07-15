@@ -174,9 +174,6 @@ def cover(c: canvas.Canvas) -> None:
     c.setStrokeColor(colors.Color(0.78, 0.64, 0.36, alpha=0.46))
     c.setLineWidth(0.55)
     c.rect(25 * mm, 25 * mm, PAGE_W - 50 * mm, PAGE_H - 50 * mm, stroke=1, fill=0)
-    c.setStrokeColor(colors.Color(0.9, 0.79, 0.47, alpha=0.28))
-    c.setLineWidth(0.5)
-    c.circle(PAGE_W / 2, PAGE_H - 58 * mm, 33 * mm, fill=0, stroke=1)
     if LOGO:
         c.drawImage(LOGO, PAGE_W / 2 - 27 * mm, PAGE_H - 85 * mm, width=54 * mm, height=54 * mm, mask="auto")
     frame = Frame(34 * mm, 122 * mm, PAGE_W - 68 * mm, 62 * mm, showBoundary=0)
