@@ -1714,6 +1714,11 @@ textarea {
   flex-wrap: wrap;
 }
 
+.footer-brand-connect {
+  width: fit-content;
+  max-width: 100%;
+}
+
 .footer .footer-brand-actions .footer-action {
   display: inline-flex;
   min-height: 44px;
@@ -1722,6 +1727,61 @@ textarea {
   padding: 0;
   font-size: 0.88rem;
   line-height: 1.2;
+}
+
+.footer-social-links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer .footer-social-links a {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(229, 201, 120, 0.42);
+  border-radius: 50%;
+  color: var(--ivory);
+  background: rgba(200, 164, 93, 0.07);
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.footer .footer-social-links a:hover {
+  color: var(--gold-soft);
+  border-color: rgba(229, 201, 120, 0.78);
+  background: rgba(200, 164, 93, 0.14);
+  transform: translateY(-1px);
+}
+
+.footer .footer-social-links a:focus-visible {
+  outline: 2px solid var(--gold-soft);
+  outline-offset: 3px;
+}
+
+.footer-social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  stroke: none;
+}
+
+.footer-social-links svg rect,
+.footer-social-links svg circle:not(.social-icon-fill) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.footer-social-links .social-icon-fill {
+  fill: currentColor;
+  stroke: none;
 }
 
 .footer-bottom {

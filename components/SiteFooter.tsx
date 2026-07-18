@@ -38,6 +38,34 @@ const policyLinks = [
   { href: "/research-methodology", label: "Research Methodology" },
 ];
 
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/doghavengroup",
+    label: "Visit Dog Haven Group on Facebook",
+    icon: (
+      <path d="M13.5 21v-8h2.75l.41-3.2H13.5V7.76c0-.93.26-1.56 1.61-1.56h1.72V3.34a23.1 23.1 0 0 0-2.5-.13c-2.48 0-4.17 1.51-4.17 4.29v2.3H7.35V13h2.81v8h3.34Z" />
+    ),
+  },
+  {
+    href: "https://www.instagram.com/doghavengroup/",
+    label: "Visit Dog Haven Group on Instagram",
+    icon: (
+      <>
+        <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+        <circle cx="12" cy="12" r="4.1" />
+        <circle cx="17.6" cy="6.45" r="1" className="social-icon-fill" />
+      </>
+    ),
+  },
+  {
+    href: "https://www.tiktok.com/@doghavengroup",
+    label: "Visit Dog Haven Group on TikTok",
+    icon: (
+      <path d="M14.45 3c.35 1.96 1.5 3.14 3.55 3.27v2.87a7.8 7.8 0 0 1-3.52-.83v6.28a6.22 6.22 0 1 1-5.36-6.16v2.94a3.37 3.37 0 1 0 2.43 3.22V3h2.9Z" />
+    ),
+  },
+];
+
 export function SiteFooter() {
   return (
     <footer className="footer">
@@ -66,13 +94,30 @@ export function SiteFooter() {
               international travel planning, practical tools, education and the
               growing Dog Haven country network.
             </p>
-            <div className="footer-brand-actions">
-              <Link className="footer-action" href="/contact">
-                Contact
-              </Link>
-              <Link className="footer-action" href="/doghaven-universe">
-                Explore the Universe
-              </Link>
+            <div className="footer-brand-connect">
+              <div className="footer-brand-actions">
+                <Link className="footer-action" href="/contact">
+                  Contact
+                </Link>
+                <Link className="footer-action" href="/doghaven-universe">
+                  Explore the Universe
+                </Link>
+              </div>
+              <nav className="footer-social-links" aria-label="Dog Haven Group social media">
+                {socialLinks.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.label}
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      {item.icon}
+                    </svg>
+                  </a>
+                ))}
+              </nav>
             </div>
           </section>
           <nav
