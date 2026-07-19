@@ -2237,6 +2237,7 @@ main li::marker { color: var(--gold); }
   .page-hero { padding: 46px 0 40px; }
   .footer-columns { grid-template-columns: 1fr; }
   .footer-brand-column, .footer-link-group, .footer-link-group:last-child { grid-column: 1; }
+  .footer-social-links { gap: 8px; }
   .footer-link-group { padding-top: 18px; border-top: 1px solid rgba(200, 164, 93, .16); }
   .footer-bottom nav { grid-template-columns: 1fr; }
 }
