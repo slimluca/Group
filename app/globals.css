@@ -2427,3 +2427,242 @@ h3 { font-size: clamp(1.4rem, 2vw, 2.1rem); line-height: 1.18; }
   h2 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
   .comparison-context ul { grid-template-columns: 1fr; }
 }
+
+/* Approved Dog Haven Group visual system */
+.home-hero {
+  isolation: isolate;
+  min-height: min(760px, calc(88vh - 72px));
+  background: #080705;
+}
+
+.home-hero-image,
+.template-hero-image {
+  z-index: -2;
+  object-fit: cover;
+}
+
+.home-hero-image {
+  object-position: center center;
+}
+
+.home-hero-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(3, 3, 2, 0.94) 0%, rgba(3, 3, 2, 0.76) 36%, rgba(3, 3, 2, 0.2) 72%, rgba(3, 3, 2, 0.3) 100%),
+    linear-gradient(180deg, rgba(2, 2, 2, 0.28), rgba(2, 2, 2, 0.08) 50%, rgba(2, 2, 2, 0.8));
+}
+
+.home-hero .hero-inner {
+  display: flex;
+  align-items: center;
+  min-height: min(760px, calc(88vh - 72px));
+  padding-top: clamp(80px, 10vw, 132px);
+  padding-bottom: clamp(72px, 8vw, 104px);
+}
+
+.home-hero .hero-copy {
+  max-width: 720px;
+}
+
+.home-hero h1 {
+  font-size: clamp(3.1rem, 6vw, 6rem);
+  max-width: 700px;
+}
+
+.home-hero .lead {
+  max-width: 650px;
+  font-size: clamp(1.1rem, 1.55vw, 1.3rem);
+}
+
+.pathway-section {
+  padding: clamp(18px, 2.5vw, 28px) 0;
+  color: #1c1712;
+  background: #eee3cf;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pathway-card {
+  position: relative;
+  display: block;
+  min-height: 300px;
+  overflow: hidden;
+  border: 1px solid rgba(91, 67, 32, 0.28);
+  background: #201a14;
+  box-shadow: 0 16px 38px rgba(52, 37, 17, 0.18);
+}
+
+.pathway-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 244, 216, 0.16);
+  pointer-events: none;
+}
+
+.pathway-card img {
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.pathway-card:hover img,
+.pathway-card:focus-visible img {
+  transform: scale(1.045);
+}
+
+.pathway-card-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 7, 5, 0.03) 20%, rgba(8, 7, 5, 0.82) 100%);
+}
+
+.pathway-card-content {
+  position: absolute;
+  inset: auto 24px 22px;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  color: #fff8eb;
+}
+
+.pathway-number {
+  color: #e8c97e;
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+}
+
+.pathway-card-content strong {
+  max-width: 300px;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.75rem, 2.8vw, 2.55rem);
+  font-weight: 600;
+  line-height: 1.04;
+}
+
+.pathway-card-content > span:not(.pathway-number):not(.pathway-arrow) {
+  max-width: 290px;
+  color: rgba(255, 248, 235, 0.82);
+  font-size: 0.95rem;
+  line-height: 1.48;
+}
+
+.pathway-arrow {
+  margin-top: 6px;
+  color: #e8c97e;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.template-hero {
+  isolation: isolate;
+  min-height: clamp(520px, 68vh, 720px);
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  background: #080705;
+}
+
+.template-hero .shell {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(76px, 10vw, 132px);
+  padding-bottom: clamp(64px, 8vw, 104px);
+}
+
+.template-hero-image {
+  object-position: center center;
+}
+
+.template-hero-atlas .template-hero-image {
+  object-position: center center;
+}
+
+.template-hero-travel .template-hero-image {
+  object-position: center center;
+}
+
+.template-hero-academy .template-hero-image {
+  object-position: center center;
+}
+
+.template-hero-lab .template-hero-image {
+  object-position: center center;
+}
+
+.template-hero-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(3, 3, 2, 0.92) 0%, rgba(3, 3, 2, 0.74) 34%, rgba(3, 3, 2, 0.2) 72%, rgba(3, 3, 2, 0.34) 100%),
+    linear-gradient(180deg, rgba(3, 3, 2, 0.18), rgba(3, 3, 2, 0.82));
+}
+
+.template-hero-copy {
+  max-width: 800px;
+}
+
+.template-hero-copy h1 {
+  max-width: 800px;
+  font-size: clamp(3rem, 5.7vw, 5.65rem);
+}
+
+.template-hero-copy .lead {
+  max-width: 760px;
+}
+
+.template-hero-copy .hero-actions {
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .pathway-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathway-card {
+    min-height: 280px;
+  }
+
+  .home-hero,
+  .home-hero .hero-inner {
+    min-height: 680px;
+  }
+
+  .home-hero-image,
+  .template-hero-image {
+    object-position: 62% center;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-hero,
+  .home-hero .hero-inner,
+  .template-hero {
+    min-height: 650px;
+  }
+
+  .home-hero h1,
+  .template-hero-copy h1 {
+    font-size: clamp(2.55rem, 12vw, 3.75rem);
+  }
+
+  .home-hero-overlay,
+  .template-hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(3, 3, 2, 0.18) 0%, rgba(3, 3, 2, 0.5) 34%, rgba(3, 3, 2, 0.94) 100%),
+      linear-gradient(90deg, rgba(3, 3, 2, 0.55), rgba(3, 3, 2, 0.08));
+  }
+
+  .home-hero-image,
+  .template-hero-image {
+    object-position: 66% center;
+  }
+}

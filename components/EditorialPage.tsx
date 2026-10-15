@@ -1,16 +1,76 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { PageContent } from "@/data/content";
 import { MediaFrame } from "./MediaFrame";
 
+const templateHeroAssets: Record<string, { src: string; alt: string; className: string }> = {
+  "world-atlas": {
+    src: "/images/doghavengroup/home/world-atlas-premium-map.svg",
+    alt: "An illuminated world map representing global dog ownership comparison",
+    className: "template-hero-atlas",
+  },
+  "global-travel": {
+    src: "/images/doghavengroup/visuals/global-travel-hero-photograph.png",
+    alt: "A Border Collie looking out from a train towards an alpine landscape",
+    className: "template-hero-travel",
+  },
+  academy: {
+    src: "/images/doghavengroup/visuals/academy-guide-photograph.png",
+    alt: "A rescue mixed-breed dog resting in a bright modern home",
+    className: "template-hero-academy",
+  },
+  lab: {
+    src: "/images/doghavengroup/visuals/lab-hero-photograph.png",
+    alt: "A black Labrador looking towards warm light in a modern home",
+    className: "template-hero-lab",
+  },
+};
+
 export function EditorialPage({ page }: { page: PageContent }) {
+  const templateKind =
+    page.slug === "world-atlas" || page.slug.startsWith("world-atlas/") ? "world-atlas" :
+      page.slug === "global-travel" || page.slug.startsWith("global-travel/") ? "global-travel" :
+        page.slug === "academy" || page.slug.startsWith("academy/") ? "academy" :
+          page.slug === "lab" || page.slug.startsWith("lab/") ? "lab" : undefined;
+  const templateHero = templateKind ? templateHeroAssets[templateKind] : undefined;
+
   return (
     <>
-      <section className="page-hero">
+      <section className={`page-hero ${templateHero ? `template-hero ${templateHero.className}` : ""}`}>
+        {templateHero ? (
+          <>
+            <Image
+              className="template-hero-image"
+              src={templateHero.src}
+              alt={templateHero.alt}
+              fill
+              sizes="100vw"
+              priority
+            />
+            <span className="template-hero-overlay" aria-hidden="true" />
+          </>
+        ) : null}
         <div className="shell">
-          <div className="page-hero-copy">
+          <div className={`page-hero-copy ${templateHero ? "template-hero-copy" : ""}`}>
             <p className="eyebrow">{page.eyebrow}</p>
             <h1>{page.hero}</h1>
             <p className="lead">{page.description}</p>
+            {templateHero ? (
+              <div className="hero-actions">
+                <Link
+                  className="button"
+                  href={templateKind === "lab" ? "/lab/global-dog-cost-calculator" : templateKind === "academy" ? "/academy/first-time-dog-owner-guide" : templateKind === "global-travel" ? "/global-travel/dog-passport-planner" : "/world-atlas/global-dog-ownership-index"}
+                >
+                  {templateKind === "lab" ? "Start planning" : templateKind === "academy" ? "Explore the guides" : templateKind === "global-travel" ? "Plan a journey" : "Compare countries"}
+                </Link>
+                <Link
+                  className="button secondary"
+                  href={templateKind === "lab" ? "/academy" : templateKind === "academy" ? "/lab" : templateKind === "global-travel" ? "/global-travel/relocation" : "/countries"}
+                >
+                  {templateKind === "lab" ? "Read the Academy" : templateKind === "academy" ? "Open the Lab" : templateKind === "global-travel" ? "Moving abroad" : "Country network"}
+                </Link>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>

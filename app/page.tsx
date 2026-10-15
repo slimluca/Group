@@ -21,7 +21,16 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero home-hero">
+        <Image
+          className="home-hero-image"
+          src="/images/doghavengroup/visuals/home-hero-photograph.png"
+          alt="An Australian Shepherd and its owner looking over an alpine lake at golden hour"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="home-hero-overlay" aria-hidden="true" />
         <div className="hero-inner">
           <div className="hero-copy">
             <p className="eyebrow">Global home of the Dog Haven network</p>
@@ -30,10 +39,9 @@ export default function HomePage() {
               dogs.
             </h1>
             <p className="lead">
-              Dog Haven Group is the mother site for Dog Haven country
-              platforms, global ownership planning, international dog travel,
-              premium tools, Academy learning, Journal insight, and downloadable
-              resources.
+              Dog Haven Group brings global ownership research, international
+              travel planning, practical tools, Academy learning and local
+              country knowledge into one considered platform.
             </p>
             <div className="hero-actions">
               <Link className="button" href="/doghaven-universe">
@@ -43,6 +51,58 @@ export default function HomePage() {
                 View country network
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pathway-section">
+        <div className="shell">
+          <div className="pathway-grid">
+            <Link className="pathway-card" href="/world-atlas">
+              <Image
+                src="/images/doghavengroup/home/world-atlas-premium-map.svg"
+                alt="A premium world map for comparing dog ownership conditions"
+                fill
+                sizes="(max-width: 760px) 100vw, 33vw"
+              />
+              <span className="pathway-card-wash" aria-hidden="true" />
+              <span className="pathway-card-content">
+                <span className="pathway-number">01</span>
+                <strong>Compare countries</strong>
+                <span>See ownership conditions through a global lens.</span>
+                <span className="pathway-arrow" aria-hidden="true">→</span>
+              </span>
+            </Link>
+            <Link className="pathway-card" href="/global-travel">
+              <Image
+                src="/images/doghavengroup/visuals/global-travel-hero-photograph.png"
+                alt="A Border Collie travelling beside a train window through the Alps"
+                fill
+                sizes="(max-width: 760px) 100vw, 33vw"
+              />
+              <span className="pathway-card-wash" aria-hidden="true" />
+              <span className="pathway-card-content">
+                <span className="pathway-number">02</span>
+                <strong>Plan a journey</strong>
+                <span>Prepare travel, documents and relocation with care.</span>
+                <span className="pathway-arrow" aria-hidden="true">→</span>
+              </span>
+            </Link>
+            <Link className="pathway-card" href="/academy">
+              <Image
+                src="/images/doghavengroup/visuals/academy-guide-photograph.png"
+                alt="A rescue mixed-breed dog resting in a light-filled home"
+                fill
+                sizes="(max-width: 760px) 100vw, 33vw"
+              />
+              <span className="pathway-card-wash" aria-hidden="true" />
+              <span className="pathway-card-content">
+                <span className="pathway-number">03</span>
+                <strong>Build a better ownership plan</strong>
+                <span>Practical guidance for a healthier life together.</span>
+                <span className="pathway-arrow" aria-hidden="true">→</span>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
