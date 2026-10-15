@@ -15,13 +15,13 @@ const templateHeroAssets: Record<string, { src: string; alt: string; className: 
     className: "template-hero-travel",
   },
   academy: {
-    src: "/images/doghavengroup/visuals/academy-guide-photograph.png",
-    alt: "A rescue mixed-breed dog resting in a bright modern home",
+    src: "/images/doghavengroup/visuals/academy-staffy-training-room.png",
+    alt: "A brindle Staffordshire bull terrier working with its owner in a bright training room",
     className: "template-hero-academy",
   },
   lab: {
-    src: "/images/doghavengroup/visuals/lab-hero-photograph.png",
-    alt: "A black Labrador looking towards warm light in a modern home",
+    src: "/images/doghavengroup/visuals/lab-dachshund-nutrition.png",
+    alt: "A chocolate dachshund beside nutrition notes and planning tools in a bright studio",
     className: "template-hero-lab",
   },
 };
@@ -35,17 +35,31 @@ export function EditorialPage({ page }: { page: PageContent }) {
   const templateHero = templateKind ? templateHeroAssets[templateKind] : undefined;
 
   const templateIntro = templateKind === "global-travel" ? (
-    <section className="template-step-section" aria-label="Global travel planning steps">
-      <div className="shell template-step-strip">
-        {["Prepare", "Documents", "Transport", "Arrive"].map((step, index) => (
-          <div className="template-step" key={step}>
-            <span>0{index + 1}</span>
-            <strong>{step}</strong>
-            <em>{["Build a calm route", "Check current rules", "Choose the right carrier", "Settle the first week"][index]}</em>
-          </div>
-        ))}
-      </div>
-    </section>
+    <>
+      <section className="template-step-section" aria-label="Global travel planning steps">
+        <div className="shell template-step-strip">
+          {["Prepare", "Documents", "Transport", "Arrive"].map((step, index) => (
+            <div className="template-step" key={step}>
+              <span>0{index + 1}</span>
+              <strong>{step}</strong>
+              <em>{["Build a calm route", "Check current rules", "Choose the right carrier", "Settle the first week"][index]}</em>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="template-feature-section">
+        <div className="shell template-feature-grid">
+          <Link href="/global-travel/dog-passport-planner" className="template-feature-card">
+            <Image src="/images/doghavengroup/visuals/ownership-index-irish-setter-coast.png" alt="Irish Setter on a coastal travel route" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <span><small>International dog travel</small><strong>Take the next route with a better plan →</strong></span>
+          </Link>
+          <Link href="/global-travel/relocation" className="template-feature-card">
+            <Image src="/images/doghavengroup/visuals/relocation-greyhound-airport.png" alt="Greyhound waiting calmly in a modern airport" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <span><small>Relocation centre</small><strong>Move well, from first question to arrival →</strong></span>
+          </Link>
+        </div>
+      </section>
+    </>
   ) : templateKind === "world-atlas" ? (
     <section className="template-atlas-section">
       <div className="shell">
