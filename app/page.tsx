@@ -60,8 +60,8 @@ export default function HomePage() {
           <div className="pathway-grid">
             <Link className="pathway-card" href="/world-atlas">
               <Image
-                src="/images/doghavengroup/home/world-atlas-premium-map.svg"
-                alt="A premium world map for comparing dog ownership conditions"
+                src="/images/doghavengroup/visuals/country-comparison-golden-retriever.png"
+                alt="A golden retriever overlooking a European hillside town for country comparison guidance"
                 fill
                 sizes="(max-width: 760px) 100vw, 33vw"
               />
@@ -90,8 +90,8 @@ export default function HomePage() {
             </Link>
             <Link className="pathway-card" href="/academy">
               <Image
-                src="/images/doghavengroup/visuals/academy-guide-photograph.png"
-                alt="A rescue mixed-breed dog resting in a light-filled home"
+                src="/images/doghavengroup/visuals/academy-staffy-training-room.png"
+                alt="A brindle Staffordshire Bull Terrier resting attentively in a bright training room"
                 fill
                 sizes="(max-width: 760px) 100vw, 33vw"
               />

@@ -34,6 +34,42 @@ export function EditorialPage({ page }: { page: PageContent }) {
           page.slug === "lab" || page.slug.startsWith("lab/") ? "lab" : undefined;
   const templateHero = templateKind ? templateHeroAssets[templateKind] : undefined;
 
+  const templateIntro = templateKind === "global-travel" ? (
+    <section className="template-step-section" aria-label="Global travel planning steps">
+      <div className="shell template-step-strip">
+        {["Prepare", "Documents", "Transport", "Arrive"].map((step, index) => (
+          <div className="template-step" key={step}>
+            <span>0{index + 1}</span>
+            <strong>{step}</strong>
+            <em>{["Build a calm route", "Check current rules", "Choose the right carrier", "Settle the first week"][index]}</em>
+          </div>
+        ))}
+      </div>
+    </section>
+  ) : templateKind === "world-atlas" ? (
+    <section className="template-atlas-section">
+      <div className="shell">
+        <div className="template-section-heading"><p className="eyebrow">Featured comparisons</p><h2>See the ownership picture clearly.</h2></div>
+        <div className="template-country-grid">
+          {[
+            ["South Africa", "country-comparison-golden-retriever.png", "Space, climate and city choice", "R 3.2k–R 7.8k"],
+            ["United States", "ownership-index-irish-setter-coast.png", "Services, housing and travel", "$150–$420"],
+            ["Italy", "tools-apricot-poodle-reading-room.png", "Walkability, routine and access", "€110–€300"],
+          ].map(([name, image, detail, range]) => (
+            <article className="template-country-card" key={name}>
+              <div className="template-country-image"><Image src={`/images/doghavengroup/visuals/${image}`} alt={`${name} dog ownership planning`} fill sizes="(max-width: 800px) 100vw, 33vw" /></div>
+              <div className="template-country-copy"><p className="eyebrow">{name}</p><h3>{detail}</h3><strong>{range}</strong><div className="metric"><span /><span /><span /><span /><span /></div><Link href="/world-atlas/global-dog-ownership-index">View the framework →</Link></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : templateKind === "academy" ? (
+    <section className="template-academy-meta">
+      <div className="shell template-meta-row"><span>Academy / Planning guides</span><span>Evidence-aware · Global context · Practical next steps</span></div>
+    </section>
+  ) : null;
+
   return (
     <>
       <section className={`page-hero ${templateHero ? `template-hero ${templateHero.className}` : ""}`}>
@@ -74,6 +110,7 @@ export function EditorialPage({ page }: { page: PageContent }) {
           </div>
         </div>
       </section>
+      {templateIntro}
       {page.sections.map((section, index) => (
         <section
           className={`section content-section ${section.image ? "content-section-with-media" : "content-section-reading"} ${index % 2 === 0 ? "editorial" : ""}`}
