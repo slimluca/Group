@@ -2831,3 +2831,116 @@ h3 { font-size: clamp(1.4rem, 2vw, 2.1rem); line-height: 1.18; }
     object-position: 66% center;
   }
 }
+
+/* Approved-template rendering lock. Kept at the end of the stylesheet so
+   legacy theme rules cannot restore the oversized black-card treatment. */
+.home-hero,
+.home-hero .hero-inner {
+  min-height: 520px;
+}
+
+.home-hero .hero-inner {
+  padding-top: 70px;
+  padding-bottom: 58px;
+}
+
+.home-hero h1 {
+  max-width: 610px;
+  font-size: clamp(3rem, 4.6vw, 5rem);
+  line-height: 1.02;
+}
+
+.home-hero .lead {
+  max-width: 530px;
+  font-size: clamp(1.08rem, 1.45vw, 1.34rem);
+}
+
+.pathway-section {
+  padding: 18px 0 30px;
+  background: #f3ead8;
+}
+
+.pathway-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.pathway-card {
+  min-height: 188px;
+  background: #f8f1e4;
+  border-color: rgba(153, 112, 38, .28);
+  box-shadow: none;
+}
+
+.pathway-card img {
+  left: 44%;
+  width: 56%;
+  object-fit: cover;
+}
+
+.pathway-card-wash {
+  inset: 0;
+  background: linear-gradient(90deg, #f8f1e4 0%, #f8f1e4 39%, rgba(248,241,228,.85) 48%, rgba(248,241,228,0) 68%);
+}
+
+.pathway-card-content {
+  inset: 0 auto 0 0;
+  width: 48%;
+  padding: 26px 30px;
+  color: #1a1d19;
+  align-content: center;
+}
+
+.pathway-card-content strong {
+  color: #1a1d19;
+  font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+}
+
+.pathway-card-content > span:not(.pathway-number):not(.pathway-arrow) {
+  color: #5c5a52;
+}
+
+.pathway-arrow {
+  color: #9c7327;
+}
+
+.template-hero {
+  min-height: 500px;
+}
+
+.template-hero-copy h1 {
+  font-size: clamp(2.8rem, 4.8vw, 5rem);
+  line-height: 1.02;
+}
+
+@media (max-width: 760px) {
+  .home-hero,
+  .home-hero .hero-inner,
+  .template-hero {
+    min-height: 620px;
+  }
+
+  .pathway-card {
+    min-height: 260px;
+  }
+
+  .pathway-card img {
+    left: 0;
+    width: 100%;
+  }
+
+  .pathway-card-wash {
+    background: linear-gradient(180deg, rgba(12,14,12,.02) 15%, rgba(12,14,12,.9) 100%);
+  }
+
+  .pathway-card-content {
+    width: 100%;
+    justify-content: end;
+    color: #fffaf0;
+  }
+
+  .pathway-card-content strong,
+  .pathway-card-content > span:not(.pathway-number):not(.pathway-arrow) {
+    color: #fffaf0;
+  }
+}

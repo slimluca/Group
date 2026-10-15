@@ -24,7 +24,7 @@ export default function HomePage() {
       <section className="hero home-hero">
         <Image
           className="home-hero-image"
-          src="/images/doghavengroup/visuals/home-hero-photograph.png"
+          src="/images/doghavengroup/visuals/home-hero-photograph.webp"
           alt="An Australian Shepherd and its owner looking over an alpine lake at golden hour"
           fill
           priority
@@ -60,7 +60,7 @@ export default function HomePage() {
           <div className="pathway-grid">
             <Link className="pathway-card" href="/world-atlas">
               <Image
-                src="/images/doghavengroup/visuals/country-comparison-golden-retriever.png"
+                src="/images/doghavengroup/visuals/country-comparison-golden-retriever.webp"
                 alt="A golden retriever overlooking a European hillside town for country comparison guidance"
                 fill
                 sizes="(max-width: 760px) 100vw, 33vw"
@@ -75,7 +75,7 @@ export default function HomePage() {
             </Link>
             <Link className="pathway-card" href="/global-travel">
               <Image
-                src="/images/doghavengroup/visuals/global-travel-hero-photograph.png"
+                src="/images/doghavengroup/visuals/global-travel-hero-photograph.webp"
                 alt="A Border Collie travelling beside a train window through the Alps"
                 fill
                 sizes="(max-width: 760px) 100vw, 33vw"
@@ -90,7 +90,7 @@ export default function HomePage() {
             </Link>
             <Link className="pathway-card" href="/academy">
               <Image
-                src="/images/doghavengroup/visuals/academy-staffy-training-room.png"
+                src="/images/doghavengroup/visuals/academy-staffy-training-room.webp"
                 alt="A brindle Staffordshire Bull Terrier resting attentively in a bright training room"
                 fill
                 sizes="(max-width: 760px) 100vw, 33vw"

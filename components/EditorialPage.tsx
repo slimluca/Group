@@ -10,17 +10,17 @@ const templateHeroAssets: Record<string, { src: string; alt: string; className: 
     className: "template-hero-atlas",
   },
   "global-travel": {
-    src: "/images/doghavengroup/visuals/global-travel-hero-photograph.png",
+    src: "/images/doghavengroup/visuals/global-travel-hero-photograph.webp",
     alt: "A Border Collie looking out from a train towards an alpine landscape",
     className: "template-hero-travel",
   },
   academy: {
-    src: "/images/doghavengroup/visuals/academy-staffy-training-room.png",
+    src: "/images/doghavengroup/visuals/academy-staffy-training-room.webp",
     alt: "A brindle Staffordshire bull terrier working with its owner in a bright training room",
     className: "template-hero-academy",
   },
   lab: {
-    src: "/images/doghavengroup/visuals/lab-dachshund-nutrition.png",
+    src: "/images/doghavengroup/visuals/lab-dachshund-nutrition.webp",
     alt: "A chocolate dachshund beside nutrition notes and planning tools in a bright studio",
     className: "template-hero-lab",
   },
@@ -50,11 +50,11 @@ export function EditorialPage({ page }: { page: PageContent }) {
       <section className="template-feature-section">
         <div className="shell template-feature-grid">
           <Link href="/global-travel/dog-passport-planner" className="template-feature-card">
-            <Image src="/images/doghavengroup/visuals/ownership-index-irish-setter-coast.png" alt="Irish Setter on a coastal travel route" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <Image src="/images/doghavengroup/visuals/ownership-index-irish-setter-coast.webp" alt="Irish Setter on a coastal travel route" fill sizes="(max-width: 760px) 100vw, 50vw" />
             <span><small>International dog travel</small><strong>Take the next route with a better plan →</strong></span>
           </Link>
           <Link href="/global-travel/relocation" className="template-feature-card">
-            <Image src="/images/doghavengroup/visuals/relocation-greyhound-airport.png" alt="Greyhound waiting calmly in a modern airport" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <Image src="/images/doghavengroup/visuals/relocation-greyhound-airport.webp" alt="Greyhound waiting calmly in a modern airport" fill sizes="(max-width: 760px) 100vw, 50vw" />
             <span><small>Relocation centre</small><strong>Move well, from first question to arrival →</strong></span>
           </Link>
         </div>
@@ -66,9 +66,9 @@ export function EditorialPage({ page }: { page: PageContent }) {
         <div className="template-section-heading"><p className="eyebrow">Featured comparisons</p><h2>See the ownership picture clearly.</h2></div>
         <div className="template-country-grid">
           {[
-            ["South Africa", "country-comparison-golden-retriever.png", "Space, climate and city choice", "R 3.2k–R 7.8k"],
-            ["United States", "ownership-index-irish-setter-coast.png", "Services, housing and travel", "$150–$420"],
-            ["Italy", "tools-apricot-poodle-reading-room.png", "Walkability, routine and access", "€110–€300"],
+            ["South Africa", "country-comparison-golden-retriever.webp", "Space, climate and city choice", "R 3.2k–R 7.8k"],
+            ["United States", "ownership-index-irish-setter-coast.webp", "Services, housing and travel", "$150–$420"],
+            ["Italy", "tools-apricot-poodle-reading-room.webp", "Walkability, routine and access", "€110–€300"],
           ].map(([name, image, detail, range]) => (
             <article className="template-country-card" key={name}>
               <div className="template-country-image"><Image src={`/images/doghavengroup/visuals/${image}`} alt={`${name} dog ownership planning`} fill sizes="(max-width: 800px) 100vw, 33vw" /></div>
