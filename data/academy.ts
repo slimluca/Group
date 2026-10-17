@@ -5,6 +5,7 @@ export type AcademyTopic = {
   eyebrow: string;
   hero: string;
   image: { src: string; alt: string };
+  supportImage: { src: string; alt: string; caption: string };
   sections: { title: string; body: string[]; checklist: string[] }[];
   links: { href: string; label: string }[];
 };
@@ -16,7 +17,8 @@ export const academyTopics: AcademyTopic[] = [
     description: "A practical Dog Haven Group Academy guide to puppy preparation, first-month routines, safe spaces, social learning, supplies, and household roles.",
     eyebrow: "Academy guide",
     hero: "A puppy plan should be calm, practical, and ready before the puppy arrives.",
-    image: { src: "/images/doghavengroup/downloads/puppy-first-month-planner.svg", alt: "A puppy first month planner with feeding, sleeping, vet, and training notes." },
+    image: { src: "/images/doghavengroup/visuals/academy-beagle-puppy-planning.webp", alt: "A young tri-colour Beagle exploring a carefully prepared puppy area in a bright home." },
+    supportImage: { src: "/images/doghavengroup/visuals/academy-support-labrador-puppy-vet.webp", alt: "A yellow Labrador puppy receiving a calm first veterinary examination.", caption: "Early preparation includes choosing a veterinary practice and making the first visit feel calm." },
     sections: [
       {
         title: "Prepare the first month before the first night",
@@ -43,7 +45,8 @@ export const academyTopics: AcademyTopic[] = [
     description: "A Dog Haven Group Academy guide to owning a dog in apartments and compact homes with routines, enrichment, noise planning, and building rules.",
     eyebrow: "Academy guide",
     hero: "Apartment dog ownership depends on routine, not just floor space.",
-    image: { src: "/images/doghavengroup/countries/italy-apartment-and-travel-dogs.svg", alt: "Dog ownership in compact city living with apartment, streets, and travel planning." },
+    image: { src: "/images/doghavengroup/visuals/academy-shiba-apartment.webp", alt: "A cream Shiba Inu relaxing beside its owner in a calm compact city apartment." },
+    supportImage: { src: "/images/doghavengroup/visuals/academy-support-schnauzer-apartment.webp", alt: "A Miniature Schnauzer leaving a city apartment building with its owner.", caption: "Successful apartment routines begin beyond the front door: access, walking routes, noise and timing all matter." },
     sections: [
       {
         title: "Compact living needs structure",
@@ -70,7 +73,8 @@ export const academyTopics: AcademyTopic[] = [
     description: "A careful Dog Haven Group Academy guide to family dog planning, child-dog routines, supervision, training support, and household responsibilities.",
     eyebrow: "Academy guide",
     hero: "A family dog plan should be led by adults, not wishful thinking.",
-    image: { src: "/images/doghavengroup/home/dog-home-routine-planning.svg", alt: "A calm home routine planning scene for a new dog owner." },
+    image: { src: "/images/doghavengroup/visuals/academy-family-mixed-breed.webp", alt: "A mixed-breed dog resting calmly with a multigenerational family in a garden." },
+    supportImage: { src: "/images/doghavengroup/visuals/academy-support-family-quiet-bed.webp", alt: "A calm family dog resting in its own bed while the household shares dinner nearby.", caption: "A protected place to rest gives a dog space from busy family moments without isolation." },
     sections: [
       {
         title: "Adults own the responsibility",
@@ -97,7 +101,8 @@ export const academyTopics: AcademyTopic[] = [
     description: "A general educational Dog Haven Group Academy guide to planning senior dog routines, comfort, vet relationships, mobility, and household adjustments.",
     eyebrow: "Academy guide",
     hero: "Senior dog care is about comfort, observation, and steady routines.",
-    image: { src: "/images/doghavengroup/home/dog-home-routine-planning.svg", alt: "A calm dog care planning scene with household notes and routine prompts." },
+    image: { src: "/images/doghavengroup/visuals/academy-senior-black-labrador.webp", alt: "A senior black Labrador resting comfortably beside an older owner in a bright accessible home." },
+    supportImage: { src: "/images/doghavengroup/visuals/academy-support-senior-cavalier-ramp.webp", alt: "A senior tricolour Cavalier King Charles Spaniel using a low mobility ramp beside its owner.", caption: "Small accessibility changes can protect comfort and independence as mobility changes." },
     sections: [
       {
         title: "Plan for changes without guessing medical answers",
@@ -124,7 +129,8 @@ export const academyTopics: AcademyTopic[] = [
     description: "A Dog Haven Group Academy guide to behavior planning, training expectations, stress signals, enrichment, routine, and when to seek qualified help.",
     eyebrow: "Academy guide",
     hero: "Dog behavior planning starts with routine, observation, and support.",
-    image: { src: "/images/doghavengroup/lab/interactive-tool-suite.svg", alt: "Dog Haven Group planning tools for training, behavior, and routine decisions." },
+    image: { src: "/images/doghavengroup/visuals/academy-border-terrier-behaviour.webp", alt: "A wire-haired Border Terrier practising calm lead focus with a trainer in a quiet park." },
+    supportImage: { src: "/images/doghavengroup/visuals/academy-support-cocker-enrichment.webp", alt: "An English Cocker Spaniel calmly working on a food puzzle at home.", caption: "Useful enrichment should suit the individual dog and fit naturally into everyday routines." },
     sections: [
       {
         title: "Behavior is information",
@@ -151,7 +157,8 @@ export const academyTopics: AcademyTopic[] = [
     description: "A Dog Haven Group Academy guide to dog safety planning, emergency contacts, weather, household hazards, travel safety, and official-source reminders.",
     eyebrow: "Academy guide",
     hero: "Dog safety is easier when emergency details are ready before they are needed.",
-    image: { src: "/images/doghavengroup/travel/vet-document-preparation.svg", alt: "Dog safety and veterinary document preparation notes arranged on a desk." },
+    image: { src: "/images/doghavengroup/visuals/academy-german-shepherd-safety.webp", alt: "A German Shepherd resting beside a neatly organised dog emergency kit at home." },
+    supportImage: { src: "/images/doghavengroup/visuals/academy-support-boxer-car-safety.webp", alt: "A fawn Boxer wearing a properly fitted travel harness on the rear seat of a car.", caption: "Travel safety deserves the same advance planning as household hazards and emergency contacts." },
     sections: [
       {
         title: "Build a simple safety file",
@@ -178,7 +185,8 @@ export const academyTopics: AcademyTopic[] = [
     description: "A cautious Dog Haven Group Academy guide to dog nutrition planning, food budgeting, water, feeding routines, storage, and veterinary guidance.",
     eyebrow: "Academy guide",
     hero: "Nutrition planning should be practical, cautious, and specific to the dog.",
-    image: { src: "/images/doghavengroup/downloads/dog-cost-planning-workbook.svg", alt: "A dog cost planning workbook with monthly and yearly budget categories." },
+    image: { src: "/images/doghavengroup/visuals/academy-standard-poodle-nutrition.webp", alt: "A white Standard Poodle waiting calmly while its owner prepares a measured meal." },
+    supportImage: { src: "/images/doghavengroup/visuals/academy-support-bernese-nutrition.webp", alt: "A Bernese Mountain Dog drinking water while its owner stores dry food in a sealed container.", caption: "Reliable water, safe storage and a repeatable feeding routine are the foundations of practical nutrition planning." },
     sections: [
       {
         title: "Food choices need context",

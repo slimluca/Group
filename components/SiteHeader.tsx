@@ -3,10 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { navItems } from "@/data/site";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     document.body.classList.toggle("menu-open", open);
@@ -25,11 +27,19 @@ export function SiteHeader() {
             <span>Global dog ownership platform</span>
           </span>
         </Link>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href}>{item.label}</Link>
+        <nav className="desktop-nav template-nav" aria-label="Primary navigation">
+          {navItems.filter((item) => item.label !== "Journal").map((item) => (
+            <Link
+              className={pathname === item.href || pathname.startsWith(`${item.href}/`) ? "active" : ""}
+              key={item.href}
+              href={item.href}
+            >
+              {item.label}
+            </Link>
           ))}
-          <Link href="/contact">Contact</Link>
+          <Link className="header-cta" href="/global-travel/dog-passport-planner">
+            Plan a journey <span aria-hidden="true">→</span>
+          </Link>
         </nav>
         <button className="menu-button" type="button" aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
           <span aria-hidden="true">{open ? "X" : "Menu"}</span>

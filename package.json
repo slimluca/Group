@@ -20,7 +20,6 @@
     "check:browser-qa": "playwright test \"scripts/browser-qa.spec.mjs\" --reporter=line"
   },
   "dependencies": {
-    "@next/third-parties": "^16.2.10",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

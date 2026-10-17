@@ -5,14 +5,14 @@ import { pageMetadata } from "@/lib/metadata";
 import { ToolLinks } from "@/components/ToolLinks";
 
 export const metadata = pageMetadata(
-  "Global Dog Ownership Guides, Travel Tools & Country Network | Dog Haven Group",
-  "Dog Haven Group provides global dog ownership guidance, international dog travel planning, country comparisons, premium tools, and gateways to Dog Haven country websites.",
+  "Global Dog Ownership & Travel Guides | Dog Haven Group",
+  "Explore international dog ownership guidance, country comparisons, travel planning, practical tools and trusted resources from Dog Haven Group.",
   "",
   {
-    url: "/images/doghavengroup/home/mother-site-architecture-global-network.jpg",
-    width: 1450,
-    height: 1088,
-    alt: "Dog Haven Group global network architecture connecting country dog websites around the world",
+    url: "/images/doghavengroup/visuals/home-mountain-australian-shepherd.webp",
+    width: 1983,
+    height: 793,
+    alt: "An Australian Shepherd and its owner overlooking an alpine lake at golden hour",
   },
 );
 
@@ -21,7 +21,16 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero home-hero">
+        <Image
+          className="home-hero-image"
+          src="/images/doghavengroup/visuals/home-mountain-australian-shepherd.webp"
+          alt="An Australian Shepherd and its owner looking over an alpine lake at golden hour"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="home-hero-overlay" aria-hidden="true" />
         <div className="hero-inner">
           <div className="hero-copy">
             <p className="eyebrow">Global home of the Dog Haven network</p>
@@ -30,10 +39,9 @@ export default function HomePage() {
               dogs.
             </h1>
             <p className="lead">
-              Dog Haven Group is the mother site for Dog Haven country
-              platforms, global ownership planning, international dog travel,
-              premium tools, Academy learning, Journal insight, and downloadable
-              resources.
+              Dog Haven Group brings global ownership research, international
+              travel planning, practical tools, Academy learning and local
+              country knowledge into one considered platform.
             </p>
             <div className="hero-actions">
               <Link className="button" href="/doghaven-universe">
@@ -43,6 +51,58 @@ export default function HomePage() {
                 View country network
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pathway-section">
+        <div className="shell">
+          <div className="pathway-grid">
+            <Link className="pathway-card" href="/world-atlas">
+              <Image
+                src="/images/doghavengroup/visuals/atlas-portugal-irish-setter.webp"
+                alt="An Irish Setter and owner on a Portuguese coastal path for country comparison guidance"
+                fill
+                sizes="(max-width: 760px) 100vw, 33vw"
+              />
+              <span className="pathway-card-wash" aria-hidden="true" />
+              <span className="pathway-card-content">
+                <span className="pathway-number">01</span>
+                <strong>Compare countries</strong>
+                <span>See ownership conditions through a global lens.</span>
+                <span className="pathway-arrow" aria-hidden="true">→</span>
+              </span>
+            </Link>
+            <Link className="pathway-card" href="/global-travel">
+              <Image
+                src="/images/doghavengroup/visuals/travel-alpine-train-border-collie.webp"
+                alt="A Border Collie travelling beside a train window through the Alps"
+                fill
+                sizes="(max-width: 760px) 100vw, 33vw"
+              />
+              <span className="pathway-card-wash" aria-hidden="true" />
+              <span className="pathway-card-content">
+                <span className="pathway-number">02</span>
+                <strong>Plan a journey</strong>
+                <span>Prepare travel, documents and relocation with care.</span>
+                <span className="pathway-arrow" aria-hidden="true">→</span>
+              </span>
+            </Link>
+            <Link className="pathway-card" href="/academy">
+              <Image
+                src="/images/doghavengroup/visuals/academy-staffy-trainer.webp"
+                alt="A brindle Staffordshire Bull Terrier resting attentively in a bright training room"
+                fill
+                sizes="(max-width: 760px) 100vw, 33vw"
+              />
+              <span className="pathway-card-wash" aria-hidden="true" />
+              <span className="pathway-card-content">
+                <span className="pathway-number">03</span>
+                <strong>Build a better ownership plan</strong>
+                <span>Practical guidance for a healthier life together.</span>
+                <span className="pathway-arrow" aria-hidden="true">→</span>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -100,10 +160,10 @@ export default function HomePage() {
             <Link className="country-card" href={southAfrica.href}>
               <div className="country-card-media country-card-media-south-africa">
                 <Image
-                  src="/images/doghavengroup/countries/dog-haven-south-africa-country-gateway-map.webp"
-                  alt="South Africa highlighted on a premium Africa network map for Dog Haven South Africa country guides"
-                  width={1450}
-                  height={1088}
+                  src="/images/doghavengroup/visuals/south-africa-fynbos-rescue-dog.webp"
+                  alt="A South African woman walking a tan rescue dog through coastal fynbos"
+                  width={1774}
+                  height={887}
                   sizes="(max-width: 520px) calc(100vw - 28px), (max-width: 900px) 46vw, 370px"
                 />
               </div>
@@ -116,8 +176,8 @@ export default function HomePage() {
             <Link className="country-card" href={unitedStates.href}>
               <div className="country-card-media country-card-media-united-states">
                 <Image
-                  src="/images/doghavengroup/countries/dog-haven-united-states-country-gateway-map.webp"
-                  alt="United States highlighted on a premium global network map for Dog Haven USA country guides"
+                  src="/images/doghavengroup/visuals/united-states-waterfront-golden-retriever.webp"
+                  alt="A couple walking a Golden Retriever beside a Pacific Northwest waterfront"
                   width={1536}
                   height={1024}
                   sizes="(max-width: 520px) calc(100vw - 28px), (max-width: 900px) 46vw, 370px"
@@ -132,8 +192,8 @@ export default function HomePage() {
             <Link className="country-card" href={italy.href}>
               <div className="country-card-media country-card-media-italy">
                 <Image
-                  src="/images/doghavengroup/countries/dog-haven-italy-country-gateway-map.webp"
-                  alt="Italy highlighted on a premium European network map for Dog Haven Italy country guides"
+                  src="/images/doghavengroup/visuals/italy-square-whippet.webp"
+                  alt="An older man walking a blue-grey Whippet through an Italian stone square"
                   width={1536}
                   height={1024}
                   sizes="(max-width: 520px) calc(100vw - 28px), (max-width: 900px) 46vw, 370px"
@@ -231,6 +291,31 @@ export default function HomePage() {
                 Open the guide
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section home-story-section">
+        <div className="shell">
+          <div className="home-story-heading">
+            <div>
+              <p className="eyebrow">Guidance through every life stage</p>
+              <h2>Beautiful lives begin with practical preparation.</h2>
+            </div>
+            <p>
+              Start with the decision in front of you, then move naturally
+              between trusted guidance, planning tools and country context.
+            </p>
+          </div>
+          <div className="home-story-grid">
+            <Link className="home-story-card" href="/academy/first-time-dog-owner-guide">
+              <Image src="/images/doghavengroup/visuals/academy-first-dog-puppy-plan.webp" alt="A young puppy sleeping while its new owners quietly prepare a first-month plan" fill sizes="(max-width: 760px) 100vw, 50vw" />
+              <span><small>First dog</small><strong>Prepare the home, budget and first month with confidence.</strong></span>
+            </Link>
+            <Link className="home-story-card" href="/academy/senior-dog-care">
+              <Image src="/images/doghavengroup/visuals/academy-senior-black-labrador.webp" alt="A senior black Labrador resting comfortably beside its owner in a bright home" fill sizes="(max-width: 760px) 100vw, 50vw" />
+              <span><small>Senior years</small><strong>Protect comfort, routine and dignity as needs change.</strong></span>
+            </Link>
           </div>
         </div>
       </section>

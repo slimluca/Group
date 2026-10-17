@@ -49,7 +49,7 @@ export const pages: Record<string, PageContent> = {
     slug: "south-africa",
     title: "Dog Haven South Africa | Global Country Gateway",
     description:
-      "A premium Dog Haven Group gateway explaining how Dog Haven South Africa fits into the global network for dog owners, travel planning, costs, and local ownership guidance.",
+      "Explore how Dog Haven South Africa connects local ownership guidance with global dog travel, cost planning and country comparisons.",
     eyebrow: "Country gateway",
     hero: "Dog Haven South Africa connects local dog ownership decisions with the wider global Dog Haven network.",
     heroImage: { src: "/images/doghavengroup/countries/south-africa-global-dog-owners.svg", alt: "A premium editorial scene representing South African dog owners connected to global Dog Haven planning." },
@@ -60,7 +60,7 @@ export const pages: Record<string, PageContent> = {
           "Dog Haven South Africa serves a distinct local audience while Dog Haven Group provides the wider international framework. South African dog owners often need practical guidance that is rooted in local living conditions, local services, seasonal weather, city patterns, housing realities, and the everyday cost of responsible care. The role of this gateway is to explain that relationship clearly before sending readers to the local site.",
           "Within the broader Dog Haven network, South Africa is also an important travel and relocation reference point. Families may be preparing to move with a dog, comparing paperwork requirements, or trying to understand how a dog care budget changes when life crosses borders. Dog Haven Group connects those questions to the <a href=\"/global-travel\">Global Travel</a>, <a href=\"/world-atlas\">World Atlas</a>, and <a href=\"/lab/global-dog-cost-calculator\">Global Dog Cost Calculator</a> sections."
         ],
-        image: { src: "/images/doghavengroup/countries/south-africa-country-overview.svg", alt: "South African dog ownership planning shown with city, coast, and household context." },
+        image: { src: "/images/doghavengroup/visuals/south-africa-ridgeback-promenade.webp", alt: "A Rhodesian Ridgeback and its owner walking on the Sea Point promenade in Cape Town." },
         links: [{ href: "https://doghaven.co.za", label: "Explore Dog Haven South Africa", text: "Open the local Dog Haven South Africa site for country-specific resources." }]
       },
       {
@@ -87,7 +87,7 @@ export const pages: Record<string, PageContent> = {
           "The United States is not one simple dog ownership market. Climate, housing, city design, public-space access, transport choices, insurance habits, training culture, and family routines can vary dramatically from one state or city to another. Dog Haven Group treats the United States as an essential local pillar while keeping the global site focused on comparison, planning structure, and cross-border ownership intelligence.",
           "For people preparing to own a dog in the United States, the Dog Haven USA site can explore practical everyday guidance. For people comparing the United States with Italy, South Africa, or a future Dog Haven country, the global site provides the broader lens through the <a href=\"/world-atlas/global-dog-ownership-index\">Global Dog Ownership Index framework</a> and the <a href=\"/academy/first-time-dog-owner-guide\">first-time owner guide</a>."
         ],
-        image: { src: "/images/doghavengroup/countries/united-states-city-dog-living.svg", alt: "United States city dog living shown with apartment, park, travel, and cost planning elements." },
+        image: { src: "/images/doghavengroup/visuals/united-states-boston-terrier-rental.webp", alt: "A Boston Terrier and its owner arriving at a suburban rental home in the United States." },
         links: [{ href: "https://doghaven.us", label: "Visit Dog Haven USA", text: "Open the Dog Haven USA website for country-specific material." }]
       },
       {
@@ -114,7 +114,7 @@ export const pages: Record<string, PageContent> = {
           "Italy is a meaningful country gateway because dog ownership often intersects with compact city living, apartment routines, regional travel, public-space etiquette, and the practical work of planning around transport and accommodation. Dog Haven Italy can speak to those local realities while Dog Haven Group keeps the wider international structure coherent.",
           "For readers comparing Italy with South Africa, the United States or a future Dog Haven country, this page provides context rather than pretending to be a complete local guide. Global readers can use the <a href=\"/global-travel/route-guides\">Route Guides hub</a>, <a href=\"/downloads\">Download Library</a> and <a href=\"/world-atlas/dog-ownership-costs-by-country\">costs by country guide</a> before moving into country-specific material."
         ],
-        image: { src: "/images/doghavengroup/countries/italy-apartment-and-travel-dogs.svg", alt: "Dog ownership in Italy represented through apartment living, trains, streets, and travel planning." },
+        image: { src: "/images/doghavengroup/visuals/italy-lagotto-train-platform.webp", alt: "A Lagotto Romagnolo waiting calmly with its owner at a regional railway platform in northern Italy." },
         links: [{ href: "https://doghaven.it", label: "Read Dog Haven Italy resources", text: "Open the local Dog Haven Italy site for country-specific resources." }]
       },
       {
@@ -266,7 +266,7 @@ export const pages: Record<string, PageContent> = {
   },
   "global-travel": {
     slug: "global-travel",
-    title: "International Dog Travel Planner & Global Travel Guides | Dog Haven Group",
+    title: "International Dog Travel Guides | Dog Haven Group",
     description:
       "Plan dog travel worldwide with guidance for travelling abroad with a dog, moving abroad, route research, documents, accommodation, and source checks.",
     eyebrow: "Dog Haven Group Global Travel",
@@ -317,9 +317,9 @@ export const pages: Record<string, PageContent> = {
   },
   "moving-abroad-with-a-dog": {
     slug: "global-travel/moving-abroad-with-a-dog",
-    title: "Moving Abroad With a Dog: Global Relocation Planning Guide | Dog Haven Group",
+    title: "Moving Abroad With a Dog | Dog Haven Group",
     description:
-      "A careful long-form guide to moving abroad with a dog, covering early planning, documents, vet preparation, housing, budget, arrival routines, and mistakes to avoid.",
+      "A practical guide to moving abroad with a dog, covering planning, documents, vet preparation, housing, budget, arrival and common mistakes.",
     eyebrow: "Relocation guide",
     hero: "Moving abroad with a dog is a project, not a last-minute errand.",
     heroImage: { src: "/images/doghavengroup/travel/moving-abroad-with-a-dog.svg", alt: "A dog relocation planning scene with luggage, veterinary documents, housing notes, and route research." },
@@ -406,7 +406,7 @@ export const pages: Record<string, PageContent> = {
   },
   lab: {
     slug: "lab",
-    title: "Dog Cost Calculator, Breed Fit Quiz & Travel Checklist | Dog Haven Group Lab",
+    title: "Dog Planning Tools & Calculators | Dog Haven Group",
     description:
       "Use Dog Haven Group Lab for dog cost and age calculators, breed-fit and puppy-readiness quizzes, a travel checklist, and curated dog name ideas.",
     eyebrow: "Dog Haven Group Lab",
@@ -439,7 +439,7 @@ export const pages: Record<string, PageContent> = {
   },
   academy: {
     slug: "academy",
-    title: "First-Time Dog Owner Guides & Dog Care Academy | Dog Haven Group",
+    title: "Dog Owner Guides & Academy | Dog Haven Group",
     description:
       "Learn first-time dog owner planning, puppy preparation, apartment dog ownership, family routines, senior dog care, safety, behavior, and nutrition basics.",
     eyebrow: "Dog Haven Group Academy",
@@ -474,10 +474,10 @@ export const pages: Record<string, PageContent> = {
     slug: "academy/first-time-dog-owner-guide",
     title: "First-Time Dog Owner Guide | Dog Haven Group Academy",
     description:
-      "A professional global first-time dog owner guide covering lifestyle fit, budgeting, routines, puppy planning, adult dogs, safety, training, and downloadable resources.",
+      "A practical first-time dog owner guide to lifestyle fit, budgeting, routines, puppy planning, adult dogs, safety, training and useful resources.",
     eyebrow: "Academy guide",
     hero: "Your first dog should begin with a realistic plan, not a fantasy version of ownership.",
-    heroImage: { src: "/images/doghavengroup/home/first-time-dog-owner-guide.svg", alt: "A first-time dog owner planning a calm home routine with a dog, checklist, and budget notes." },
+    heroImage: { src: "/images/doghavengroup/visuals/academy-first-dog-puppy-plan.webp", alt: "A young puppy sleeping while its new owners prepare a calm first-month plan." },
     sections: [
       {
         title: "Start with the life the dog will actually live",
@@ -485,7 +485,7 @@ export const pages: Record<string, PageContent> = {
           "A good first dog decision begins with daily routine, housing, budget, energy, time, family structure, travel plans and tolerance for mess, training, noise and unpredictability. The right question is not which dog looks appealing online. It is which kind of dog can thrive in the life you can responsibly provide for the next decade or more.",
           "Before choosing a puppy or adult dog, use the <a href=\"/lab/breed-fit-quiz\">Breed Fit Quiz</a> to think in lifestyle categories, then check the <a href=\"/lab/global-dog-cost-calculator\">Global Dog Cost Calculator</a> to understand planning ranges. If your life may involve relocation, read <a href=\"/global-travel/moving-abroad-with-a-dog\">moving abroad with a dog</a> before making a commitment."
         ],
-        image: { src: "/images/doghavengroup/home/dog-home-routine-planning.svg", alt: "A calm home routine planning scene for a new dog owner." }
+        image: { src: "/images/doghavengroup/visuals/first-owner-lurcher-settling-home.webp", alt: "An adult brindle lurcher settling into a quiet home while its new owner reviews adoption information." }
       },
       {
         title: "Prepare the home, budget, and support system",
@@ -520,7 +520,7 @@ export const pages: Record<string, PageContent> = {
   },
   journal: {
     slug: "journal",
-    title: "Global Dog Ownership Journal, Travel Updates & Network Notes | Dog Haven Group",
+    title: "Global Dog Ownership Journal | Dog Haven Group",
     description:
       "Read Dog Haven Group Journal insights on global dog ownership, dog travel planning, safety, ownership trends, country spotlights, and network updates.",
     eyebrow: "Dog Haven Group Journal",
@@ -546,7 +546,7 @@ export const pages: Record<string, PageContent> = {
   },
   downloads: {
     slug: "downloads",
-    title: "Free Dog Ownership Planners, PDFs & Checklists | Dog Haven Group",
+    title: "Free Dog Planners & Checklists | Dog Haven Group",
     description:
       "Download free dog ownership planners, PDFs, checklists, worksheets, travel resources, puppy planning guides, and dog cost planning workbooks.",
     eyebrow: "Download Library",
@@ -572,7 +572,7 @@ export const pages: Record<string, PageContent> = {
   },
   countries: {
     slug: "countries",
-    title: "Dog Haven Country Network: South Africa, United States & Italy | Dog Haven Group",
+    title: "Dog Haven Country Network | Dog Haven Group",
     description:
       "Explore the Dog Haven country network for South Africa, the United States, Italy, and future country expansion connected to global dog ownership planning.",
     eyebrow: "Country Network",
@@ -592,7 +592,7 @@ export const pages: Record<string, PageContent> = {
   },
   "doghaven-universe": {
     slug: "doghaven-universe",
-    title: "Dog Haven Group Platform Map: Atlas, Travel, Lab, Academy & Countries",
+    title: "Explore the Dog Haven Group Platform",
     description:
       "Explore the Dog Haven Group platform map across World Atlas, Global Travel, Lab tools, Academy guides, Journal insights, downloads, and countries.",
     eyebrow: "Platform map",
@@ -628,7 +628,7 @@ export const pages: Record<string, PageContent> = {
     slug: "about",
     title: "About Dog Haven Group | Global Dog Ownership Platform",
     description:
-      "Learn about Dog Haven Group, the global parent site for the Dog Haven country network, ownership research, travel planning, tools, Academy, Journal and downloads.",
+      "Learn about Dog Haven Group, the parent site for our country network, ownership research, travel planning, tools, Academy and downloads.",
     eyebrow: "About",
     hero: "Dog Haven Group exists to make responsible dog ownership easier to plan across countries, homes, and life stages.",
     heroImage: { src: "/images/doghavengroup/home/global-dog-ownership-hero.svg", alt: "Dog Haven Group global dog ownership platform brand scene." },
@@ -740,8 +740,8 @@ export const pages: Record<string, PageContent> = {
         title: "Privacy overview",
         body: [
           "This privacy policy should be reviewed by a qualified legal professional before it is relied on as legal advice. Dog Haven Group may collect information voluntarily submitted through contact links or future forms, along with standard technical information used to operate and improve the website.",
-          "Dog Haven Group uses optional Google Analytics only after a visitor chooses to accept analytics. It helps understand how visitors use the website so guides, tools and resources can be improved. Visitors can decline analytics, and they can change the choice later using Analytics preferences in the footer.",
-          "The analytics consent decision is stored locally in the visitor's browser as dog-haven-group-analytics-consent-v1. If analytics is declined, Google Analytics is not loaded by this website. If other email tools, forms, advertising, or third-party services are added, this policy should describe those services accurately."
+          "Dog Haven Group does not use Google Analytics or place a Google Analytics cookie on this website. Traffic may be measured through Cloudflare Web Analytics, configured at the domain level, using aggregated website performance and visit information.",
+          "The website may also receive technical information needed to deliver pages, protect the service, process contact requests, and prevent abuse. If other email tools, forms, advertising, or third-party services are added, this policy should be updated to describe those services accurately."
         ]
       }
     ]

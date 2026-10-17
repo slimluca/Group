@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { AnalyticsPreferencesLink } from "@/components/AnalyticsPreferencesLink";
 
 const globalPlatformLinks = [
   { href: "/world-atlas", label: "World Atlas" },
@@ -22,6 +21,7 @@ const learnLinks = [
   { href: "/academy", label: "Dog Haven Group Academy" },
   { href: "/journal", label: "Dog Haven Group Journal" },
   { href: "/downloads", label: "Download Library" },
+  { href: "/dogweddingkit", label: "Dog Wedding Kit project" },
 ];
 
 const networkLinks = [
@@ -184,8 +184,15 @@ export function SiteFooter() {
                 {item.label}
               </Link>
             ))}
-            <AnalyticsPreferencesLink />
           </nav>
+          <a
+            className="site-credit"
+            href="https://sitesbyluca.com"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            Website by Sites by Luca
+          </a>
         </div>
       </div>
     </footer>

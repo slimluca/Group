@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import "./readability.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { AnalyticsConsent } from "@/components/AnalyticsConsent";
 import { site } from "@/data/site";
 import { jsonLd } from "@/lib/metadata";
 
@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -52,7 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
-        <AnalyticsConsent measurementId={gaMeasurementId} />
       </body>
     </html>
   );
