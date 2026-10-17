@@ -5,22 +5,22 @@ import { MediaFrame, resolveEditorialImageSrc } from "./MediaFrame";
 
 const templateHeroAssets: Record<string, { src: string; alt: string; className: string }> = {
   "world-atlas": {
-    src: "/images/doghavengroup/visuals/world-atlas-premium-map-v2.png",
+    src: "/images/doghavengroup/visuals/world-atlas-premium-map-v2.webp",
     alt: "A premium global dog ownership atlas with a different Irish Setter beside maps and comparison notes",
     className: "template-hero-atlas",
   },
   "global-travel": {
-    src: "/images/doghavengroup/visuals/international-dog-travel-v2.png",
+    src: "/images/doghavengroup/visuals/international-dog-travel-v2.webp",
     alt: "A Border Collie resting beside a premium international dog travel planning desk",
     className: "template-hero-travel",
   },
   academy: {
-    src: "/images/doghavengroup/visuals/doghaven-academy-reading-room-v2.png",
+    src: "/images/doghavengroup/visuals/doghaven-academy-reading-room-v2.webp",
     alt: "A Bernese Mountain Dog beside a refined Dog Haven learning room with guidebooks",
     className: "template-hero-academy",
   },
   lab: {
-    src: "/images/doghavengroup/visuals/doghaven-lab-tools-v2.png",
+    src: "/images/doghavengroup/visuals/doghaven-lab-tools-v2.webp",
     alt: "An apricot Standard Poodle beside a premium dog planning laboratory desk",
     className: "template-hero-lab",
   },
@@ -75,11 +75,11 @@ export function EditorialPage({ page }: { page: PageContent }) {
       <section className="template-feature-section">
         <div className="shell template-feature-grid">
           <Link href="/global-travel/dog-passport-planner" className="template-feature-card">
-            <Image src="/images/doghavengroup/visuals/world-atlas-premium-map-v2.png" alt="A premium atlas scene for planning an international dog journey" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <Image src="/images/doghavengroup/visuals/world-atlas-premium-map-v2.webp" alt="A premium atlas scene for planning an international dog journey" fill sizes="(max-width: 760px) 100vw, 50vw" />
             <span><small>International dog travel</small><strong>Take the next route with a better plan →</strong></span>
           </Link>
           <Link href="/global-travel/relocation" className="template-feature-card">
-            <Image src="/images/doghavengroup/visuals/dog-relocation-planning-v2.png" alt="A Greyhound beside a calm dog relocation planning scene" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <Image src="/images/doghavengroup/visuals/dog-relocation-planning-v2.webp" alt="A Greyhound beside a calm dog relocation planning scene" fill sizes="(max-width: 760px) 100vw, 50vw" />
             <span><small>Relocation centre</small><strong>Move well, from first question to arrival →</strong></span>
           </Link>
         </div>
@@ -111,11 +111,11 @@ export function EditorialPage({ page }: { page: PageContent }) {
       <section className="template-feature-section">
         <div className="shell template-feature-grid">
           <Link href="/academy/puppy-planning" className="template-feature-card">
-            <Image src="/images/doghavengroup/visuals/doghaven-academy-reading-room-v2.png" alt="A Bernese Mountain Dog beside a calm Academy reading room" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <Image src="/images/doghavengroup/visuals/doghaven-academy-reading-room-v2.webp" alt="A Bernese Mountain Dog beside a calm Academy reading room" fill sizes="(max-width: 760px) 100vw, 50vw" />
             <span><small>Puppy planning</small><strong>Prepare the first month before the puppy arrives →</strong></span>
           </Link>
           <Link href="/academy/senior-dog-care" className="template-feature-card">
-            <Image src="/images/doghavengroup/visuals/download-library-guides-v2.png" alt="A Cavalier King Charles Spaniel beside premium dog ownership guides" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <Image src="/images/doghavengroup/visuals/download-library-guides-v2.webp" alt="A Cavalier King Charles Spaniel beside premium dog ownership guides" fill sizes="(max-width: 760px) 100vw, 50vw" />
             <span><small>Senior care</small><strong>Adapt the home and routine with dignity →</strong></span>
           </Link>
         </div>
@@ -125,11 +125,11 @@ export function EditorialPage({ page }: { page: PageContent }) {
     <section className="template-feature-section">
       <div className="shell template-feature-grid">
         <Link href="/lab/global-dog-cost-calculator" className="template-feature-card">
-          <Image src="/images/doghavengroup/visuals/doghaven-lab-tools-v2.png" alt="An apricot Standard Poodle beside a dog-owner budgeting and planning desk" fill sizes="(max-width: 760px) 100vw, 50vw" />
+          <Image src="/images/doghavengroup/visuals/doghaven-lab-tools-v2.webp" alt="An apricot Standard Poodle beside a dog-owner budgeting and planning desk" fill sizes="(max-width: 760px) 100vw, 50vw" />
           <span><small>Cost planning</small><strong>Build a realistic monthly and yearly ownership range →</strong></span>
         </Link>
         <Link href="/lab/puppy-readiness-quiz" className="template-feature-card">
-          <Image src="/images/doghavengroup/visuals/doghaven-academy-reading-room-v2.png" alt="A Bernese Mountain Dog beside a practical Dog Haven learning plan" fill sizes="(max-width: 760px) 100vw, 50vw" />
+          <Image src="/images/doghavengroup/visuals/doghaven-academy-reading-room-v2.webp" alt="A Bernese Mountain Dog beside a practical Dog Haven learning plan" fill sizes="(max-width: 760px) 100vw, 50vw" />
           <span><small>Readiness</small><strong>Turn uncertainty into a clear preparation list →</strong></span>
         </Link>
       </div>
