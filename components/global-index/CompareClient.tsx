@@ -182,7 +182,7 @@ export function CompareClient() {
                     (item) => item.categoryId === category.id,
                   )!;
                   return (
-                    <td key={country.slug}>
+                    <td key={country.slug} data-country={country.name}>
                       <strong>
                         {assessment.score} / 5 — {assessment.scoreLabel}
                       </strong>

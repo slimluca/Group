@@ -4,6 +4,56 @@
   color: #fff8e9 !important;
 }
 
+.global-guide-hero { position: relative; min-height: 700px; display: flex; align-items: end; overflow: hidden; background: #181716; }
+.global-guide-hero > img { object-fit: cover; object-position: center; }
+.global-guide-hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12, 12, 11, .88) 0%, rgba(12, 12, 11, .58) 45%, rgba(12, 12, 11, .1) 100%), linear-gradient(0deg, rgba(12, 12, 11, .68), transparent 58%); }
+.global-guide-hero-inner { position: relative; z-index: 1; width: 100%; padding-top: 9rem; padding-bottom: 6rem; }
+.global-guide-hero-copy { max-width: 840px; color: #fff; }
+.global-guide-hero-copy h1 { max-width: 860px; margin: .55rem 0 1.2rem; font-size: clamp(2.65rem, 5.4vw, 5.55rem); line-height: .98; letter-spacing: -.055em; }
+.global-guide-hero-copy .lead { max-width: 720px; color: rgba(255,255,255,.86); font-size: clamp(1.08rem, 1.35vw, 1.35rem); line-height: 1.7; }
+.global-guide-intro-copy { max-width: 900px; }
+.global-guide-intro-copy h2, .global-guide-section h2, .global-guide-checklist h2, .global-guide-end h2 { max-width: 760px; }
+.global-guide-section { background: #f5f0e7; }
+.global-guide-section-dark { background: #242321; color: #f7f2e9; }
+.global-guide-section-dark .editorial-copy p { color: rgba(247,242,233,.82); }
+.global-guide-section-grid { display: grid; grid-template-columns: 110px minmax(0, 820px); gap: 3rem; align-items: start; }
+.global-guide-section-number { color: #b48b43; font: 700 1.1rem/1 Manrope, sans-serif; letter-spacing: .12em; padding-top: .45rem; }
+.global-guide-checklist { background: #d7c7a2; }
+.global-guide-checklist-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 520px); gap: 5rem; align-items: start; }
+.global-guide-checklist ol { list-style: none; padding: 0; margin: 0; }
+.global-guide-checklist li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 1rem; align-items: start; padding: 1rem 0; border-top: 1px solid rgba(32,30,27,.2); }
+.global-guide-checklist li:last-child { border-bottom: 1px solid rgba(32,30,27,.2); }
+.global-guide-checklist li span { color: #705321; font: 700 .78rem/1.4 Manrope, sans-serif; letter-spacing: .12em; }
+.global-guide-checklist li p { margin: 0; color: #26231e; }
+.global-guide-end { background: #1a1917; color: #f7f2e9; text-align: center; }
+.global-guide-end-inner { max-width: 900px; }
+.global-guide-end h2 { margin-left: auto; margin-right: auto; }
+.guides-directory-hero { min-height: 620px; }
+.guides-directory-intro { background: #f5f0e7; }
+.guides-directory-copy { max-width: 920px; }
+.guides-directory-grid-section { background: #ebe3d4; }
+.guides-directory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.global-guide-card { display: grid; grid-template-rows: 270px 1fr; color: inherit; background: #f8f4ec; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.global-guide-card:hover { transform: translateY(-4px); box-shadow: 0 1.2rem 2.5rem rgba(43,35,23,.12); }
+.global-guide-card-image { position: relative; overflow: hidden; min-height: 0; }
+.global-guide-card-image img { object-fit: cover; transition: transform .35s ease; }
+.global-guide-card:hover .global-guide-card-image img { transform: scale(1.035); }
+.global-guide-card-copy { padding: 1.75rem 1.8rem 2rem; }
+.global-guide-card-copy h2 { margin: .4rem 0 .9rem; font-size: clamp(1.55rem, 2.1vw, 2.2rem); line-height: 1.06; }
+.global-guide-card-copy p:not(.eyebrow) { color: #5b554d; line-height: 1.7; }
+.global-guide-card-copy strong { display: inline-block; margin-top: .6rem; color: #785a25; }
+.guides-directory-end { background: #d7c7a2; }
+.guides-directory-end-inner { text-align: center; max-width: 900px; }
+.guides-directory-end h2 { margin-left: auto; margin-right: auto; }
+@media (max-width: 760px) {
+  .global-guide-hero { min-height: 680px; }
+  .global-guide-hero-inner { padding-top: 7rem; padding-bottom: 3.5rem; }
+  .global-guide-section-grid, .global-guide-checklist-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  .global-guide-section-number { padding-top: 0; }
+  .guides-directory-grid { grid-template-columns: 1fr; }
+  .global-guide-card { grid-template-rows: 230px 1fr; }
+}
+
 .owner-guidance-section h2,
 .owner-guidance-section h3,
 .owner-guidance-section p,
@@ -78,4 +128,76 @@
 @media (max-width: 760px) {
   .template-hero-generic { min-height: 620px; }
   .template-hero-generic .template-hero-image { object-position: 62% center; }
+}
+
+/* Dogs of the World editorial library */
+.world-story-hero,
+.world-stories-hub-hero { position: relative; min-height: clamp(560px, 72vh, 760px); overflow: hidden; background: #171a17; color: #fff8ed; }
+.world-story-hero-image { object-fit: cover; object-position: center; }
+.world-story-hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12, 14, 11, .94), rgba(12, 14, 11, .7) 40%, rgba(12, 14, 11, .08) 82%), linear-gradient(180deg, rgba(12, 14, 11, .08), rgba(12, 14, 11, .64)); }
+.world-story-hero-inner { position: relative; z-index: 1; min-height: inherit; display: flex; align-items: center; }
+.world-story-hero-copy { max-width: 760px; text-shadow: 0 2px 18px rgba(0,0,0,.4); }
+.world-story-hero-copy h1 { max-width: 850px; margin: 12px 0 18px; color: #fff8ed; font-size: clamp(3rem, 6.5vw, 6.5rem); line-height: .96; }
+.world-story-hero-copy .lead { max-width: 680px; color: rgba(255,248,237,.92); font-size: clamp(1.1rem, 1.7vw, 1.45rem); line-height: 1.45; }
+.world-story-intro, .world-stories-hub-intro { background: #f4ecdf; color: #28221e; }
+.world-story-intro-grid, .world-story-breed-grid, .world-story-section-grid, .world-story-source-grid, .world-stories-next-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); gap: clamp(34px, 7vw, 100px); align-items: start; }
+.world-story-intro h2, .world-story-breed h2, .world-story-section h2, .world-story-sources h2, .world-stories-hub-copy h2, .world-stories-next h2 { color: #28221e; text-shadow: none; }
+.world-story-intro .editorial-copy p, .world-story-breed .editorial-copy p, .world-story-section .editorial-copy p, .world-story-sources .editorial-copy p, .world-stories-hub-copy p, .world-stories-next p { color: #5e554d; }
+.world-story-facts { padding: clamp(26px,4vw,46px); border: 1px solid rgba(142,99,52,.3); background: #ead9c2; }
+.world-story-facts dl { margin: 0; }
+.world-story-facts dl div { padding: 18px 0; border-top: 1px solid rgba(142,99,52,.25); }
+.world-story-facts dl div:first-child { border-top: 0; }
+.world-story-facts dt { color: #8d671d; font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.world-story-facts dd { margin: 6px 0 0; color: #38291f; font-weight: 750; line-height: 1.4; }
+.world-story-breed { background: #fffaf1; color: #28221e; }
+.world-story-breed-label { position: sticky; top: 100px; }
+.world-story-breed-label span, .world-story-section-number { color: #9d702d; font-weight: 850; letter-spacing: .14em; }
+.world-story-breed-label h2 { margin: 10px 0; font-size: clamp(2.2rem, 4vw, 4.5rem); }
+.world-story-breed-label > p:last-child { color: #786b5d; font-family: var(--font-display), Georgia, serif; font-size: 1.2rem; }
+.world-story-section { background: #f2eadb; color: #28221e; }
+.world-story-section-dark { background: #1f241f; color: #fff8ed; }
+.world-story-section-dark h2, .world-story-section-dark .editorial-copy p { color: #fff8ed; }
+.world-story-section-dark .editorial-copy p:not(.eyebrow) { color: rgba(255,248,237,.78); }
+.world-story-section-dark .eyebrow { color: #e2bc71; }
+.world-story-section-grid { grid-template-columns: 72px minmax(0, 1fr); }
+.world-story-section-number { font-size: 1.3rem; }
+.world-story-sources { background: #ead9c2; color: #28221e; }
+.world-story-sources h2 { color: #28221e; }
+.world-story-sources aside { padding: 28px; border-left: 1px solid rgba(142,99,52,.35); }
+.world-story-sources ol { margin: 0; padding-left: 20px; }
+.world-story-sources li { margin: 12px 0; color: #5e554d; }
+.world-story-sources a { color: #765719; font-weight: 750; text-decoration: underline; text-underline-offset: .16em; }
+.world-stories-hub-hero .template-hero-copy h1 { color: #fff8ed; }
+.world-stories-hub-copy { max-width: 860px; }
+.world-stories-directory { background: #fffaf1; }
+.world-stories-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.world-story-card { display: flex; flex-direction: column; overflow: hidden; background: #211f1b; color: #fff8ed; box-shadow: 0 18px 34px rgba(41,31,19,.12); }
+.world-story-card-image { position: relative; min-height: 260px; }
+.world-story-card-image img { object-fit: cover; }
+.world-story-card-copy { display: flex; flex: 1; flex-direction: column; padding: 24px; }
+.world-story-card-copy .eyebrow { color: #e2bc71; }
+.world-story-card-copy h3 { margin: 7px 0 10px; color: #fff8ed; font-size: 2rem; }
+.world-story-card-copy p:not(.eyebrow) { color: rgba(255,248,237,.75); }
+.world-story-card-copy strong { margin-top: auto; padding-top: 16px; color: #e2bc71; }
+.world-stories-next { background: #1f241f; color: #fff8ed; }
+.world-stories-next h2, .world-stories-next p { color: #fff8ed; }
+.world-stories-next .eyebrow { color: #e2bc71; }
+.world-stories-next-list { padding: 26px; border: 1px solid rgba(226,188,113,.26); }
+.world-stories-next-list span { display: block; margin-bottom: 16px; color: #e2bc71; font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.world-stories-next-list p { margin: 0; padding: 12px 0; border-top: 1px solid rgba(255,248,237,.16); }
+
+@media (max-width: 860px) {
+  .world-stories-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  .world-story-hero { min-height: 700px; }
+  .world-story-hero-image { object-position: 62% center; }
+  .world-story-hero-wash { background: linear-gradient(180deg, rgba(12,14,11,.06) 10%, rgba(12,14,11,.48) 46%, rgba(12,14,11,.96) 100%); }
+  .world-story-hero-inner { align-items: flex-end; padding-top: 140px; padding-bottom: 52px; }
+  .world-story-hero-copy h1 { font-size: clamp(3rem, 14vw, 5.2rem); }
+  .world-story-intro-grid, .world-story-breed-grid, .world-story-source-grid, .world-stories-next-grid { grid-template-columns: 1fr; gap: 32px; }
+  .world-story-section-grid { grid-template-columns: 1fr; gap: 12px; }
+  .world-story-breed-label { position: static; }
+  .world-story-sources aside { border-top: 1px solid rgba(142,99,52,.35); border-left: 0; }
+  .world-stories-grid { grid-template-columns: 1fr; }
 }

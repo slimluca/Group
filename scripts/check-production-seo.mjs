@@ -2,6 +2,34 @@ import fs from "node:fs";
 
 const baseUrl = process.env.SEO_BASE_URL || "http://localhost:3000";
 const productionHost = "https://doghavengroup.com";
+const worldDogStoryRoutes = [
+  "/world-atlas/dogs-of-the-world",
+  "/world-atlas/dogs-of-the-world/south-africa-rhodesian-ridgeback",
+  "/world-atlas/dogs-of-the-world/united-states-boston-terrier",
+  "/world-atlas/dogs-of-the-world/italy-lagotto-romagnolo",
+  "/world-atlas/dogs-of-the-world/united-kingdom-border-collie",
+  "/world-atlas/dogs-of-the-world/australia-australian-kelpie",
+  "/world-atlas/dogs-of-the-world/canada-newfoundland",
+  "/world-atlas/dogs-of-the-world/japan-shiba-inu",
+  "/world-atlas/dogs-of-the-world/germany-german-shepherd",
+  "/world-atlas/dogs-of-the-world/france-brittany-spaniel",
+  "/world-atlas/dogs-of-the-world/brazil-brazilian-terrier",
+];
+const globalGuideRoutes = [
+  "/guides",
+  "/guides/best-dogs-for-hot-climates",
+  "/guides/best-dogs-for-apartments",
+  "/guides/first-time-dog-owner-breed-guide",
+  "/guides/dog-travel-planning-guide",
+  "/guides/native-dog-breeds-by-country",
+];
+const breedComparisonRoutes = [
+  "/guides/breed-comparisons",
+  "/guides/breed-comparisons/border-collie-vs-australian-kelpie",
+  "/guides/breed-comparisons/boston-terrier-vs-italian-greyhound",
+  "/guides/breed-comparisons/newfoundland-vs-rhodesian-ridgeback",
+  "/guides/breed-comparisons/shiba-inu-vs-lagotto-romagnolo",
+];
 const routes = [
   "/", "/about", "/academy", "/academy/first-time-dog-owner-guide", "/academy/puppy-planning",
   "/academy/apartment-dog-ownership", "/academy/family-dog-ownership", "/academy/senior-dog-care",
@@ -19,6 +47,9 @@ const routes = [
   "/italy", "/journal", "/journal/introducing-dog-haven-group", "/journal/how-doghaven-will-grow-across-countries",
   "/journal/why-global-dog-travel-needs-better-planning", "/contact", "/editorial-policy", "/research-methodology",
   "/privacy-policy", "/terms", "/disclaimer", "/doghaven-universe",
+  ...worldDogStoryRoutes,
+  ...globalGuideRoutes,
+  ...breedComparisonRoutes,
 ];
 
 const failures = [];

@@ -15,10 +15,11 @@ export function CountryProfile({ country }: { country: IndexCountry }) {
   return (
     <>
       <section
-        className={`page-hero index-country-hero ${country.image ? "with-image" : "data-led"}`}
+        className={`page-hero template-hero template-hero-country index-country-hero ${country.image ? "with-image" : "data-led"}`}
       >
         <div className="shell">
           <IndexNav />
+          <span className="template-hero-overlay" aria-hidden="true" />
           <div className="index-country-heading">
             <div>
               <p className="eyebrow">Global Dog Ownership Index</p>
