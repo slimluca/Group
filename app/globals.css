@@ -2613,6 +2613,128 @@ main li::marker { color: var(--gold); }
   .footer-bottom nav { grid-template-columns: 1fr; }
 }
 
+/* Dog Wedding Kit project showcase */
+.dwk-showcase-hero {
+  position: relative;
+  min-height: clamp(590px, 72vh, 760px);
+  overflow: hidden;
+  background: #201b18;
+  color: #fff8ed;
+}
+
+.dwk-showcase-hero-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.dwk-showcase-hero-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(23, 18, 16, .9), rgba(23, 18, 16, .62) 38%, rgba(23, 18, 16, .08) 76%), linear-gradient(180deg, rgba(18, 14, 12, .08), rgba(18, 14, 12, .42));
+}
+
+.dwk-showcase-hero-inner {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.dwk-showcase-hero-copy {
+  max-width: 680px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, .42);
+}
+
+.dwk-showcase-hero-copy h1 {
+  margin: 12px 0 18px;
+  color: #fff8ed;
+  font-size: clamp(3.8rem, 8vw, 7.8rem);
+  line-height: .9;
+}
+
+.dwk-showcase-hero-copy .lead {
+  max-width: 620px;
+  color: rgba(255, 248, 237, .94);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.25;
+}
+
+.dwk-showcase-intro,
+.dwk-showcase-feature-paper { background: #f4ecdf; color: #28221e; }
+
+.dwk-showcase-intro-grid,
+.dwk-showcase-feature-grid,
+.dwk-showcase-closing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
+  gap: clamp(34px, 7vw, 96px);
+  align-items: center;
+}
+
+.dwk-showcase-intro h2,
+.dwk-showcase-feature h2,
+.dwk-showcase-closing h2 { color: #28221e; text-shadow: none; }
+
+.dwk-showcase-intro p:not(.eyebrow),
+.dwk-showcase-feature-paper p:not(.eyebrow),
+.dwk-showcase-closing p:not(.eyebrow) { color: #5e554d; }
+
+.dwk-showcase-note {
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid rgba(142, 99, 52, .3);
+  background: #ead9c2;
+}
+
+.dwk-showcase-note strong {
+  display: block;
+  margin: 12px 0;
+  color: #38291f;
+  font: 600 clamp(1.8rem, 3vw, 2.8rem)/1 var(--font-display), Georgia, serif;
+}
+
+.dwk-showcase-note p { margin: 0; }
+
+.dwk-showcase-feature-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.dwk-showcase-feature-grid-reverse .dwk-showcase-feature-image { order: 2; }
+.dwk-showcase-feature-grid-reverse .editorial-copy { order: 1; }
+
+.dwk-showcase-feature-image { overflow: hidden; min-height: 520px; }
+.dwk-showcase-feature-image img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; }
+
+.dwk-showcase-list { display: grid; gap: 18px; margin-top: 32px; }
+.dwk-showcase-list > div { display: grid; grid-template-columns: 38px 1fr; gap: 2px 14px; padding-top: 16px; border-top: 1px solid rgba(145, 104, 34, .28); }
+.dwk-showcase-list span { grid-row: 1 / span 2; color: #9d702d; font-weight: 800; letter-spacing: .08em; }
+.dwk-showcase-list strong { color: #2e2925; }
+.dwk-showcase-list p { grid-column: 2; margin: 0; color: #655c54 !important; }
+
+.dwk-showcase-feature-dark { background: #211d1a; color: #fff8ed; }
+.dwk-showcase-feature-dark h2 { color: #fff8ed; }
+.dwk-showcase-feature-dark .editorial-copy > p:not(.eyebrow) { color: rgba(255, 248, 237, .76); }
+.dwk-showcase-feature-dark .eyebrow { color: #e2bc71; }
+.dwk-showcase-feature-dark .text-link { color: #e2bc71; }
+
+.dwk-showcase-closing { background: #ead9c2; }
+.dwk-showcase-closing-grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
+.dwk-showcase-closing-grid > img { width: 100%; height: auto; max-height: 540px; object-fit: cover; }
+
+@media (max-width: 760px) {
+  .dwk-showcase-hero { min-height: 680px; }
+  .dwk-showcase-hero-image { object-position: 64% center; }
+  .dwk-showcase-hero-wash { background: linear-gradient(180deg, rgba(23, 18, 16, .05) 15%, rgba(23, 18, 16, .5) 46%, rgba(23, 18, 16, .94) 100%); }
+  .dwk-showcase-hero-inner { align-items: flex-end; padding-top: 150px; padding-bottom: 54px; }
+  .dwk-showcase-hero-copy h1 { font-size: clamp(3.2rem, 16vw, 5.3rem); }
+  .dwk-showcase-intro-grid,
+  .dwk-showcase-feature-grid,
+  .dwk-showcase-closing-grid { grid-template-columns: 1fr; gap: 34px; }
+  .dwk-showcase-feature-grid-reverse .dwk-showcase-feature-image,
+  .dwk-showcase-feature-grid-reverse .editorial-copy { order: initial; }
+  .dwk-showcase-feature-image,
+  .dwk-showcase-feature-image img { min-height: 330px; }
+  .dwk-showcase-closing-grid > img { max-height: 440px; }
+}
+
 /* Unified width, split-composition and spacing system */
 :root {
   --max: 1180px;
