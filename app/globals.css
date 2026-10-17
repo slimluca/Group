@@ -2454,6 +2454,57 @@ textarea {
   }
 }
 
+/* Absolute final readability lock. */
+.owner-guidance-section,
+.owner-guidance-section h2,
+.owner-guidance-section h3,
+.owner-guidance-section p,
+.owner-guidance-section .eyebrow {
+  color: #fff8e9 !important;
+}
+
+.owner-guidance-section {
+  background: #1a211c !important;
+}
+
+.owner-guidance-section p {
+  color: rgba(255, 248, 233, .88) !important;
+  opacity: 1 !important;
+}
+
+.owner-guidance-section .context-link-row a {
+  color: #f0c968 !important;
+}
+
+.tool-grid .nav-card,
+.nav-card,
+.article-card {
+  background: linear-gradient(145deg, #2b2822, #151512) !important;
+  color: #fff8eb !important;
+}
+
+.tool-grid .nav-card h3,
+.tool-grid .nav-card p,
+.nav-card h3,
+.article-card h3,
+.nav-card p,
+.article-card p {
+  color: #fff8eb !important;
+  opacity: 1 !important;
+}
+
+.tool-grid .nav-card p,
+.nav-card p,
+.article-card p {
+  color: rgba(255, 248, 235, .82) !important;
+}
+
+.template-feature-card strong,
+.template-feature-card small {
+  color: #fff8eb !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
+}
+
 /* Exact approved template direction: charcoal navigation, ivory editorial surfaces,
    gold rules, photographic split compositions and horizontal feature cards. */
 .site-header {
@@ -2733,6 +2784,129 @@ main li::marker { color: var(--gold); }
   .dwk-showcase-feature-image,
   .dwk-showcase-feature-image img { min-height: 330px; }
   .dwk-showcase-closing-grid > img { max-height: 440px; }
+}
+
+/* Final contrast correction. These rules intentionally remain last so every
+   legacy theme layer resolves to a readable foreground/background pairing. */
+.owner-guidance-section {
+  background: #1a211c !important;
+  color: #fff8e9 !important;
+}
+
+.owner-guidance-section h2,
+.owner-guidance-section h3,
+.owner-guidance-section p,
+.owner-guidance-section li,
+.owner-guidance-section .eyebrow {
+  color: #fff8e9 !important;
+  opacity: 1 !important;
+  text-shadow: none;
+}
+
+.owner-guidance-section p {
+  color: rgba(255, 248, 233, .88) !important;
+}
+
+.owner-guidance-section .context-link-row {
+  border-top-color: rgba(229, 201, 120, .3);
+}
+
+.owner-guidance-section .context-link-row a {
+  color: #f0c968 !important;
+  border-bottom-color: rgba(240, 201, 104, .55) !important;
+}
+
+.nav-card,
+.article-card {
+  background: linear-gradient(145deg, #2b2822, #151512) !important;
+  color: #fff8eb !important;
+}
+
+.nav-card h3,
+.article-card h3,
+.nav-card strong,
+.article-card strong {
+  color: #fff8eb !important;
+  text-shadow: none;
+}
+
+.nav-card p,
+.article-card p {
+  color: rgba(255, 248, 235, .82) !important;
+}
+
+.nav-card .eyebrow,
+.article-card .eyebrow {
+  color: #e8c97e !important;
+}
+
+.country-card h3 {
+  color: #171916 !important;
+}
+
+.country-card p {
+  color: #4b4e47 !important;
+}
+
+.country-card .eyebrow {
+  color: #8d671d !important;
+}
+
+.template-feature-card strong,
+.template-feature-card small {
+  color: #fff8eb !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
+}
+
+.page-hero.template-hero ~ .section .editorial-copy p,
+.page-hero.template-hero ~ .section .full-copy p,
+.page-hero.template-hero ~ .section .lead,
+.home-hero ~ .section .editorial-copy p,
+.home-hero ~ .section .full-copy p,
+.home-hero ~ .section .lead {
+  color: #4b4e47 !important;
+  opacity: 1 !important;
+}
+
+.page-hero.template-hero ~ .section .editorial-copy h2,
+.page-hero.template-hero ~ .section .full-copy h2,
+.home-hero ~ .section .editorial-copy h2,
+.home-hero ~ .section .full-copy h2 {
+  color: #171916 !important;
+  text-shadow: none;
+}
+
+.page-hero.template-hero ~ .section a:not(.button),
+.home-hero ~ .section a:not(.button) {
+  color: #765719 !important;
+}
+
+.page-hero.template-hero ~ .section .button.secondary,
+.home-hero ~ .section .button.secondary {
+  color: #29251f !important;
+  border-color: #8f6b25 !important;
+  background: transparent !important;
+}
+
+.dwk-showcase-feature-dark .editorial-copy p:not(.eyebrow),
+.dwk-showcase-feature-dark .editorial-copy .lead {
+  color: rgba(255, 248, 237, .84) !important;
+}
+
+.dwk-showcase-feature-dark .editorial-copy h2 {
+  color: #fff8ed !important;
+}
+
+@media (max-width: 760px) {
+  .owner-guidance-section p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .nav-card,
+  .article-card {
+    min-height: 0;
+  }
 }
 
 /* Unified width, split-composition and spacing system */
