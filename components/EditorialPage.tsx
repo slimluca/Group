@@ -5,34 +5,58 @@ import { MediaFrame } from "./MediaFrame";
 
 const templateHeroAssets: Record<string, { src: string; alt: string; className: string }> = {
   "world-atlas": {
-    src: "/images/doghavengroup/home/world-atlas-premium-map.svg",
-    alt: "An illuminated world map representing global dog ownership comparison",
+    src: "/images/doghavengroup/visuals/atlas-portugal-irish-setter.webp",
+    alt: "An Irish Setter and its owner on a Portuguese Atlantic coastal path",
     className: "template-hero-atlas",
   },
   "global-travel": {
-    src: "/images/doghavengroup/visuals/global-travel-hero-photograph.webp",
-    alt: "A Border Collie looking out from a train towards an alpine landscape",
+    src: "/images/doghavengroup/visuals/travel-alpine-train-border-collie.webp",
+    alt: "A Border Collie travelling calmly with its owner on an alpine train",
     className: "template-hero-travel",
   },
   academy: {
-    src: "/images/doghavengroup/visuals/academy-staffy-training-room.webp",
+    src: "/images/doghavengroup/visuals/academy-staffy-trainer.webp",
     alt: "A brindle Staffordshire bull terrier working with its owner in a bright training room",
     className: "template-hero-academy",
   },
   lab: {
-    src: "/images/doghavengroup/visuals/lab-dachshund-nutrition.webp",
-    alt: "A chocolate dachshund beside nutrition notes and planning tools in a bright studio",
+    src: "/images/doghavengroup/visuals/lab-dachshund-planning-desk.webp",
+    alt: "A chocolate Dachshund beside a calm dog-owner planning desk",
     className: "template-hero-lab",
   },
 };
 
 export function EditorialPage({ page }: { page: PageContent }) {
-  const templateKind =
-    page.slug === "world-atlas" || page.slug.startsWith("world-atlas/") ? "world-atlas" :
-      page.slug === "global-travel" || page.slug.startsWith("global-travel/") ? "global-travel" :
-        page.slug === "academy" || page.slug.startsWith("academy/") ? "academy" :
-          page.slug === "lab" || page.slug.startsWith("lab/") ? "lab" : undefined;
+  const templateKind = ["world-atlas", "global-travel", "academy", "lab"].includes(page.slug)
+    ? page.slug
+    : undefined;
   const templateHero = templateKind ? templateHeroAssets[templateKind] : undefined;
+
+  const countryHeroAssets: Record<string, { src: string; alt: string }> = {
+    "south-africa": {
+      src: "/images/doghavengroup/visuals/south-africa-fynbos-rescue-dog.webp",
+      alt: "A South African woman walking a tan rescue dog through coastal fynbos above Cape Town",
+    },
+    "united-states": {
+      src: "/images/doghavengroup/visuals/united-states-waterfront-golden-retriever.webp",
+      alt: "A couple walking a Golden Retriever beside an urban waterfront in the Pacific Northwest",
+    },
+    italy: {
+      src: "/images/doghavengroup/visuals/italy-square-whippet.webp",
+      alt: "An older man walking a blue-grey Whippet through a quiet Italian stone square",
+    },
+  };
+  const countryHero = countryHeroAssets[page.slug];
+  const secondaryHeroAssets: Record<string, { src: string; alt: string }> = {
+    "academy/first-time-dog-owner-guide": {
+      src: "/images/doghavengroup/visuals/academy-first-dog-puppy-plan.webp",
+      alt: "A young puppy sleeping while its new owners prepare a calm first-month plan",
+    },
+  };
+  const secondaryHero = secondaryHeroAssets[page.slug];
+  const heroVisual = templateHero
+    ?? (countryHero ? { ...countryHero, className: "template-hero-country" } : undefined)
+    ?? (secondaryHero ? { ...secondaryHero, className: "template-hero-guide" } : undefined);
 
   const templateIntro = templateKind === "global-travel" ? (
     <>
@@ -66,9 +90,9 @@ export function EditorialPage({ page }: { page: PageContent }) {
         <div className="template-section-heading"><p className="eyebrow">Featured comparisons</p><h2>See the ownership picture clearly.</h2></div>
         <div className="template-country-grid">
           {[
-            ["South Africa", "country-comparison-golden-retriever.webp", "Space, climate and city choice", "R 3.2k–R 7.8k"],
-            ["United States", "ownership-index-irish-setter-coast.webp", "Services, housing and travel", "$150–$420"],
-            ["Italy", "tools-apricot-poodle-reading-room.webp", "Walkability, routine and access", "€110–€300"],
+            ["South Africa", "south-africa-fynbos-rescue-dog.webp", "Space, climate and city choice", "Planning range"],
+            ["United States", "united-states-waterfront-golden-retriever.webp", "Services, housing and travel", "Planning range"],
+            ["Italy", "italy-square-whippet.webp", "Walkability, routine and access", "Planning range"],
           ].map(([name, image, detail, range]) => (
             <article className="template-country-card" key={name}>
               <div className="template-country-image"><Image src={`/images/doghavengroup/visuals/${image}`} alt={`${name} dog ownership planning`} fill sizes="(max-width: 800px) 100vw, 33vw" /></div>
@@ -79,20 +103,47 @@ export function EditorialPage({ page }: { page: PageContent }) {
       </div>
     </section>
   ) : templateKind === "academy" ? (
-    <section className="template-academy-meta">
-      <div className="shell template-meta-row"><span>Academy / Planning guides</span><span>Evidence-aware · Global context · Practical next steps</span></div>
+    <>
+      <section className="template-academy-meta">
+        <div className="shell template-meta-row"><span>Academy / Planning guides</span><span>Evidence-aware · Global context · Practical next steps</span></div>
+      </section>
+      <section className="template-feature-section">
+        <div className="shell template-feature-grid">
+          <Link href="/academy/puppy-planning" className="template-feature-card">
+            <Image src="/images/doghavengroup/visuals/academy-beagle-puppy-planning.webp" alt="A Beagle puppy exploring a carefully prepared puppy area" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <span><small>Puppy planning</small><strong>Prepare the first month before the puppy arrives →</strong></span>
+          </Link>
+          <Link href="/academy/senior-dog-care" className="template-feature-card">
+            <Image src="/images/doghavengroup/visuals/academy-senior-black-labrador.webp" alt="A senior black Labrador resting comfortably beside its owner" fill sizes="(max-width: 760px) 100vw, 50vw" />
+            <span><small>Senior care</small><strong>Adapt the home and routine with dignity →</strong></span>
+          </Link>
+        </div>
+      </section>
+    </>
+  ) : templateKind === "lab" ? (
+    <section className="template-feature-section">
+      <div className="shell template-feature-grid">
+        <Link href="/lab/global-dog-cost-calculator" className="template-feature-card">
+          <Image src="/images/doghavengroup/visuals/lab-dachshund-planning-desk.webp" alt="A Dachshund beside a dog-owner budgeting and planning desk" fill sizes="(max-width: 760px) 100vw, 50vw" />
+          <span><small>Cost planning</small><strong>Build a realistic monthly and yearly ownership range →</strong></span>
+        </Link>
+        <Link href="/lab/puppy-readiness-quiz" className="template-feature-card">
+          <Image src="/images/doghavengroup/visuals/academy-first-dog-puppy-plan.webp" alt="A puppy sleeping while its owners prepare a practical plan" fill sizes="(max-width: 760px) 100vw, 50vw" />
+          <span><small>Readiness</small><strong>Turn uncertainty into a clear preparation list →</strong></span>
+        </Link>
+      </div>
     </section>
   ) : null;
 
   return (
     <>
-      <section className={`page-hero ${templateHero ? `template-hero ${templateHero.className}` : ""}`}>
-        {templateHero ? (
+      <section className={`page-hero ${heroVisual ? `template-hero ${heroVisual.className}` : ""}`}>
+        {heroVisual ? (
           <>
             <Image
               className="template-hero-image"
-              src={templateHero.src}
-              alt={templateHero.alt}
+              src={heroVisual.src}
+              alt={heroVisual.alt}
               fill
               sizes="100vw"
               priority
@@ -101,7 +152,7 @@ export function EditorialPage({ page }: { page: PageContent }) {
           </>
         ) : null}
         <div className="shell">
-          <div className={`page-hero-copy ${templateHero ? "template-hero-copy" : ""}`}>
+          <div className={`page-hero-copy ${heroVisual ? "template-hero-copy" : ""}`}>
             <p className="eyebrow">{page.eyebrow}</p>
             <h1>{page.hero}</h1>
             <p className="lead">{page.description}</p>

@@ -186,6 +186,7 @@ export function SiteFooter() {
             ))}
             <AnalyticsPreferencesLink />
           </nav>
+          <a className="site-credit" href="https://sitesbyluca.com" rel="nofollow">Website by Sites by Luca</a>
         </div>
       </div>
     </footer>

@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 const path = "global-travel/relocation";
 const title = "Global Dog Relocation Centre | Dog Haven Group";
 const description =
-  "Plan an international move with a dog using calm relocation guidance for route research, documents, transport, crates, departure, transit, arrival and settling in.";
+  "Plan an international move with a dog using practical guidance for route research, documents, transport, departure, transit and arrival.";
 
 const planningSections = [
   {

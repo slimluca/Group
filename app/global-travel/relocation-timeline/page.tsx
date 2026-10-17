@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 const path = "global-travel/relocation-timeline";
 const title = "Dog Relocation Timeline Planner | Dog Haven Group";
 const description =
-  "Create a private browser-saved dog relocation timeline for destination research, official requirements, veterinary planning, documents, transport, departure, arrival and settling in.";
+  "Create a private dog relocation timeline for destination research, official requirements, veterinary planning, documents, transport and arrival.";
 
 export const metadata = pageMetadata(title, description, path);
 
