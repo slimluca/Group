@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { indexCategories } from "@/data/global-dog-ownership-index/categories";
 import {
@@ -15,22 +16,16 @@ export const metadata = pageMetadata(
 export default function Page() {
   return (
     <>
-      <section className="page-hero">
-        <div className="shell">
-          <IndexNav />
-          <p className="eyebrow">Published scoring and evidence rules</p>
-          <h1>How the Global Dog Ownership Index Works</h1>
-          <p className="lead">
-            The methodology makes editorial judgement visible, preserves
-            uncertainty and prevents incomplete evidence from becoming a
-            confident-looking national verdict.
-          </p>
-        </div>
+      <section className="page-hero template-hero template-hero-index">
+        <Image className="template-hero-image" src="/images/doghavengroup/visuals/world-atlas-premium-map-v2.webp" alt="A refined global dog ownership atlas planning scene with maps and research notes" fill priority sizes="100vw" />
+        <span className="template-hero-overlay" aria-hidden="true" />
+        <div className="shell"><IndexNav/><div className="page-hero-copy template-hero-copy"><p className="eyebrow">Published scoring and evidence rules</p><h1>How the Global Dog Ownership Index Works</h1><p className="lead">The methodology makes editorial judgement visible, preserves uncertainty and prevents incomplete evidence from becoming a confident-looking national verdict.</p><div className="hero-actions"><a className="button" href="#methodology-content">Read the framework</a><a className="button secondary" href="/world-atlas/global-dog-ownership-index/compare">Compare countries</a></div></div></div>
       </section>
       <main>
         <section className="section">
-          <div className="shell index-reading methodology">
+          <div className="shell index-reading methodology" id="methodology-content">
             <IndexNotice />
+            <div className="index-inline-feature"><Image src="/images/doghavengroup/visuals/atlas-portugal-irish-setter.webp" alt="An Irish Setter beside a global atlas and research notes" width={1100} height={700}/><div><p className="eyebrow">Why the framework matters</p><h2>Evidence should be visible before a score is persuasive.</h2><p>The Index is designed to show what is known, what is inferred and where local variation changes the answer. That makes the research more useful for owners planning a move, comparing countries or deciding what to investigate next.</p></div></div>
             <h2>Purpose and boundaries</h2>
             <p>
               The Index compares practical conditions that shape dog ownership

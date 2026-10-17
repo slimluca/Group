@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { countriesAlphabetical } from "@/data/global-dog-ownership-index/countries";
 import { indexCategories } from "@/data/global-dog-ownership-index/categories";
@@ -99,34 +100,16 @@ export default function Page() {
           acceptedAnswer: { "@type": "Answer", text: a },
         })),
       })}
-      <section className="page-hero index-hero">
-        <div className="shell">
-          <IndexNav />
-          <p className="eyebrow">Global dog ownership research</p>
-          <h1>Global Dog Ownership Index</h1>
-          <p className="lead">
-            Compare the practical conditions that shape dog ownership across
-            researched countries. Every profile separates source-backed evidence
-            from Dog Haven Group editorial assessment and shows where national
-            comparisons remain limited.
-          </p>
-          <div className="hero-actions">
-            <Link className="button" href={`${INDEX_BASE}/compare`}>
-              Compare Countries
-            </Link>
-            <Link
-              className="button secondary"
-              href={`${INDEX_BASE}/methodology`}
-            >
-              Read the Methodology
-            </Link>
-          </div>
-        </div>
+      <section className="page-hero template-hero template-hero-index">
+        <Image className="template-hero-image" src="/images/doghavengroup/visuals/ownership-index-irish-setter-coast.webp" alt="An Irish Setter beside a refined global dog ownership index planning scene" fill priority sizes="100vw" />
+        <span className="template-hero-overlay" aria-hidden="true" />
+        <div className="shell"><IndexNav/><div className="page-hero-copy template-hero-copy"><p className="eyebrow">Global dog ownership research</p><h1>Global Dog Ownership Index</h1><p className="lead">Compare the practical conditions that shape dog ownership across researched countries. Every profile separates source-backed evidence from Dog Haven Group editorial assessment and shows where national comparisons remain limited.</p><div className="hero-actions"><Link className="button" href={`${INDEX_BASE}/compare`}>Compare countries</Link><Link className="button secondary" href={`${INDEX_BASE}/methodology`}>Read the methodology</Link></div></div></div>
       </section>
       <main>
         <section className="section">
           <div className="shell index-reading">
             <IndexNotice />
+            <div className="index-inline-feature"><Image src="/images/doghavengroup/visuals/world-atlas-premium-map-v2.webp" alt="A global dog ownership atlas with maps and comparison notes" width={1100} height={700}/><div><p className="eyebrow">A research layer for real decisions</p><h2>Use the Index to ask better country questions.</h2><p>The strongest use of a comparison is not choosing a winner. It is identifying which local questions deserve attention before a move, a long stay or a new ownership routine.</p></div></div>
             <h2>What the Global Dog Ownership Index compares</h2>
             <p>
               The Index examines the practical experience of owning and caring
