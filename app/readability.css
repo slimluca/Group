@@ -1,0 +1,81 @@
+/* Loaded after the legacy theme so every route shares one reliable visual contract. */
+.owner-guidance-section {
+  background: #18201b !important;
+  color: #fff8e9 !important;
+}
+
+.owner-guidance-section h2,
+.owner-guidance-section h3,
+.owner-guidance-section p,
+.owner-guidance-section .eyebrow {
+  color: #fff8e9 !important;
+  opacity: 1 !important;
+}
+
+.owner-guidance-section p { color: rgba(255, 248, 233, .88) !important; }
+.owner-guidance-section .context-link-row a { color: #e8c878 !important; }
+
+.template-step-section,
+.template-atlas-section,
+.template-academy-meta,
+.template-feature-section {
+  background: #f2eadb !important;
+  color: #1b1f1a !important;
+}
+
+.template-step-section h2,
+.template-step-section strong,
+.template-step-section p,
+.template-step-section .eyebrow,
+.template-section-heading h2,
+.template-meta-row span {
+  color: #1b1f1a !important;
+  opacity: 1 !important;
+}
+
+.template-step em,
+.template-meta-row span:last-child { color: #68645b !important; }
+
+.tool-grid .nav-card,
+.nav-card,
+.article-card {
+  background: linear-gradient(145deg, #2b2822, #151512) !important;
+  color: #fff8eb !important;
+}
+
+.tool-grid .nav-card h3,
+.tool-grid .nav-card p,
+.nav-card h3,
+.nav-card p,
+.article-card h3,
+.article-card p {
+  color: #fff8eb !important;
+  opacity: 1 !important;
+}
+
+.tool-grid .nav-card p,
+.nav-card p,
+.article-card p { color: rgba(255, 248, 235, .82) !important; }
+
+.template-feature-card strong,
+.template-feature-card small {
+  color: #fff8eb !important;
+  opacity: 1 !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
+}
+
+.template-hero-generic { min-height: clamp(460px, 60vh, 650px); }
+.template-hero-generic .template-hero-image { object-fit: cover; object-position: center; }
+.template-hero-generic .template-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(3, 3, 2, .94), rgba(3, 3, 2, .72) 38%, rgba(3, 3, 2, .2) 78%),
+    linear-gradient(180deg, rgba(3, 3, 2, .15), rgba(3, 3, 2, .82));
+}
+
+.content-section-with-media .media-frame img,
+.homepage-media-frame img { object-fit: cover; }
+
+@media (max-width: 760px) {
+  .template-hero-generic { min-height: 620px; }
+  .template-hero-generic .template-hero-image { object-position: 62% center; }
+}
