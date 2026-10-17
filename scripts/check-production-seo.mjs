@@ -2,6 +2,19 @@ import fs from "node:fs";
 
 const baseUrl = process.env.SEO_BASE_URL || "http://localhost:3000";
 const productionHost = "https://doghavengroup.com";
+const worldDogStoryRoutes = [
+  "/world-atlas/dogs-of-the-world",
+  "/world-atlas/dogs-of-the-world/south-africa-rhodesian-ridgeback",
+  "/world-atlas/dogs-of-the-world/united-states-boston-terrier",
+  "/world-atlas/dogs-of-the-world/italy-lagotto-romagnolo",
+  "/world-atlas/dogs-of-the-world/united-kingdom-border-collie",
+  "/world-atlas/dogs-of-the-world/australia-australian-kelpie",
+  "/world-atlas/dogs-of-the-world/canada-newfoundland",
+  "/world-atlas/dogs-of-the-world/japan-shiba-inu",
+  "/world-atlas/dogs-of-the-world/germany-german-shepherd",
+  "/world-atlas/dogs-of-the-world/france-brittany-spaniel",
+  "/world-atlas/dogs-of-the-world/brazil-brazilian-terrier",
+];
 const routes = [
   "/", "/about", "/academy", "/academy/first-time-dog-owner-guide", "/academy/puppy-planning",
   "/academy/apartment-dog-ownership", "/academy/family-dog-ownership", "/academy/senior-dog-care",
@@ -19,6 +32,7 @@ const routes = [
   "/italy", "/journal", "/journal/introducing-dog-haven-group", "/journal/how-doghaven-will-grow-across-countries",
   "/journal/why-global-dog-travel-needs-better-planning", "/contact", "/editorial-policy", "/research-methodology",
   "/privacy-policy", "/terms", "/disclaimer", "/doghaven-universe",
+  ...worldDogStoryRoutes,
 ];
 
 const failures = [];

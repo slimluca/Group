@@ -33,6 +33,9 @@ export default function Page() {
             >
               Compare Countries
             </Link>
+            <Link className="button secondary" href="/world-atlas/dogs-of-the-world">
+              Explore Dogs of the World
+            </Link>
           </div>
         </div>
       </section>

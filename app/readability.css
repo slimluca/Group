@@ -79,3 +79,75 @@
   .template-hero-generic { min-height: 620px; }
   .template-hero-generic .template-hero-image { object-position: 62% center; }
 }
+
+/* Dogs of the World editorial library */
+.world-story-hero,
+.world-stories-hub-hero { position: relative; min-height: clamp(560px, 72vh, 760px); overflow: hidden; background: #171a17; color: #fff8ed; }
+.world-story-hero-image { object-fit: cover; object-position: center; }
+.world-story-hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12, 14, 11, .94), rgba(12, 14, 11, .7) 40%, rgba(12, 14, 11, .08) 82%), linear-gradient(180deg, rgba(12, 14, 11, .08), rgba(12, 14, 11, .64)); }
+.world-story-hero-inner { position: relative; z-index: 1; min-height: inherit; display: flex; align-items: center; }
+.world-story-hero-copy { max-width: 760px; text-shadow: 0 2px 18px rgba(0,0,0,.4); }
+.world-story-hero-copy h1 { max-width: 850px; margin: 12px 0 18px; color: #fff8ed; font-size: clamp(3rem, 6.5vw, 6.5rem); line-height: .96; }
+.world-story-hero-copy .lead { max-width: 680px; color: rgba(255,248,237,.92); font-size: clamp(1.1rem, 1.7vw, 1.45rem); line-height: 1.45; }
+.world-story-intro, .world-stories-hub-intro { background: #f4ecdf; color: #28221e; }
+.world-story-intro-grid, .world-story-breed-grid, .world-story-section-grid, .world-story-source-grid, .world-stories-next-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); gap: clamp(34px, 7vw, 100px); align-items: start; }
+.world-story-intro h2, .world-story-breed h2, .world-story-section h2, .world-story-sources h2, .world-stories-hub-copy h2, .world-stories-next h2 { color: #28221e; text-shadow: none; }
+.world-story-intro .editorial-copy p, .world-story-breed .editorial-copy p, .world-story-section .editorial-copy p, .world-story-sources .editorial-copy p, .world-stories-hub-copy p, .world-stories-next p { color: #5e554d; }
+.world-story-facts { padding: clamp(26px,4vw,46px); border: 1px solid rgba(142,99,52,.3); background: #ead9c2; }
+.world-story-facts dl { margin: 0; }
+.world-story-facts dl div { padding: 18px 0; border-top: 1px solid rgba(142,99,52,.25); }
+.world-story-facts dl div:first-child { border-top: 0; }
+.world-story-facts dt { color: #8d671d; font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.world-story-facts dd { margin: 6px 0 0; color: #38291f; font-weight: 750; line-height: 1.4; }
+.world-story-breed { background: #fffaf1; color: #28221e; }
+.world-story-breed-label { position: sticky; top: 100px; }
+.world-story-breed-label span, .world-story-section-number { color: #9d702d; font-weight: 850; letter-spacing: .14em; }
+.world-story-breed-label h2 { margin: 10px 0; font-size: clamp(2.2rem, 4vw, 4.5rem); }
+.world-story-breed-label > p:last-child { color: #786b5d; font-family: var(--font-display), Georgia, serif; font-size: 1.2rem; }
+.world-story-section { background: #f2eadb; color: #28221e; }
+.world-story-section-dark { background: #1f241f; color: #fff8ed; }
+.world-story-section-dark h2, .world-story-section-dark .editorial-copy p { color: #fff8ed; }
+.world-story-section-dark .editorial-copy p:not(.eyebrow) { color: rgba(255,248,237,.78); }
+.world-story-section-dark .eyebrow { color: #e2bc71; }
+.world-story-section-grid { grid-template-columns: 72px minmax(0, 1fr); }
+.world-story-section-number { font-size: 1.3rem; }
+.world-story-sources { background: #ead9c2; color: #28221e; }
+.world-story-sources h2 { color: #28221e; }
+.world-story-sources aside { padding: 28px; border-left: 1px solid rgba(142,99,52,.35); }
+.world-story-sources ol { margin: 0; padding-left: 20px; }
+.world-story-sources li { margin: 12px 0; color: #5e554d; }
+.world-story-sources a { color: #765719; font-weight: 750; text-decoration: underline; text-underline-offset: .16em; }
+.world-stories-hub-hero .template-hero-copy h1 { color: #fff8ed; }
+.world-stories-hub-copy { max-width: 860px; }
+.world-stories-directory { background: #fffaf1; }
+.world-stories-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.world-story-card { display: flex; flex-direction: column; overflow: hidden; background: #211f1b; color: #fff8ed; box-shadow: 0 18px 34px rgba(41,31,19,.12); }
+.world-story-card-image { position: relative; min-height: 260px; }
+.world-story-card-image img { object-fit: cover; }
+.world-story-card-copy { display: flex; flex: 1; flex-direction: column; padding: 24px; }
+.world-story-card-copy .eyebrow { color: #e2bc71; }
+.world-story-card-copy h3 { margin: 7px 0 10px; color: #fff8ed; font-size: 2rem; }
+.world-story-card-copy p:not(.eyebrow) { color: rgba(255,248,237,.75); }
+.world-story-card-copy strong { margin-top: auto; padding-top: 16px; color: #e2bc71; }
+.world-stories-next { background: #1f241f; color: #fff8ed; }
+.world-stories-next h2, .world-stories-next p { color: #fff8ed; }
+.world-stories-next .eyebrow { color: #e2bc71; }
+.world-stories-next-list { padding: 26px; border: 1px solid rgba(226,188,113,.26); }
+.world-stories-next-list span { display: block; margin-bottom: 16px; color: #e2bc71; font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.world-stories-next-list p { margin: 0; padding: 12px 0; border-top: 1px solid rgba(255,248,237,.16); }
+
+@media (max-width: 860px) {
+  .world-stories-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  .world-story-hero { min-height: 700px; }
+  .world-story-hero-image { object-position: 62% center; }
+  .world-story-hero-wash { background: linear-gradient(180deg, rgba(12,14,11,.06) 10%, rgba(12,14,11,.48) 46%, rgba(12,14,11,.96) 100%); }
+  .world-story-hero-inner { align-items: flex-end; padding-top: 140px; padding-bottom: 52px; }
+  .world-story-hero-copy h1 { font-size: clamp(3rem, 14vw, 5.2rem); }
+  .world-story-intro-grid, .world-story-breed-grid, .world-story-source-grid, .world-stories-next-grid { grid-template-columns: 1fr; gap: 32px; }
+  .world-story-section-grid { grid-template-columns: 1fr; gap: 12px; }
+  .world-story-breed-label { position: static; }
+  .world-story-sources aside { border-top: 1px solid rgba(142,99,52,.35); border-left: 0; }
+  .world-stories-grid { grid-template-columns: 1fr; }
+}
