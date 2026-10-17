@@ -3523,3 +3523,42 @@ h3 { font-size: clamp(1.4rem, 2vw, 2.1rem); line-height: 1.18; }
 .print-notes a { color: #f0cd7a; }
 @media (max-width: 900px) { .index-feature-grid, .index-inline-feature { grid-template-columns: 1fr; } .index-inline-feature img { min-height: 220px; } }
 @media (max-width: 600px) { .index-inline-feature { padding: 18px; } .index-feature-grid { gap: 28px; } .index-country-hero .index-country-heading { padding-top: 0; } }
+/* Final readable card treatment for every light editorial section */
+.home-hero ~ .section .nav-card,
+.home-hero ~ .section .article-card,
+.home-hero ~ .section .country-card,
+.page-hero.template-hero ~ .section .nav-card,
+.page-hero.template-hero ~ .section .article-card,
+.page-hero.template-hero ~ .section .country-card,
+.page-hero.template-hero ~ .section .global-guide-card {
+  background: #fffaf1 !important;
+  color: #25221c !important;
+  border-color: rgba(142, 103, 36, .3) !important;
+  box-shadow: 0 18px 44px rgba(62, 45, 22, .1) !important;
+}
+.home-hero ~ .section .nav-card h3,
+.home-hero ~ .section .article-card h3,
+.home-hero ~ .section .country-card h3,
+.page-hero.template-hero ~ .section .nav-card h3,
+.page-hero.template-hero ~ .section .article-card h3,
+.page-hero.template-hero ~ .section .country-card h3,
+.page-hero.template-hero ~ .section .global-guide-card h2 {
+  color: #25221c !important;
+  text-shadow: none !important;
+}
+.home-hero ~ .section .nav-card p,
+.home-hero ~ .section .article-card p,
+.home-hero ~ .section .country-card p,
+.page-hero.template-hero ~ .section .nav-card p,
+.page-hero.template-hero ~ .section .article-card p,
+.page-hero.template-hero ~ .section .country-card p,
+.page-hero.template-hero ~ .section .global-guide-card p {
+  color: #5c554a !important;
+}
+.home-hero ~ .section .country-card:hover,
+.page-hero.template-hero ~ .section .country-card:hover,
+.page-hero.template-hero ~ .section .nav-card:hover,
+.page-hero.template-hero ~ .section .article-card:hover {
+  background: #fffdf8 !important;
+  border-color: rgba(142, 103, 36, .62) !important;
+}
