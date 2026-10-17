@@ -39,6 +39,9 @@ export default function Page() {
             <Link className="button secondary" href="/guides">
               Open global owner guides
             </Link>
+            <Link className="button secondary" href="/guides/breed-comparisons">
+              Compare dog breeds
+            </Link>
           </div>
         </div>
       </section>

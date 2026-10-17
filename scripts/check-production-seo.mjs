@@ -23,6 +23,13 @@ const globalGuideRoutes = [
   "/guides/dog-travel-planning-guide",
   "/guides/native-dog-breeds-by-country",
 ];
+const breedComparisonRoutes = [
+  "/guides/breed-comparisons",
+  "/guides/breed-comparisons/border-collie-vs-australian-kelpie",
+  "/guides/breed-comparisons/boston-terrier-vs-italian-greyhound",
+  "/guides/breed-comparisons/newfoundland-vs-rhodesian-ridgeback",
+  "/guides/breed-comparisons/shiba-inu-vs-lagotto-romagnolo",
+];
 const routes = [
   "/", "/about", "/academy", "/academy/first-time-dog-owner-guide", "/academy/puppy-planning",
   "/academy/apartment-dog-ownership", "/academy/family-dog-ownership", "/academy/senior-dog-care",
@@ -42,6 +49,7 @@ const routes = [
   "/privacy-policy", "/terms", "/disclaimer", "/doghaven-universe",
   ...worldDogStoryRoutes,
   ...globalGuideRoutes,
+  ...breedComparisonRoutes,
 ];
 
 const failures = [];
