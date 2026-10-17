@@ -15,6 +15,14 @@ const worldDogStoryRoutes = [
   "/world-atlas/dogs-of-the-world/france-brittany-spaniel",
   "/world-atlas/dogs-of-the-world/brazil-brazilian-terrier",
 ];
+const globalGuideRoutes = [
+  "/guides",
+  "/guides/best-dogs-for-hot-climates",
+  "/guides/best-dogs-for-apartments",
+  "/guides/first-time-dog-owner-breed-guide",
+  "/guides/dog-travel-planning-guide",
+  "/guides/native-dog-breeds-by-country",
+];
 const routes = [
   "/", "/about", "/academy", "/academy/first-time-dog-owner-guide", "/academy/puppy-planning",
   "/academy/apartment-dog-ownership", "/academy/family-dog-ownership", "/academy/senior-dog-care",
@@ -33,6 +41,7 @@ const routes = [
   "/journal/why-global-dog-travel-needs-better-planning", "/contact", "/editorial-policy", "/research-methodology",
   "/privacy-policy", "/terms", "/disclaimer", "/doghaven-universe",
   ...worldDogStoryRoutes,
+  ...globalGuideRoutes,
 ];
 
 const failures = [];

@@ -36,6 +36,9 @@ export default function Page() {
             <Link className="button secondary" href="/world-atlas/dogs-of-the-world">
               Explore Dogs of the World
             </Link>
+            <Link className="button secondary" href="/guides">
+              Open global owner guides
+            </Link>
           </div>
         </div>
       </section>

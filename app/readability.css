@@ -4,6 +4,56 @@
   color: #fff8e9 !important;
 }
 
+.global-guide-hero { position: relative; min-height: 700px; display: flex; align-items: end; overflow: hidden; background: #181716; }
+.global-guide-hero > img { object-fit: cover; object-position: center; }
+.global-guide-hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12, 12, 11, .88) 0%, rgba(12, 12, 11, .58) 45%, rgba(12, 12, 11, .1) 100%), linear-gradient(0deg, rgba(12, 12, 11, .68), transparent 58%); }
+.global-guide-hero-inner { position: relative; z-index: 1; width: 100%; padding-top: 9rem; padding-bottom: 6rem; }
+.global-guide-hero-copy { max-width: 840px; color: #fff; }
+.global-guide-hero-copy h1 { max-width: 860px; margin: .55rem 0 1.2rem; font-size: clamp(2.65rem, 5.4vw, 5.55rem); line-height: .98; letter-spacing: -.055em; }
+.global-guide-hero-copy .lead { max-width: 720px; color: rgba(255,255,255,.86); font-size: clamp(1.08rem, 1.35vw, 1.35rem); line-height: 1.7; }
+.global-guide-intro-copy { max-width: 900px; }
+.global-guide-intro-copy h2, .global-guide-section h2, .global-guide-checklist h2, .global-guide-end h2 { max-width: 760px; }
+.global-guide-section { background: #f5f0e7; }
+.global-guide-section-dark { background: #242321; color: #f7f2e9; }
+.global-guide-section-dark .editorial-copy p { color: rgba(247,242,233,.82); }
+.global-guide-section-grid { display: grid; grid-template-columns: 110px minmax(0, 820px); gap: 3rem; align-items: start; }
+.global-guide-section-number { color: #b48b43; font: 700 1.1rem/1 Manrope, sans-serif; letter-spacing: .12em; padding-top: .45rem; }
+.global-guide-checklist { background: #d7c7a2; }
+.global-guide-checklist-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 520px); gap: 5rem; align-items: start; }
+.global-guide-checklist ol { list-style: none; padding: 0; margin: 0; }
+.global-guide-checklist li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 1rem; align-items: start; padding: 1rem 0; border-top: 1px solid rgba(32,30,27,.2); }
+.global-guide-checklist li:last-child { border-bottom: 1px solid rgba(32,30,27,.2); }
+.global-guide-checklist li span { color: #705321; font: 700 .78rem/1.4 Manrope, sans-serif; letter-spacing: .12em; }
+.global-guide-checklist li p { margin: 0; color: #26231e; }
+.global-guide-end { background: #1a1917; color: #f7f2e9; text-align: center; }
+.global-guide-end-inner { max-width: 900px; }
+.global-guide-end h2 { margin-left: auto; margin-right: auto; }
+.guides-directory-hero { min-height: 620px; }
+.guides-directory-intro { background: #f5f0e7; }
+.guides-directory-copy { max-width: 920px; }
+.guides-directory-grid-section { background: #ebe3d4; }
+.guides-directory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.global-guide-card { display: grid; grid-template-rows: 270px 1fr; color: inherit; background: #f8f4ec; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.global-guide-card:hover { transform: translateY(-4px); box-shadow: 0 1.2rem 2.5rem rgba(43,35,23,.12); }
+.global-guide-card-image { position: relative; overflow: hidden; min-height: 0; }
+.global-guide-card-image img { object-fit: cover; transition: transform .35s ease; }
+.global-guide-card:hover .global-guide-card-image img { transform: scale(1.035); }
+.global-guide-card-copy { padding: 1.75rem 1.8rem 2rem; }
+.global-guide-card-copy h2 { margin: .4rem 0 .9rem; font-size: clamp(1.55rem, 2.1vw, 2.2rem); line-height: 1.06; }
+.global-guide-card-copy p:not(.eyebrow) { color: #5b554d; line-height: 1.7; }
+.global-guide-card-copy strong { display: inline-block; margin-top: .6rem; color: #785a25; }
+.guides-directory-end { background: #d7c7a2; }
+.guides-directory-end-inner { text-align: center; max-width: 900px; }
+.guides-directory-end h2 { margin-left: auto; margin-right: auto; }
+@media (max-width: 760px) {
+  .global-guide-hero { min-height: 680px; }
+  .global-guide-hero-inner { padding-top: 7rem; padding-bottom: 3.5rem; }
+  .global-guide-section-grid, .global-guide-checklist-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  .global-guide-section-number { padding-top: 0; }
+  .guides-directory-grid { grid-template-columns: 1fr; }
+  .global-guide-card { grid-template-rows: 230px 1fr; }
+}
+
 .owner-guidance-section h2,
 .owner-guidance-section h3,
 .owner-guidance-section p,
